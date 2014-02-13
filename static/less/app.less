@@ -1,0 +1,318 @@
+/* app styles */
+
+// Normalize / TWBS (Bootstrap)
+@import 'bootstrap-mixins';
+
+// App-specific
+
+// App modules-specific
+
+html, body {
+  height: 100%;
+  font-size: 10px;
+}
+
+body {
+  overflow: hidden;
+  .translate3d(0,0,0); // Force GPU whenever possible
+
+  // TEMP fix
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.non-selectable {
+  .user-select(none);
+  -webkit-touch-callout: none;
+}
+
+.non-draggable {
+  -webkit-user-drag: none;
+}
+
+img {
+  .non-draggable;
+}
+
+.hidden-cursor {
+  cursor: none !important;
+  
+  * {
+    cursor: none !important;
+  }
+}
+
+.force-show {
+  display: block !important;
+}
+
+.pseudo-link {
+  color: #26a9e0;
+  text-decoration: underline;
+}
+
+.absolute-centerize {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+// General / layouts
+.ui-layout {
+  z-index: 400;
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.embed-cover {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+}
+
+.embed-cover-el(@zIndex: 100) {
+  content: "";
+  position: absolute;
+  z-index: @zIndex;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+embed[type="image/svg+xml"] {
+  .embed-cover;
+}
+
+.standby-timer {
+  position: fixed;
+  z-index: 50000;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  font-family: HelveticaNeueThin;
+  font-size: 2.5em;
+  line-height: 2;
+  text-align: center;
+  color: white;
+}
+
+@main-area-height: 540px;
+
+.ui-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 120px;
+  //padding-top: 3em;
+  min-height: @main-area-height;
+  // background: rgba(0,0,0,0.4);
+  overflow: hidden; // Fix unexpected whitespaces caused by nav-links
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+// App animations
+
+.show-hide-animation {
+  &.ng-hide-add,
+  &.ng-hide-remove {
+    .transitions-all-ease-in(.2s);
+    display: block !important;
+  }
+
+  &.ng-hide-add,
+  &.ng-hide-remove.ng-hide-remove-active {
+    .translate(0, 0);
+    opacity: 1;
+  }
+
+  &.ng-hide-remove,
+  &.ng-hide-add.ng-hide-add-active {
+    .translate(-3em, 0);
+    opacity: 0;
+  }
+
+  &.ng-enter,
+  &.ng-leave {
+    .transitions-all-ease-in(.2s);
+    display: block !important;
+  }
+
+  &.ng-enter,
+  &.ng-leave.ng-leave-active {
+    .translate(-3em, 0);
+    opacity: 0;
+  }
+
+  &.ng-enter.ng-enter-active,
+  &.ng-leave {
+    .translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.fade-animation {
+  &.ng-hide-add,
+  &.ng-hide-remove {
+    .transitions-all-ease-in(.2s);
+    display: block !important;
+  }
+
+  &.ng-hide-add,
+  &.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
+  }
+
+  &.ng-hide-remove,
+  &.ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+  }
+
+  &.ng-enter,
+  &.ng-leave {
+    .transitions-all-ease-in(.2s);
+  }
+
+  &.ng-enter,
+  &.ng-leave.ng-leave-active {
+    opacity: 0;
+  }
+
+  &.ng-enter.ng-enter-active,
+  &.ng-leave {
+    opacity: 1;
+  }
+}
+
+.fade-animation-timing(@duration: 0.2s) {
+  &.ng-hide-add,
+  &.ng-hide-remove {
+    .transitions-all-ease-in(@duration);
+    display: block !important;
+  }
+
+  &.ng-hide-add,
+  &.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
+  }
+
+  &.ng-hide-remove,
+  &.ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+  }
+
+  &.ng-enter,
+  &.ng-leave {
+    .transitions-all-ease-in(@duration);
+  }
+
+  &.ng-enter,
+  &.ng-leave.ng-leave-active {
+    opacity: 0;
+  }
+
+  &.ng-enter.ng-enter-active,
+  &.ng-leave {
+    opacity: 1;
+  }
+}
+
+.fade-animation-05s {
+  .fade-animation-timing(.5s);
+}
+
+.fade-animation-06s {
+  .fade-animation-timing(.6s);
+}
+
+// TODO: When Angular-UI ui-view animations are fixed
+.view-hide-out {
+  background: rgba(180, 0, 0, 0.4);
+  height: 500px;
+  
+  &.ng-enter,
+  &.ng-leave {
+    .transitions-all-ease-in(.7s);
+  }
+
+  &.ng-enter {
+    opacity: 0;
+  }
+
+  &.ng-enter.ng-enter-active {
+    opacity: 1;
+  }
+
+  &.ng-leave {
+    opacity: 1;
+    .translate(-100px, 0);
+  }
+
+  &.ng-leave.ng-leave-active {
+    opacity: 0;
+    .translate(100px, 0);
+  }
+}
+
+// Angular features
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
