@@ -9,11 +9,10 @@
 	</head>
 	<body ng-controller="AppCtrl">
       <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1;">
-            Cool!
+        <jobs-flow ng-controller="JobsCtrl" items="items" years="years"></jobs-flow>
 	  </div>
 
-	  <footer>
-	  </footer>
+	  <footer></footer>
 
    	  <script data-main="static/js/app/main" src="bower_components/requirejs/require.js"></script>
 	</body>

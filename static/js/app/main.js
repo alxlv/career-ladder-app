@@ -3,9 +3,10 @@ require.config({
   paths: {
     angular:        '../../../bower_components/angular/angular',
     jquery:         '../../../bower_components/jquery/jquery',
+    text:           '../../../bower_components/requirejs-text/text',
     underscore:     '../../../bower_components/underscore/underscore',
     timelineMax:    '../../../bower_components/greensock/src/uncompressed/TimelineMax',
-    tweenMax:             '../../../bower_components/greensock/src/uncompressed/TweenMax'
+    tweenMax:       '../../../bower_components/greensock/src/uncompressed/TweenMax'
   },
   shim: {
     'angular'          : { deps: ['jquery'], exports : 'angular' },

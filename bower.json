@@ -1,0 +1,17 @@
+{
+  "name": "career-ladder-app",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.0",
+    "requirejs": "~2.1.8",
+    "requirejs-text": "~2.0.10",
+    "underscore": "~1.5.2"
+  }
+}

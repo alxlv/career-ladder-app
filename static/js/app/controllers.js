@@ -4,5 +4,6 @@ define(function (require) {
   var angular = require('angular');
 
   return angular.module('ladderApp.controllers', [])
-    .controller('AppCtrl', require('controllers/appCtrl'));
+    .controller('AppCtrl', require('controllers/appCtrl'))
+    .controller('JobsCtrl', require('controllers/jobsCtrl'));
 });

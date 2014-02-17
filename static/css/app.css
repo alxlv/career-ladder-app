@@ -7373,3 +7373,21 @@ embed[type="image/svg+xml"]:after {
 .ng-cloak {
   display: none !important;
 }
+
+.jobs-flow img {
+  float: left;
+  height: 48px;
+  border: 0px black solid;
+}
+
+.jobs-flow img.mark-year {
+  width: 10px;
+}
+
+.jobs-flow img.tube-part {
+  width: 5px;
+}
+
+.jobs-flow div.clear-fix {
+  clear: left;
+}

@@ -1,0 +1,8 @@
+define({
+  books: [
+    {
+      title: '',
+      rate: ''
+    }
+  ]
+});
