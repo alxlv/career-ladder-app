@@ -36,6 +36,17 @@ define(function (require) {
         }
 
         return years;
+      },
+
+      findJobs: function(month, year) {
+        var to = ("0" + month).slice(-2) + "." + year;
+        var from = to;
+        var jobs = _.where(this.getAll(), { dateTo: to });
+        if (_.size(jobs) === 0) {
+          jobs = _.where(this.getAll(), { dateFrom: from });
+        }
+
+        return jobs;
       }
 
     };

@@ -1,12 +1,11 @@
-<!--<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="50px" xml:space="preserve">
-  <image ng-repeat="month in [1]" x="{{ $index * 19 }}" y="0" width="19px" height="48px" xlink:href="media/tube-part.png" />
-  <!--<text x="{{ $index * 10 +  $parent.$index * 20 }}" y="10">{{ $index * 10 +  $parent.$index * 20 }}</text>-->
-<!--</svg>-->
-<div class="jobs-flow">
+<div class="jobs-flow" style="margin-top: 70px; margin-left: 70px;">
   <img class="mark-year" src="media/mark-year.png"/>
-  <span ng-repeat="year in years">
-    <img class="tube-part" ng-repeat="month in [1,2,3,4,5,6,7,8,9,10,11,12]" x="{{ $index * 5 + $parent.$index * 5 }}" y="0" src="media/tube-part.png" />
+  <div ng-repeat="year in years">
+    <span ng-repeat="month in [1,2,3,4,5,6,7,8,9,10,11,12]">
+        <img class="tube-part" x="{{ $index * 5 + $parent.$index * 5 }}" y="0" src="media/tube-part.png" />
+        <job-point ng-repeat="job in findJobs(month, year)" class="job-point" id="job.id" date-label="getJobText(job, month, year)" color="getJobColor(job, month, year)" ng-mouseenter="onJobPointEnter(job)" ng-mouseleave="onJobPointLeave(job)" ng-click="onJobPointClick(job)"></job-point>
+    </span>
     <img class="mark-year" src="media/mark-year.png"/>
-  </span>
+  </div>
   <div class="clear-fix"></div>
 </div>

@@ -7391,3 +7391,29 @@ embed[type="image/svg+xml"]:after {
 .jobs-flow div.clear-fix {
   clear: left;
 }
+
+.jobs-flow .job-point {
+  position: fixed;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.jobs-flow .job-point-text-leave {
+  display: none;
+  font-family: monospace, serif;
+  font-size: 0.8em;
+}
+
+.jobs-flow .job-point-text-active {
+  display: inline;
+}
+
+/*
+.jobs-flow .job-point:hover {
+  -webkit-transform-origin: top left;
+  -webkit-transform: scale(1.5);
+}
+
+.job-point-hover {
+    -webkit-transform-origin: top left;
+    -webkit-transform: scale(1.5);
+}*/

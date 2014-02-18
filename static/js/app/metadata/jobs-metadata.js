@@ -1,6 +1,7 @@
 define({
   jobs: [
     {
+      id: 1,
       title: 'Student',
       type: 'education',
       dateFrom: '09.1999',
@@ -11,6 +12,7 @@ define({
       website: 'http://pskgu.ru/',
       speciality: 'system engineer'
     }, {
+      id: 2,
       title: 'Cofounder/System adminitrator (200+ users)',
       type: 'office',
       dateFrom: '09.2003',
@@ -18,6 +20,7 @@ define({
       location: 'Pskov',
       company: 'Distict 5 network'
     }, {
+      id: 3,
       title: 'C++/Embedding developer',
       type: 'office',
       dateFrom: '05.2004',
@@ -47,6 +50,7 @@ define({
       ],
       references: ''
     }, {
+      id: 4,
       title: 'Java developer',
       type: 'office',
       dateFrom: '06.2005',
@@ -63,6 +67,7 @@ define({
       ],
       references: ''
     }, {
+      id: 5,
       title: 'C#.NET/C++ developer',
       type: 'office',
       dateFrom: '11.2005',
@@ -96,6 +101,7 @@ define({
       ],
       references: ''
     }, {
+      id: 6,
       title: 'C#.NET developer',
       type: 'office',
       dateFrom: '12.2006',
@@ -125,6 +131,7 @@ define({
       ],
       references: ''
     }, {
+      id: 7,
       title: 'Senior C#.NET developer',
       type: 'office',
       dateFrom: '04.2008',
@@ -147,6 +154,7 @@ define({
       ],
       references: ''
     }, {
+      id: 8,
       title: 'Senior C#.NET developer',
       type: 'office',
       dateFrom: '08.2010',
@@ -170,6 +178,7 @@ define({
       ],
       references: ''
     }, {
+      id: 9,
       title: 'Cofounder/CEO',
       type: 'remote',
       dateFrom: '09.2009',
@@ -193,6 +202,7 @@ define({
       ],
       references: ''
     }, {
+      id: 10,
       title: 'Senior .NET C#/Installation developer',
       type: 'remote',
       dateFrom: '01.2011',
@@ -216,6 +226,7 @@ define({
       ],
       references: ''
     }, {
+      id: 11,
       title: 'Senior .NET C#/Visual Basic developer/Support engineer',
       type: 'remote',
       dateFrom: '05.2012',
@@ -241,6 +252,7 @@ define({
       ],
       references: ''
     }, {
+      id: 12,
       title: 'Javascript frontend developer',
       type: 'remote',
       dateFrom: '12.2013',
@@ -258,14 +270,16 @@ define({
       ],
       references: ''
     }, {
+      id: 13,
       title: 'MCAD/MCSD',
       type: 'education',
-      dateFrom: '11.2007',
+      dateFrom: '09.2007',
       dateTo: '03.2008',
       location: 'Saint-Petersburg',
       company: 'Eureca',
       website: 'http://www.eureca.ru/'
     }, {
+      id: 14,
       title: 'IELTS',
       type: 'education',
       dateFrom: '08.2009',
@@ -274,6 +288,7 @@ define({
       company: 'BKC',
       website: 'http://www.bkc.ru/'
     }, {
+      id: 15,
       title: 'MCPD Windows Developer 4',
       type: 'education',
       dateFrom: '11.2012',

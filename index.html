@@ -9,7 +9,8 @@
 	</head>
 	<body ng-controller="AppCtrl">
       <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1;">
-        <jobs-flow ng-controller="JobsCtrl" items="items" years="years"></jobs-flow>
+        <jobs-flow ng-controller="JobsCtrl" items="items" years="years" find-jobs-ctrl="findJobs(month, year)">
+        </jobs-flow>
 	  </div>
 
 	  <footer></footer>
