@@ -47,6 +47,10 @@ define(function (require) {
         }
 
         return jobs;
+      },
+
+      findJobById: function(jobId) {
+        return _.where(this.getAll(), { id: jobId })[0];
       }
 
     };

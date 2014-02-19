@@ -1,0 +1,16 @@
+<div ng-cloak ng-show="job !== undefined">
+  <h3>Title: {{ job.title }}</h3>
+  <h3>Location: {{ job.location }}</h3>
+  <h3>Company: <a href="{{ job.website }}"> {{ job.company }} </a></h3>
+  <h3>Type: {{ job.type }}</h3>
+  <h3>From: {{ job.dateFrom }}</h3>
+  <h3>To: {{ job.dateTo }}</h3>
+  <h1 ng-show="job.projects.length > 0"> Projects </h1>
+  <div ng-repeat="project in job.projects">
+    <h1>{{ project.title }}</h1>
+    <div>{{ project.description }}</div>
+    <ul ng-repeat="resp in project.responsibilities">
+        <li>{{ resp }}
+    </ul>
+  </div>
+</div>

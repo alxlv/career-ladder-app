@@ -2,6 +2,7 @@ require.config({
   baseUrl: './static/js/app',
   paths: {
     angular:        '../../../bower_components/angular/angular',
+    uiRouter:       '../../../bower_components/angular-ui-router/release/angular-ui-router',
     jquery:         '../../../bower_components/jquery/jquery',
     text:           '../../../bower_components/requirejs-text/text',
     underscore:     '../../../bower_components/underscore/underscore',
@@ -10,6 +11,7 @@ require.config({
   },
   shim: {
     'angular'          : { deps: ['jquery'], exports : 'angular' },
+    'uiRouter'         : ['angular'],
     'jquery'           : { exports: '$' },
     'underscore'       : { exports: '_' },
     'tweenMax'         : { exports: 'TweenMax' },
@@ -27,6 +29,8 @@ define(function (require) {
   'use strict';
 
   var angular    = require('angular'),
+      routes     = require('routes'),
+      templates  = require('templates'),
       app        = require('app');
 
   var $html = angular.element(document.getElementsByTagName('html')[0]);

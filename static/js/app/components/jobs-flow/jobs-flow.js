@@ -10,14 +10,16 @@ define(function (require) {
 
   return angular.module('jobsFlow', [])
 
-    .directive('jobsFlow', function($timeout) {
+    .directive('jobsFlow', function($rootScope, $timeout) {
 
       return {
         restrict: 'EA',
         scope: {
           items: '=',
           years: '=',
-          findJobsCtrl: '&'
+          findJobsCtrl: '&',
+          onJobPointEnterCtrl: '&',
+          onJobPointLeaveCtrl: '&'
         },
         template: jobsFlowTpl,
 
@@ -25,7 +27,7 @@ define(function (require) {
           var jobPoints = [];
           var zeroDuration = 0;
           var paramsScale1 = { scale: 1, ease: "easeOut", transformOrigin: 'top left' };
-          var paramsScale15 = { scale: 1.5, ease: "easeOut", transformOrigin: 'top left' };
+          var paramsScale15 = { scale: 1.8, ease: "easeOut", transformOrigin: 'top left' };
 
           function scaleJobPoints(job, isScaled) {
             for (var idx = 0; idx < _.size(jobPoints); idx++) {
@@ -45,7 +47,7 @@ define(function (require) {
           scope.getJobColor = function(job, month, year) {
             var from = ("0" + month).slice(-2) + "." + year;
             if (job.dateFrom === from) {
-              return '#07F3FE';
+              return 'green';
             }
 
             return 'red';
@@ -66,10 +68,12 @@ define(function (require) {
 
           scope.onJobPointEnter = function(job) {
             scaleJobPoints(job, true);
+            scope.onJobPointEnterCtrl({ job: job });
           }
 
           scope.onJobPointLeave = function(job) {
             scaleJobPoints(job, false);
+            scope.onJobPointLeaveCtrl({ job: job });
           }
 
           // http://lorenzmerdian.blogspot.ru/2013/03/how-to-handle-dom-updates-in-angularjs.html

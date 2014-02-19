@@ -7127,6 +7127,7 @@ embed[type="image/svg+xml"]:after {
   margin-top: 120px;
   min-height: 540px;
   overflow: hidden;
+  border: 1px black solid;
 }
 .spinner-animation {
   display: inline-block;
@@ -7401,10 +7402,6 @@ embed[type="image/svg+xml"]:after {
   display: none;
   font-family: monospace, serif;
   font-size: 0.8em;
-}
-
-.jobs-flow .job-point-text-active {
-  display: inline;
 }
 
 /*

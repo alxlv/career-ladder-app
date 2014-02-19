@@ -1,7 +1,7 @@
 define(function (require) {
   'use strict';
 
-  return ['$scope', 'jobs', function ($scope, jobs) {
+  return ['$rootScope', '$scope', 'jobs', function ($rootScope, $scope, jobs) {
 
     $scope.items = jobs.getAll();
     $scope.years = jobs.getYears();
@@ -16,6 +16,14 @@ define(function (require) {
       }
 
       return jobs.findJobs(month, year);
-    }
+    };
+
+    $scope.onJobPointEnter = function(job) {
+      $rootScope.$broadcast('jobPointEnter', job);
+    };
+
+    $scope.onJobPointLeave = function(job) {
+      $rootScope.$broadcast('jobPointLeave', job);
+    };
   }];
 });
