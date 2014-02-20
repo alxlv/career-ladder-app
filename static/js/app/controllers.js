@@ -6,5 +6,6 @@ define(function (require) {
   return angular.module('ladderApp.controllers', [])
     .controller('AppCtrl', require('controllers/appCtrl'))
     .controller('JobsCtrl', require('controllers/jobsCtrl'))
-    .controller('SkillsCtrl', require('controllers/skillsCtrl'));
+    .controller('SkillsCtrl', require('controllers/skillsCtrl'))
+    .controller('FiltersCtrl', require('controllers/filtersCtrl'));
 });

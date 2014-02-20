@@ -1,0 +1,32 @@
+<div class="filters-panel">
+  <div class="flex-wrapper">
+   <span class="filters-panel-item-label">Years</span>
+   <span class="filters-panel-item-value">
+     <div range-slider min="years.rangeMin" max="years.rangeMax" model-min="years.min" model-max="years.max" step="1" />
+   </span>
+  </div>
+  <div class="flex-wrapper">
+   <span class="filters-panel-item-label">Positions:</span>
+   <span class="filters-panel-item-value">
+     <label ng-repeat="pos in positions">
+       <input type="checkbox" ng-model="positionChecked" ng-change="onPositionClick(pos)"> {{pos}}
+     </label>
+   </span>
+  </div>
+  <div class="flex-wrapper">
+    <span class="filters-panel-item-label">Types of employment:</span>
+    <span class="filters-panel-item-value">
+      <label ng-repeat="et in employment_types">
+        <input type="checkbox"> {{et}}
+      </label>
+    </span>
+  </div>
+  <div class="flex-wrapper">
+    <span class="filters-panel-item-label">Working types:</span>
+    <span class="filters-panel-item-value">
+      <label ng-repeat="wt in working_types">
+        <input type="checkbox"> {{wt}}
+      </label>
+    </span>
+  </div>
+ </div>

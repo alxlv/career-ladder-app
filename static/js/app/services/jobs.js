@@ -2,10 +2,18 @@ define(function (require) {
   'use strict';
 
   var _             = require('underscore'),
-      jobsMetadata  = require('metadata/jobs-metadata'),
-      booksMetadata = require('metadata/books-metadata');
+      jobsMetadata  = require('metadata/jobs-metadata')
 
   return [function () {
+
+    function _getYear(date) {
+      var dates = date.split('.');
+      if (_.size(dates) > 1) {
+        return dates[1];
+      }
+
+      throw Error("Wrong date format");
+    }
 
     return {
 
@@ -13,46 +21,30 @@ define(function (require) {
         return jobsMetadata.jobs;
       },
 
-      getJobs: function() {
-        // TODO: type - remote/office
-        return jobsMetadata.jobs;
+      getEmploymentTypes: function() {
+        return _.uniq(_.pluck(jobsMetadata.jobs, 'employment_type'));
       },
 
-      getBooks: function() {
-        return booksMetadata.books;
+      getPositions: function() {
+        return _.uniq(_.flatten(_.pluck(jobsMetadata.jobs, 'position')));
       },
 
-      getEducation: function() {
-        // TODO: type - education
-        return jobsMetadata.jobs;
+      getWorkingTypes: function() {
+        return _.filter(_.uniq(_.pluck(jobsMetadata.jobs, 'working_type')), function(t) { return t !== "" });
+      },
+
+      getMinMaxYears: function() {
+        var years = this.getYears();
+        return [years[0], years[_.size(years) - 1]];
       },
 
       getYears: function() {
-        // TODO: get from jobs data
-        var years = [];
-        var currentYear = new Date().getFullYear();
-        for (var idx = 1999; idx <= currentYear; idx++) {
-          years.push(idx);
-        }
+        var datesFrom = _.uniq(_.map(_.pluck(jobsMetadata.jobs, 'dateFrom'), _getYear));
+        var datesTo = _.uniq(_.map(_.pluck(jobsMetadata.jobs, 'dateTo'), _getYear));
 
-        return years;
-      },
-
-      findJobs: function(month, year) {
-        var to = ("0" + month).slice(-2) + "." + year;
-        var from = to;
-        var jobs = _.where(this.getAll(), { dateTo: to });
-        if (_.size(jobs) === 0) {
-          jobs = _.where(this.getAll(), { dateFrom: from });
-        }
-
-        return jobs;
-      },
-
-      findJobById: function(jobId) {
-        return _.where(this.getAll(), { id: jobId })[0];
+        var years = _.sortBy(_.union(datesFrom, datesTo), function(y){ return y; });
+        return _.range(parseInt(years[0]), parseInt(years[_.size(years) - 1]) + 1, 1);
       }
-
     };
 
   }];

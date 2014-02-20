@@ -9,15 +9,14 @@
 	</head>
 	<body ng-controller="AppCtrl">
       <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1;">
-        <jobs-flow ng-controller="JobsCtrl" items="items" years="years" find-jobs-ctrl="findJobs(month, year)" on-job-point-enter-ctrl="onJobPointEnter(job)" on-job-point-leave-ctrl="onJobPointLeave(job)">
-        </jobs-flow>
-        <div ng-controller="SkillsCtrl" class="ui-overlay fade-animation" ng-cloak>
-          <div ng-include="'static/js/app/templates/skillsBoard.html'"></div>
+        <div ng-controller="FiltersCtrl" ng-cloak ng-include="'static/js/app/templates/filtersPanel.html'" class="fade-animation">
+        </div>
+        <jobs-flow ng-controller="JobsCtrl" items="items" years="years" find-jobs-ctrl="findJobs(month, year)" on-job-point-enter-ctrl="onJobPointEnter(job)" on-job-point-leave-ctrl="onJobPointLeave(job)"></jobs-flow>
+        <div ng-controller="SkillsCtrl" ng-include="'static/js/app/templates/skillsBoard.html'" class="ui-overlay fade-animation" ng-cloak>
         </div>
 	  </div>
 
 	  <footer>
-
 	  </footer>
 
    	  <script data-main="static/js/app/main" src="bower_components/requirejs/require.js"></script>

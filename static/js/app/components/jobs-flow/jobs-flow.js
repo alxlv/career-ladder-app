@@ -24,12 +24,12 @@ define(function (require) {
         template: jobsFlowTpl,
 
         link: function(scope, el, attrs) {
-          var jobPoints = [];
           var zeroDuration = 0;
           var paramsScale1 = { scale: 1, ease: "easeOut", transformOrigin: 'top left' };
           var paramsScale15 = { scale: 1.8, ease: "easeOut", transformOrigin: 'top left' };
 
           function scaleJobPoints(job, isScaled) {
+            var jobPoints = el.find('job-point').children().find('g');
             for (var idx = 0; idx < _.size(jobPoints); idx++) {
               if (job.id.toString() === $(jobPoints[idx]).attr('id')) {
                 var jobPoint = $(jobPoints[idx]);
@@ -76,22 +76,7 @@ define(function (require) {
             scope.onJobPointLeaveCtrl({ job: job });
           }
 
-          // http://lorenzmerdian.blogspot.ru/2013/03/how-to-handle-dom-updates-in-angularjs.html
-          var initTimeout = $timeout(function () {
-            $timeout(function () {
-              // This code will run after
-              // templateUrl has been loaded, cloned
-              // and transformed by directives.
-              // and properly rendered by the browser
-              jobPoints = el.find('job-point').children().find('g');
-              //console.log(jobPoints);
-            }, 0);
-          }, 0);
-
           scope.$on('$destroy', function () {
-            if (initTimeout) {
-              $timeout.cancel(initTimeout);
-            }
           });
         }
       };

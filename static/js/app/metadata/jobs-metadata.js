@@ -2,8 +2,9 @@ define({
   jobs: [
     {
       id: 1,
-      title: 'Student',
-      type: 'education',
+      position: ['Student'],
+      employment_type: 'education',
+      working_type: 'university',
       dateFrom: '09.1999',
       dateTo: '02.2005',
       location: 'Pskov',
@@ -12,8 +13,9 @@ define({
       projects: []
     }, {
       id: 2,
-      title: 'Cofounder/System adminitrator (200+ users)',
-      type: 'office',
+      position: ['Cofounder', 'System administrator'],
+      employment_type: 'regular full-time',
+      working_type: 'office',
       dateFrom: '09.2003',
       dateTo: '02.2005',
       location: 'Pskov',
@@ -21,8 +23,9 @@ define({
       projects: []
     }, {
       id: 3,
-      title: 'C++/Embedding developer',
-      type: 'office',
+      position: ['C++ developer', 'Embedding developer'],
+      employment_type: 'regular full-time',
+      working_type: 'office',
       dateFrom: '05.2004',
       dateTo: '05.2005',
       location: 'Pskov',
@@ -57,8 +60,9 @@ define({
       references: ''
     }, {
       id: 4,
-      title: 'Java developer',
-      type: 'office',
+      position: ['Java developer'],
+      employment_type: 'regular full-time',
+      working_type: 'office',
       dateFrom: '06.2005',
       dateTo: '10.2005',
       location: 'Saint-Petersburg',
@@ -74,8 +78,9 @@ define({
       references: ''
     }, {
       id: 5,
-      title: 'C#.NET/C++ developer',
-      type: 'office',
+      position: ['C#.NET developer', 'C++ developer'],
+      employment_type: 'regular full-time',
+      working_type: 'office',
       dateFrom: '11.2005',
       dateTo: '11.2006',
       location: 'Saint-Petersburg',
@@ -110,8 +115,9 @@ define({
       references: ''
     }, {
       id: 6,
-      title: 'C#.NET developer',
-      type: 'office',
+      position: ['C#.NET developer'],
+      employment_type: 'regular full-time',
+      working_type: 'office',
       dateFrom: '12.2006',
       dateTo: '03.2008',
       location: 'Saint-Petersburg',
@@ -143,8 +149,9 @@ define({
       references: ''
     }, {
       id: 7,
-      title: 'Senior C#.NET developer',
-      type: 'office',
+      position: ['Senior C#.NET developer'],
+      employment_type: 'regular full-time',
+      working_type: 'office',
       dateFrom: '04.2008',
       dateTo: '09.2009',
       location: 'Saint-Petersburg',
@@ -167,8 +174,9 @@ define({
       references: ''
     }, {
       id: 8,
-      title: 'Senior C#.NET developer',
-      type: 'office',
+      position: ['Senior C#.NET developer'],
+      employment_type: 'regular full-time',
+      working_type: 'office',
       dateFrom: '08.2010',
       dateTo: '05.2011',
       location: 'Saint-Petersburg',
@@ -191,8 +199,9 @@ define({
       references: ''
     }, {
       id: 9,
-      title: 'Cofounder/CEO',
-      type: 'remote',
+      position: ['Cofounder', 'Technical leader'],
+      employment_type: 'regular part-time',
+      working_type: 'remote',
       dateFrom: '10.2009',
       dateTo: '11.2011',
       location: 'Saint-Petersburg',
@@ -215,10 +224,11 @@ define({
       references: ''
     }, {
       id: 10,
-      title: 'Senior .NET C#/Installation developer',
-      type: 'remote',
+      position: ['Senior C#.NET developer', 'Installation developer'],
+      employment_type: 'regular part-time',
+      working_type: 'remote',
       dateFrom: '01.2011',
-      dateTo: '05.2012',
+      dateTo: '04.2012',
       location: 'Saint-Petersburg',
       company: 'Perfect Vision Soft',
       website: 'http://vk.com/id153862424/',
@@ -241,8 +251,9 @@ define({
       references: ''
     }, {
       id: 11,
-      title: 'Senior .NET C#/Visual Basic developer/Support engineer',
-      type: 'remote',
+      position: ['Senior C#.NET developer', 'Visual Basic.NET developer', 'Support engineer'],
+      employment_type: 'regular full-time',
+      working_type: 'remote',
       dateFrom: '05.2012',
       dateTo: '12.2013',
       location: 'Saint-Petersburg',
@@ -267,8 +278,9 @@ define({
       references: ''
     }, {
       id: 12,
-      title: 'Javascript frontend developer',
-      type: 'remote',
+      position: ['Javascript frontend developer'],
+      employment_type: 'regular full-time',
+      working_type: 'remote',
       dateFrom: '12.2013',
       dateTo: '02.2014',
       location: 'Saint-Petersburg',
@@ -285,8 +297,9 @@ define({
       references: ''
     }, {
       id: 13,
-      title: 'MCAD/MCSD',
-      type: 'education',
+      position: ['MCAD/MCSD'],
+      employment_type: 'certification',
+      working_type: '',
       dateFrom: '09.2007',
       dateTo: '03.2008',
       location: 'Saint-Petersburg',
@@ -295,8 +308,9 @@ define({
       projects: []
     }, {
       id: 14,
-      title: 'IELTS',
-      type: 'education',
+      position: ['IELTS'],
+      employment_type: 'certification',
+      working_type: '',
       dateFrom: '08.2009',
       dateTo: '08.2009',
       location: 'Moscow',
@@ -305,8 +319,9 @@ define({
       projects: []
     }, {
       id: 15,
-      title: 'MCPD Windows Developer 4',
-      type: 'education',
+      position: ['MCPD Windows Developer 4'],
+      employment_type: 'certification',
+      working_type: '',
       dateFrom: '11.2012',
       dateTo: '03.2013',
       location: 'Saint-Petersburg',
