@@ -21,6 +21,29 @@ define(function (require) {
         return jobsMetadata.jobs;
       },
 
+      getTags: function() {
+        var tags = _.flatten(_.pluck(_.flatten(_.pluck(jobsMetadata.jobs, 'projects')), 'tags'));
+        var langs = _.countBy(_.flatten((_.pluck(tags, 'languages'))), function(lang) { return lang; });
+        langs = _.map(langs, function(value, key) {
+          if (value < 3) {
+            value += 8;
+          }else {
+            value += 10;
+          }
+          return { 'text': key, 'weight': value }
+        });
+        var stacks = _.countBy(_.flatten((_.pluck(tags, 'stack')), function(stack) { return stack; }));
+        stacks = _.map(stacks, function(value, key) {
+          if (value < 3) {
+            value += 8;
+          }else {
+            value += 10;
+          }
+          return { 'text': key, 'weight': value }
+        });
+        return _.union(stacks, langs);
+      },
+
       getEmploymentTypes: function() {
         return _.uniq(_.pluck(jobsMetadata.jobs, 'employment_type'));
       },

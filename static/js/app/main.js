@@ -8,7 +8,8 @@ require.config({
     text:           '../../../bower_components/requirejs-text/text',
     underscore:     '../../../bower_components/underscore/underscore',
     timelineMax:    '../../../bower_components/greensock/src/uncompressed/TimelineMax',
-    tweenMax:       '../../../bower_components/greensock/src/uncompressed/TweenMax'
+    tweenMax:       '../../../bower_components/greensock/src/uncompressed/TweenMax',
+    cloudCanvas:    '../jquery.tagcanvas'
   },
   shim: {
     'angular'          : { deps: ['jquery'], exports : 'angular' },
@@ -17,10 +18,8 @@ require.config({
     'jquery'           : { exports: '$' },
     'underscore'       : { exports: '_' },
     'tweenMax'         : { exports: 'TweenMax' },
-    'timelineMax'      : {
-      deps: ['tweenMax'],
-      exports: 'TimelineMax'
-    }
+    'timelineMax'      : { deps: ['tweenMax'], exports: 'TimelineMax' },
+     cloudCanvas       : ['jquery']
   }
 });
 
@@ -34,6 +33,8 @@ define(function (require) {
       routes     = require('routes'),
       templates  = require('templates'),
       app        = require('app');
+
+  require('cloudCanvas');
 
   var $html = angular.element(document.getElementsByTagName('html')[0]);
 

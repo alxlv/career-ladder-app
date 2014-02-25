@@ -7,5 +7,6 @@ define(function (require) {
     .controller('AppCtrl', require('controllers/appCtrl'))
     .controller('JobsCtrl', require('controllers/jobsCtrl'))
     .controller('SkillsCtrl', require('controllers/skillsCtrl'))
-    .controller('FiltersCtrl', require('controllers/filtersCtrl'));
+    .controller('FiltersCtrl', require('controllers/filtersCtrl'))
+    .controller('TagsCtrl', require('controllers/tagsCtrl'));
 });

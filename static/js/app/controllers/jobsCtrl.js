@@ -3,6 +3,9 @@ define(function (require) {
 
   return ['$rootScope', '$scope', 'jobs', function ($rootScope, $scope, jobs) {
     var positionsFilterStates = undefined;
+    var employmentTypesFilterStates = undefined;
+    var workingTypesFilterStates = undefined;
+    var datesFilterStates = undefined;
 
     $scope.items = jobs.getAll();
     $scope.years = jobs.getYears();
@@ -27,6 +30,36 @@ define(function (require) {
     }
 
     function _filterJobs(jobs) {
+      jobs = _filterDates(jobs);
+      jobs = _filterPositions(jobs);
+      jobs = _filterEmploymentTypes(jobs);
+      jobs = _filterWorkingTypes(jobs);
+
+      return jobs;
+    }
+
+    function _filterDates(jobs) {
+      if (typeof datesFilterStates === 'undefined') {
+        return jobs;
+      }
+
+      // TODO: use _
+      var result = [];
+      var dateMin = datesFilterStates.value[0];
+      var dateMax = datesFilterStates.value[1];
+      for (var idx = 0; idx < _.size(jobs); idx++) {
+        var dateFrom = jobs[idx].dateFrom.split('.')[1];
+        var dateTo = jobs[idx].dateTo.split('.')[1];
+
+        if (dateFrom >= dateMin && dateTo <= dateMax) {
+          result.push(jobs[idx]);
+        }
+      }
+
+      return result;
+    }
+
+    function _filterPositions(jobs) {
       if (typeof positionsFilterStates === 'undefined') {
         return jobs;
       }
@@ -50,13 +83,57 @@ define(function (require) {
       return result;
     }
 
+    function _filterEmploymentTypes(jobs) {
+      if (typeof employmentTypesFilterStates === 'undefined') {
+        return jobs;
+      }
+
+      // TODO: use _
+      var result = [];
+      for (var idx = 0; idx < _.size(jobs); idx++) {
+        if (employmentTypesFilterStates.value[jobs[idx].employment_type] !== false) {
+          result.push(jobs[idx]);
+        }
+      }
+
+      return result;
+    }
+
+    function _filterWorkingTypes(jobs) {
+      if (typeof workingTypesFilterStates === 'undefined') {
+        return jobs;
+      }
+
+      // TODO: use _
+      var result = [];
+      for (var idx = 0; idx < _.size(jobs); idx++) {
+        if (workingTypesFilterStates.value[jobs[idx].working_type] !== false) {
+          result.push(jobs[idx]);
+        }
+      }
+
+      return result;
+    }
+
     $scope.findJobs = function(month, year) {
       var jobs = _findJobs(month, year);
       return _filterJobs(jobs);
     };
 
-    $scope.$on('filterChanged', function(event, data) {
+    var onDatesFilterChangedHandler = $scope.$on('datesFilterChanged', function(event, data) {
+      datesFilterStates = data;
+    });
+
+    var onPositionsFilterChangedHandler = $scope.$on('positionsFilterChanged', function(event, data) {
       positionsFilterStates = data;
+    });
+
+    var onEmploymentTypesFilterChangedHandler = $scope.$on('employmentTypesFilterChanged', function(event, data) {
+      employmentTypesFilterStates = data;
+    });
+
+    var onWorkingTypesFilterChangedHandler = $scope.$on('workingTypesFilterChanged', function(event, data) {
+      workingTypesFilterStates = data;
     });
 
     $scope.onJobPointEnter = function(job) {
@@ -66,5 +143,12 @@ define(function (require) {
     $scope.onJobPointLeave = function(job) {
       $rootScope.$broadcast('jobPointLeave', job);
     };
+
+    $scope.$on('$destroy', function () {
+      onDatesFilterChangedHandler();
+      onPositionsFilterChangedHandler();
+      onEmploymentTypesFilterChangedHandler();
+      onWorkingTypesFilterChangedHandler();
+    });
   }];
 });

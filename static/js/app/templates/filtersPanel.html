@@ -17,7 +17,7 @@
     <span class="filters-panel-item-label">Types of employment:</span>
     <span class="filters-panel-item-value">
       <label ng-repeat="et in employment_types">
-        <input type="checkbox"> {{et}}
+        <input type="checkbox" ng-model="employmentTypeChecked" ng-change="onEmploymentTypeClick(et)"> {{et}}
       </label>
     </span>
   </div>
@@ -25,7 +25,7 @@
     <span class="filters-panel-item-label">Working types:</span>
     <span class="filters-panel-item-value">
       <label ng-repeat="wt in working_types">
-        <input type="checkbox"> {{wt}}
+        <input type="checkbox" ng-model="workingTypeChecked" ng-change="onWorkingTypeClick(wt)"> {{wt}}
       </label>
     </span>
   </div>
