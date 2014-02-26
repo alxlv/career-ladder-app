@@ -10,7 +10,7 @@ define(function (require) {
 
   return angular.module('jobsFlow', [])
 
-    .directive('jobsFlow', function($rootScope, $timeout) {
+    .directive('jobsFlow', function() {
 
       return {
         restrict: 'EA',

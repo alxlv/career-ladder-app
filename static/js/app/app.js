@@ -9,6 +9,7 @@ define(function (require) {
   require('components/jobs-flow/jobs-flow');
   require('components/job-point/job-point');
   require('components/tags-cloud/tags-cloud');
+  require('components/sliding-panel/sliding-panel');
 
   return angular.module('ladderApp', [
     'ui-rangeSlider',
@@ -17,6 +18,7 @@ define(function (require) {
     'ladderApp.services',
     'jobsFlow',
     'jobPoint',
-    'tagsCloud'
+    'tagsCloud',
+    'slidingPanel'
   ]);
 });
