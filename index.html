@@ -8,12 +8,16 @@
 		<link rel="stylesheet" type="text/css" media="all" href="static/css/app.css" />
 	</head>
 	<body ng-controller="AppCtrl">
-      <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1;">
-        <div ng-controller="FiltersCtrl" ng-cloak ng-include="'static/js/app/templates/filtersPanel.html'" class="fade-animation">
-        </div>
-        <tags-cloud ng-controller="TagsCtrl" items="items"></tags-cloud>
-        <jobs-flow ng-controller="JobsCtrl" items="items" years="years" find-jobs-ctrl="findJobs(month, year)" on-job-point-enter-ctrl="onJobPointEnter(job)" on-job-point-leave-ctrl="onJobPointLeave(job)"></jobs-flow>
-        <div ng-controller="SkillsCtrl" ng-include="'static/js/app/templates/skillsBoard.html'" class="ui-overlay fade-animation" ng-cloak>
+      <div class="main-view">
+        <div class="flex-wrapper">
+          <div ng-controller="FiltersCtrl" class="filters-panel-container" ng-cloak ng-include="'static/js/app/templates/filtersPanel.html'">
+          </div>
+          <tags-cloud ng-controller="TagsCtrl" class="tags-cloud-container" items="items">
+          </tags-cloud>
+          <jobs-flow ng-controller="JobsCtrl" class="jobs-flow-container" items="items" years="years" find-jobs-ctrl="findJobs(month, year)" on-job-point-enter-ctrl="onJobPointEnter(job)" on-job-point-leave-ctrl="onJobPointLeave(job)">
+          </jobs-flow>
+          <div ng-controller="SkillsCtrl" class="skills-container" ng-include="'static/js/app/templates/skillsBoard.html'" ng-cloak>
+          </div>
         </div>
 	  </div>
 

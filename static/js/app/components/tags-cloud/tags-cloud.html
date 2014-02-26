@@ -1,9 +1,7 @@
 <!-- 3D -->
-<div id="tags-cloud-container" class="tags-cloud-container" style="margin-left: 10px;">
-  <canvas width="300" height="300" id="tags-cloud-canvas" class="tags-cloud-canvas">
-    <p>Anything in here will be replaced on browsers that support the canvas element</p>
-  </canvas>
-</div>
+<canvas id="tags-cloud-canvas" class="tags-cloud-canvas">
+  <p>Anything in here will be replaced on browsers that support the canvas element</p>
+</canvas>
 <div id="tags" ng-show="false">
   <ul>
     <li ng-repeat="item in items"><a data-weight="{{ item.weight }}">{{ item.text }}</a></li>

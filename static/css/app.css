@@ -7124,9 +7124,9 @@ embed[type="image/svg+xml"]:after {
   position: absolute;
   left: 0;
   right: 0;
-  margin-top: 120px;
+  margin-top: 10px;
   min-height: 540px;
-  overflow: hidden;
+  overflow: scroll;
   border: 1px black solid;
 }
 .spinner-animation {
@@ -7669,104 +7669,152 @@ body.TOUCH {
     -ms-touch-action: none;
 }
 
-.jobs-flow img {
-  float: left;
-  height: 48px;
-  border: 0px black solid;
-}
-
-.jobs-flow img.mark-year {
-  width: 10px;
-}
-
-.jobs-flow img.tube-part {
-  width: 5px;
-}
-
-.jobs-flow div.clear-fix {
-  clear: left;
-}
-
-.jobs-flow .job-point {
-  position: fixed;
-  -webkit-transition: all .2s ease-in-out;
-}
-
-.jobs-flow .job-point-text-leave {
-  display: none;
-  font-family: monospace, serif;
-  font-size: 0.8em;
-}
-
-.filters-panel {
+div.main-view {
   padding: 0;
   margin: 0;
-  border: 1px solid black;
+  position: absolute;
   width: 1000px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border: 1px solid black;
 }
 
-.filters-panel .flex-wrapper {
+div.main-view .flex-wrapper {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 
-  -webkit-flex-flow: row nowrap;
+  -webkit-flex-flow: row wrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
 }
 
-.filters-panel .filters-panel-item-label {
-  background: tomato;
-  padding: 5px;
-  width: 20%;
-  height: 40px;
-
-  color: white;
-  font-size: 1em;
+.filters-panel-container {
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 300px;
   border: 1px solid black;
 }
 
-.filters-panel .filters-panel-item-value {
-  background: tomato;
-  padding: 10px;
-  width: 80%;
-  height: 50px;
+.filters-panel-container .flex-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
 
-  color: white;
-  font-size: 1em;
-  text-align: center;
-  border: 1px solid black;
+    -webkit-flex-flow: row nowrap !important;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.filters-panel-item-label {
+    background: tomato;
+    padding: 5px;
+    width: 20%;
+    height: 40px;
+
+    color: white;
+    font-size: 1em;
+    border: 1px solid black;
+}
+
+.filters-panel-item-value {
+    background: tomato;
+    padding: 10px;
+    width: 80%;
+    height: 50px;
+
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    border: 1px solid black;
 }
 
 .tags-cloud-container {
-
+  padding: 0;
+  margin: 0;
+  width: 39%;
+  border: 1px solid red;
 }
 
 .tags-cloud-container .tags-cloud-canvas {
+  width: 100%;
+  height: 200px;
   border: 1px solid black;
 }
 
+.jobs-flow-container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.jobs-flow-container img {
+  float: left;
+  height: 48px;
+  border: 0px black solid;
+}
+
+.jobs-flow-container img.mark-year {
+  width: 10px;
+}
+
+.jobs-flow-container img.tube-part {
+  width: 5px;
+}
+
+.jobs-flow-container div.clear-fix {
+  clear: left;
+}
+
+.jobs-flow-container .job-point {
+  position: fixed;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.jobs-flow-container .job-point-text-leave {
+  display: none;
+  font-family: monospace, serif;
+  font-size: 0.8em;
+}
+
 .tags-cloud-container .centred {
-    margin: auto;
-    overflow: auto;
+  margin: auto;
+  overflow: auto;
 }
 
 .tags-cloud-container ul.weighted {
-    float: left;
-    display: block;
-    width: 280px;
-    overflow: auto;
-    padding: 20px;
-    margin: 0 10px 20px 0;
-    background-color: #fff;
-    border: 4px solid #aaa;
-    border-radius: 20px;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
+  float: left;
+  display: block;
+  width: 280px;
+  overflow: auto;
+  padding: 20px;
+  margin: 0 10px 20px 0;
+  background-color: #fff;
+  border: 4px solid #aaa;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
 }
 
 ul.weighted li {
-    display: inline;
+  display: inline;
+}
+
+.skills-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
