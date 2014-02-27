@@ -21,8 +21,8 @@ define(function (require) {
         return jobsMetadata.jobs;
       },
 
-      getTags: function() {
-        var tags = _.flatten(_.pluck(_.flatten(_.pluck(jobsMetadata.jobs, 'projects')), 'tags'));
+      getTagsForJobs: function(jobs) {
+        var tags = _.flatten(_.pluck(_.flatten(_.pluck(jobs, 'projects')), 'tags'));
         var langs = _.countBy(_.flatten((_.pluck(tags, 'languages'))), function(lang) { return lang; });
         langs = _.map(langs, function(value, key) {
           if (value < 3) {
@@ -42,6 +42,10 @@ define(function (require) {
           return { 'text': key, 'weight': value }
         });
         return _.union(stacks, langs);
+      },
+
+      getAllTags: function() {
+        return this.getTagsForJobs(jobsMetadata.jobs);
       },
 
       getEmploymentTypes: function() {

@@ -41,7 +41,7 @@ define(function (require) {
 
 
           scope.$on('$destroy', function () {
-            initTimeout();
+            $timeout.cancel(initTimeout);
           });
         }
       };
