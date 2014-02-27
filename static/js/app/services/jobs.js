@@ -70,7 +70,7 @@ define(function (require) {
         var datesTo = _.uniq(_.map(_.pluck(jobsMetadata.jobs, 'dateTo'), _getYear));
 
         var years = _.sortBy(_.union(datesFrom, datesTo), function(y){ return y; });
-        return _.range(parseInt(years[0]), parseInt(years[_.size(years) - 1]) + 1, 1);
+        return _.range(parseInt(years[0]), parseInt(years[_.size(years) - 1]) + 2, 1);
       }
     };
 
