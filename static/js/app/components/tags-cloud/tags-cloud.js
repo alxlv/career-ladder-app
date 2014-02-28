@@ -22,14 +22,14 @@ define(function (require) {
 
           function _init() {
             if (!$('#tags-cloud-canvas').tagcanvas({
-              textColour: '#00f',
+              textColour: '#2f96b4',
               //dragControl: true,
               //freezeActive: true,
-              shape: 'vcylinder',
+              //shape: 'hcylinder',
               hideTags: false,
               interval: 20,
-              outlineColour: '#f96',
-              outlineThickness: 5,
+              outlineColour: '#5bc0de',
+              outlineThickness: 1,
               reverse: true,
               depth: 0.8,
               minBrightness: 0.1,

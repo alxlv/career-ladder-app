@@ -1,18 +1,45 @@
-<div ng-show="job !== undefined">
-  <h3>Position:
-      <span ng-repeat="pos in job.position"> {{ pos }}</span>
-  </h3>
-  <h3>Location: {{ job.location }}</h3>
-  <h3>Company: <a href="{{ job.website }}"> {{ job.company }} </a></h3>
-  <h3>Type: {{ job.employment_type }}</h3>
-  <h3>From: {{ job.dateFrom }}</h3>
-  <h3>To: {{ job.dateTo }}</h3>
-  <h1 ng-show="job.projects.length > 0"> Projects </h1>
-  <div ng-repeat="project in job.projects">
-    <h1>{{ project.title }}</h1>
-    <div>{{ project.description }}</div>
-    <ul ng-repeat="resp in project.responsibilities">
-        <li>{{ resp }}
-    </ul>
+<div ng-show="job !== undefined" class="main-flex-wrapper">
+  <div class="left-column-wrapper">
+    <h1>General</h1>
+      <div class="skills-board-item-container">
+        <span class="skills-board-item-label">Position:</span>
+        <span class="skills-board-item-value">
+          <span class="position" ng-repeat="pos in job.position">{{ pos }}</span>
+        </span>
+      </div>
+      <div class="skills-board-item-container">
+        <span class="skills-board-item-label">Location:</span>
+        <span class="skills-board-item-value">
+          {{ job.location }}
+        </span>
+      </div>
+      <div class="skills-board-item-container">
+        <span class="skills-board-item-label">Company:</span>
+        <span class="skills-board-item-value">
+          <a href="{{ job.website }}"> {{ job.company }} </a>
+        </span>
+      </div>
+      <div class="skills-board-item-container">
+        <span class="skills-board-item-label">Type:</span>
+        <span class="skills-board-item-value">
+          {{ job.employment_type }}
+        </span>
+      </div>
+      <div class="skills-board-item-container">
+        <span class="skills-board-item-label">Dates:</span>
+        <span class="skills-board-item-value">
+          From {{ job.dateFrom }} to {{ job.dateTo }}
+        </span>
+      </div>
   </div>
+  <div class="right-column-wrapper" ng-show="job.projects.length > 0">
+    <h1>Projects</h1>
+    <div class="project" ng-repeat="project in job.projects">
+      <h2>{{ project.title }}</h2>
+      <div>{{ project.description }}</div>
+      <ul ng-repeat="resp in project.responsibilities">
+        <li>{{ resp }}
+      </ul>
+    </div>
+   </div>
 </div>

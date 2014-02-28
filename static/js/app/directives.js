@@ -15,6 +15,7 @@ define(function (require) {
           attrs.$observe('exXlinkHref', function (value) {
             if (!value) return;
             attrs.$set("xlink:href", value);
+            attrs.$set("src", value);
           });
         }
       };

@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" media="all" href="static/css/app.css" />
 	</head>
 	<body ng-controller="AppCtrl">
-      <sliding-panel ng-controller="SlidingCtrl" data="data" header-data="headerData">
+      <sliding-panel ng-controller="SlidingCtrl" data="data" header-data="headerData" ng-cloak>
       </sliding-panel>
 
       <div class="main-view">
@@ -16,11 +16,11 @@
           <div class="left-column-wrapper">
             <div ng-controller="FiltersCtrl" class="filters-panel-container" ng-cloak ng-include="'static/js/app/templates/filtersPanel.html'">
             </div>
-            <tags-cloud ng-controller="TagsCtrl" class="tags-cloud-container" items="items">
+            <tags-cloud ng-controller="TagsCtrl" class="tags-cloud-container" ng-cloak items="items">
             </tags-cloud>
-            <jobs-flow ng-controller="JobsCtrl" class="jobs-flow-container" items="items" years="years" find-jobs-ctrl="findJobs(month, year)" on-job-point-enter-ctrl="onJobPointEnter(job)" on-job-point-leave-ctrl="onJobPointLeave(job)">
+            <jobs-flow ng-controller="JobsCtrl" class="jobs-flow-container" ng-cloak items="items" years="years" find-jobs-ctrl="findJobs(month, year)" on-job-point-enter-ctrl="onJobPointEnter(job)" on-job-point-leave-ctrl="onJobPointLeave(job)">
             </jobs-flow>
-            <div ng-controller="SkillsCtrl" class="skills-container" ng-include="'static/js/app/templates/skillsBoard.html'" ng-cloak>
+            <div ng-controller="SkillsCtrl" class="skills-board-container" ng-cloak ng-include="'static/js/app/templates/skillsBoard.html'">
             </div>
           </div>
           <div class="right-column-wrapper" ng-controller="ResumesCtrl" ng-include="'static/js/app/templates/resumesPanel.html'" ng-cloak>

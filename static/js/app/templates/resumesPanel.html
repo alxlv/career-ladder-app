@@ -1,3 +1,4 @@
-<ul>
-  <li ng-repeat="resume in resumes"><a href="{{ resume.link }}">{{ resume.text }}</a></li>
-</ul>
+<div class="header">Curriculum vitae</div>
+<div class="item" ng-repeat="resume in resumes">
+  <a href="{{ resume.link }}"><img src="" ex-xlink-href="{{ resume.image_src }}"/></a>
+</div>
