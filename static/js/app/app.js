@@ -4,6 +4,7 @@ define(function (require) {
   var angular = require('angular');
   require('rangeSlider');
   require('uiRouter');
+  require('directives');
   require('controllers');
   require('services');
   require('components/jobs-flow/jobs-flow');
@@ -14,6 +15,7 @@ define(function (require) {
   return angular.module('ladderApp', [
     'ui-rangeSlider',
     'ui.router',
+    'ladderApp.directives',
     'ladderApp.controllers',
     'ladderApp.services',
     'jobsFlow',

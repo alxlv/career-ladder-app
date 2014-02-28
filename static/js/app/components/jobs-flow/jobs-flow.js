@@ -44,6 +44,14 @@ define(function (require) {
             return scope.findJobsCtrl({ month: month, year: year });
           }
 
+          scope.getEmploymentType = function(job) {
+            if (job.employment_type === 'certification' || job.employment_type === 'education' || job.employment_type === 'startup') {
+              return 'media/' + job.employment_type + '.png';
+            }
+
+            return 'media/work.png';
+          }
+
           scope.getJobColor = function(job, month, year) {
             var from = ("0" + month).slice(-2) + "." + year;
             if (job.dateFrom === from) {

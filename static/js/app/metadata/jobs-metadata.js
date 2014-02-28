@@ -200,7 +200,7 @@ define({
     }, {
       id: 9,
       position: ['Cofounder', 'Technical leader'],
-      employment_type: 'regular part-time',
+      employment_type: 'startup',
       working_type: 'remote',
       dateFrom: '10.2009',
       dateTo: '11.2011',

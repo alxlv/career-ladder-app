@@ -13,6 +13,7 @@ define(function (require) {
         scope: {
           color: '=',
           dateLabel: '=',
+          type: '=',
           id: '='
         },
         template: jobPointTpl,
