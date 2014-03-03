@@ -18,7 +18,7 @@
             </div>
             <tags-cloud ng-controller="TagsCtrl" class="tags-cloud-container" ng-cloak items="items">
             </tags-cloud>
-            <jobs-flow ng-controller="JobsCtrl" class="jobs-flow-container" ng-cloak items="items" years="years" find-jobs-ctrl="findJobs(month, year)" on-job-point-enter-ctrl="onJobPointEnter(job)" on-job-point-leave-ctrl="onJobPointLeave(job)">
+            <jobs-flow ng-controller="JobsCtrl" class="jobs-flow-container" ng-cloak items="items" years="years" find-jobs-ctrl="findJobs(month, year)" on-job-point-enter-ctrl="onJobPointEnter(job)" on-job-point-leave-ctrl="onJobPointLeave(job)" on-job-point-click-ctrl="onJobPointClick(clicked)">
             </jobs-flow>
             <div ng-controller="SkillsCtrl" class="skills-board-container" ng-cloak ng-include="'static/js/app/templates/skillsBoard.html'">
             </div>

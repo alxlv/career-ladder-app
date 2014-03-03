@@ -30,6 +30,10 @@ define(function (require) {
       return $scope.filterJobs(jobs);
     };
 
+    $scope.onJobPointClick = function(clicked) {
+      this.$parent.frozen = clicked;
+    };
+
     $scope.onJobPointEnter = function(job) {
       $rootScope.$broadcast('jobPointEnter', job);
     };

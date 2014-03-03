@@ -19,14 +19,17 @@ define(function (require) {
           years: '=',
           findJobsCtrl: '&',
           onJobPointEnterCtrl: '&',
-          onJobPointLeaveCtrl: '&'
+          onJobPointLeaveCtrl: '&',
+          onJobPointClickCtrl: '&'
         },
         template: jobsFlowTpl,
 
         link: function(scope, el, attrs) {
           var zeroDuration = 0;
+          var lastClickedJob;
           var paramsScale1 = { scale: 1, ease: "easeOut", transformOrigin: 'top left' };
           var paramsScale15 = { scale: 1.8, ease: "easeOut", transformOrigin: 'top left' };
+          var isClicked = false;
 
           function scaleJobPoints(job, isScaled) {
             var jobPoints = el.find('job-point').children().find('g');
@@ -34,8 +37,9 @@ define(function (require) {
               if (job.id.toString() === $(jobPoints[idx]).attr('id')) {
                 var jobPoint = $(jobPoints[idx]);
                 TweenMax.to(jobPoint, 0.2, isScaled ? paramsScale15 : paramsScale1);
+                TweenMax.to(jobPoint, zeroDuration, {css:{ cursor: isScaled ? 'pointer' : 'arrow' }});
                 var text = jobPoint.children('text')[0];
-                TweenMax.to(text, zeroDuration, {css:{ display: isScaled ? 'inline' : 'none' }});
+                TweenMax.to(text, zeroDuration, {css:{ display: isScaled ? 'inline' : 'none', cursor: isScaled ? 'pointer' : 'arrow' }});
               }
             }
           }
@@ -71,15 +75,26 @@ define(function (require) {
           }
 
           scope.onJobPointClick = function(job) {
-            //console.log(job);
+            if (!isClicked) {
+              lastClickedJob = job;
+            } else {
+              if (typeof lastClickedJob !== 'undefined') {
+                scaleJobPoints(lastClickedJob, false);
+              }
+            }
+
+            isClicked = !isClicked;
+            scope.onJobPointClickCtrl({ clicked: isClicked });
           }
 
           scope.onJobPointEnter = function(job) {
+            if (isClicked) return;
             scaleJobPoints(job, true);
             scope.onJobPointEnterCtrl({ job: job });
           }
 
           scope.onJobPointLeave = function(job) {
+            if (isClicked) return;
             scaleJobPoints(job, false);
             scope.onJobPointLeaveCtrl({ job: job });
           }

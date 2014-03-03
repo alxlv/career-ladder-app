@@ -7,6 +7,8 @@ define(function (require) {
     $scope.workingTypesFilterStates = undefined;
     $scope.datesFilterStates = undefined;
 
+    $scope.frozen = false;
+
     var onDatesFilterChangedHandler = $scope.$on('datesFilterChanged', function(event, data) {
       $scope.datesFilterStates = data;
     });

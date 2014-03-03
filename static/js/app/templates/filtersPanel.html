@@ -2,34 +2,39 @@
   <div class="flex-wrapper">
    <span class="filters-panel-item-label">Years:</span>
    <span class="filters-panel-item-value">
-     <div range-slider min="years.rangeMin" max="years.rangeMax" model-min="years.min" model-max="years.max" step="1" />
+     <div disabled="frozen" range-slider min="years.rangeMin" max="years.rangeMax" model-min="years.min" model-max="years.max" step="1" />
    </span>
   </div>
   <div class="flex-wrapper">
    <span class="filters-panel-item-label">Positions:</span>
-   <span class="filters-panel-item-value filters-panel-item-value-checkbox">
+   <span id="positions" class="filters-panel-item-value filters-panel-item-value-checkbox" ng-mouseenter="onValueBoxMouseEnter($event)" ng-mouseleave="onValueBoxMouseLeave($event)">
      <div ng-repeat="pos in positions">
-       <input type="checkbox" ng-model="positionChecked" ng-change="onPositionClick(pos)"/>
+       <input ng-disabled="frozen" type="checkbox" ng-model="positionsStates[pos]" ng-change="onPositionClick()"/>
        <label> {{ pos }}</label>
      </div>
    </span>
   </div>
   <div class="flex-wrapper">
     <span class="filters-panel-item-label">Types of employment:</span>
-    <span class="filters-panel-item-value filters-panel-item-value-checkbox">
+    <span id="employmentTypes" class="filters-panel-item-value filters-panel-item-value-checkbox" ng-mouseenter="onValueBoxMouseEnter($event)" ng-mouseleave="onValueBoxMouseLeave($event)">
       <div ng-repeat="et in employment_types">
-        <input type="checkbox" ng-model="employmentTypeChecked" ng-change="onEmploymentTypeClick(et)"/>
+        <input ng-disabled="frozen" type="checkbox" ng-model="employmentTypesStates[et]" ng-change="onEmploymentTypeClick()"/>
         <label> {{et}} </label>
       </div>
     </span>
   </div>
   <div class="flex-wrapper">
     <span class="filters-panel-item-label">Working types:</span>
-    <span class="filters-panel-item-value filters-panel-item-value-checkbox">
+    <span id="workingTypes" class="filters-panel-item-value filters-panel-item-value-checkbox" ng-mouseenter="onValueBoxMouseEnter($event)" ng-mouseleave="onValueBoxMouseLeave($event)">
       <div ng-repeat="wt in working_types">
-        <input type="checkbox" ng-model="workingTypeChecked" ng-change="onWorkingTypeClick(wt)"/>
+        <input ng-disabled="frozen" type="checkbox" ng-model="workingTypesStates[wt]" ng-change="onWorkingTypeClick()"/>
         <label> {{wt}} </label>
       </div>
     </span>
   </div>
  </div>
+
+<div class="filtersValuePanel" ng-cloak>
+  <button title="Select all" ng-click="select($event, true)">+*</button>
+  <button title="Unselect all" ng-click="select($event, false)">-*</button>
+</div>

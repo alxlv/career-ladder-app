@@ -7035,3 +7035,9 @@ div.main-view {
   margin-top: 5px;
   width: 100%;
 }
+
+.filtersValuePanel {
+  display: none;
+  background: #FFFFFF;
+  border: 1px dotted #d3d3d3;
+}

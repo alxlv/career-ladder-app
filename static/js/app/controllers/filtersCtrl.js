@@ -4,36 +4,37 @@ define(function (require) {
   var _             = require('underscore');
 
   return ['$rootScope', '$scope', 'jobs', function ($rootScope, $scope, jobs) {
-    var positionsStates = {};
-    _initPositions();
-    function _initPositions() {
+
+    $scope.positionsStates = {};
+    _initPositions(true);
+    function _initPositions(checked) {
       var positions = jobs.getPositions();
       $scope.positions = positions;
 
       for (var idx = 0; idx < _.size(positions); idx++) {
-        positionsStates[positions[idx]] = true;
+        $scope.positionsStates[positions[idx]] = checked;
       }
     }
 
-    var employmentTypesStates = {};
-    _initEmploymentTypes();
-    function _initEmploymentTypes() {
+    $scope.employmentTypesStates = {};
+    _initEmploymentTypes(true);
+    function _initEmploymentTypes(checked) {
       var employmentTypes = jobs.getEmploymentTypes();
       $scope.employment_types = employmentTypes;
 
       for (var idx = 0; idx < _.size(employmentTypes); idx++) {
-        employmentTypesStates[employmentTypes[idx]] = true;
+        $scope.employmentTypesStates[employmentTypes[idx]] = checked;
       }
     }
 
-    var workingTypesStates = {};
-    _initWorkingTypes();
-    function _initWorkingTypes() {
+    $scope.workingTypesStates = {};
+    _initWorkingTypes(true);
+    function _initWorkingTypes(checked) {
       var workingTypes = jobs.getWorkingTypes();
       $scope.working_types = workingTypes;
 
       for (var idx = 0; idx < _.size(workingTypes); idx++) {
-        workingTypesStates[workingTypes[idx]] = true;
+        $scope.workingTypesStates[workingTypes[idx]] = checked;
       }
     }
 
@@ -57,34 +58,73 @@ define(function (require) {
     $scope.$watch('years.min', _sendMinMaxDatesEvent);
     $scope.$watch('years.max', _sendMinMaxDatesEvent);
 
-    $scope.positionChecked = true;
-
-    $scope.onPositionClick = function(position) {
-      positionsStates[position] = this.positionChecked;
+    $scope.onPositionClick = function() {
       var eventData = {
-        value: positionsStates
+        value: this.positionsStates
       };
       $rootScope.$broadcast('positionsFilterChanged', eventData);
     };
 
-    $scope.employmentTypeChecked = true;
-
-    $scope.onEmploymentTypeClick = function(empType) {
-      employmentTypesStates[empType] = this.employmentTypeChecked;
+    $scope.onEmploymentTypeClick = function() {
       var eventData = {
-        value: employmentTypesStates
+        value: this.employmentTypesStates
       };
       $rootScope.$broadcast('employmentTypesFilterChanged', eventData);
     };
 
-    $scope.workingTypeChecked = true;
-
-    $scope.onWorkingTypeClick = function(workingType) {
-      workingTypesStates[workingType] = this.workingTypeChecked;
+    $scope.onWorkingTypeClick = function() {
       var eventData = {
-        value: workingTypesStates
+        value: this.workingTypesStates
       };
       $rootScope.$broadcast('workingTypesFilterChanged', eventData);
+    };
+
+    $scope.onValueBoxMouseEnter = function(e) {
+      if (!$('.filtersValuePanel').is(':visible') && !this.$parent.frozen) {
+        var position = $(e.currentTarget).position();
+        var boundingRect = e.currentTarget.getBoundingClientRect();
+        var filtersValuePanelWidth = $('.filtersValuePanel').width();
+        $('.filtersValuePanel').css({'top' : position.top, 'left' : boundingRect.right - filtersValuePanelWidth, 'position':'absolute'});
+        $('.filtersValuePanel').data('currentTargetId', e.currentTarget.id);
+        $('.filtersValuePanel').show();
+      }
+    };
+
+    $scope.onValueBoxMouseLeave = function(e) {
+      if (e.toElement !== 'undefined') {
+        if (typeof($(e.toElement).attr('class')) !== 'undefined' && $(e.toElement).attr('class').indexOf('filtersValuePanel') !== -1) {
+          return;
+        }
+        
+        if (e.toElement.tagName === 'BUTTON') {
+          return;
+        }
+
+        $('.filtersValuePanel').hide();
+        $('.filtersValuePanel').removeData('currentTargetId');
+      }
+    };
+
+    $scope.select = function(e, checked) {
+      var currentTargetId = $('.filtersValuePanel').data('currentTargetId');
+      if (typeof currentTargetId !== 'undefined') {
+        var eventData = {};
+
+        if (currentTargetId === 'positions') {
+          _initPositions(checked);
+          eventData.value = this.positionsStates;
+        } else if (currentTargetId === 'workingTypes') {
+          _initWorkingTypes(checked);
+          eventData.value = this.workingTypesStates;
+        } else if (currentTargetId === 'employmentTypes') {
+          _initEmploymentTypes(checked);
+          eventData.value = this.employmentTypesStates;
+        } else {
+          return;
+        }
+
+        $rootScope.$broadcast(currentTargetId + 'FilterChanged', eventData);
+      }
     };
 
   }];
