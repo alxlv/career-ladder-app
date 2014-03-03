@@ -57,8 +57,8 @@ define(function (require) {
           }
 
           scope.getJobColor = function(job, month, year) {
-            var from = ("0" + month).slice(-2) + "." + year;
-            if (job.dateFrom === from) {
+            var isStartPoint = scope.isStartPoint(job, month, year);
+            if (isStartPoint) {
               return 'green';
             }
 
@@ -97,6 +97,15 @@ define(function (require) {
             if (isClicked) return;
             scaleJobPoints(job, false);
             scope.onJobPointLeaveCtrl({ job: job });
+          }
+
+          scope.isStartPoint = function(job,  month, year) {
+            var from = ("0" + month).slice(-2) + "." + year;
+            if (job.dateFrom === from) {
+              return true;
+            }
+
+            return false;
           }
 
           scope.$on('$destroy', function () {

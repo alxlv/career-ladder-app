@@ -6828,14 +6828,15 @@ div.main-view {
 }
 
 .jobs-flow-container {
-  padding: 2px;
-  margin: 2px;
+  margin-top: 10px;
   width: 100%;
+  height: 70px;
 }
 
 .job-flow-wrapper {
   display: table;
   table-layout: fixed;
+  height: 100%;
 }
 
 .job-flow-year-section {
@@ -6844,7 +6845,8 @@ div.main-view {
 }
 
 .job-point {
-  margin-left: -4px;
+  margin-top: 2px;
+  margin-left: -7px;
 }
 
 .jobs-flow-container img {
@@ -6853,14 +6855,15 @@ div.main-view {
 }
 
 .jobs-flow-container img.mark-year {
-  margin-top: 2px;
+  margin-left: 3px;
   width: 6px;
   vertical-align: bottom;
 }
 
 .jobs-flow-container img.mark-month {
-  margin-top: 5px;
-  width: 5px;
+  margin-top: 6px;
+  margin-left: 4px;
+  width: 1px;
   height: 30px;
 }
 
@@ -6883,7 +6886,8 @@ div.main-view {
 .jobs-flow-container .job-point-text-leave {
   display: none;
   font-family: monospace, serif;
-  font-size: 0.8em;
+  font-weight: bold;
+  font-size: 0.7em;
 }
 
 .skills-board-container {
@@ -7040,4 +7044,9 @@ div.main-view {
   display: none;
   background: #FFFFFF;
   border: 1px dotted #d3d3d3;
+}
+
+.filter-panel-employment-type-image {
+  width: 20px;
+  height: 20px;
 }

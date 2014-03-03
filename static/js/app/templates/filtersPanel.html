@@ -20,6 +20,7 @@
       <div ng-repeat="et in employment_types">
         <input ng-disabled="frozen" type="checkbox" ng-model="employmentTypesStates[et]" ng-change="onEmploymentTypeClick()"/>
         <label> {{et}} </label>
+        <img src="" ex-xlink-href="{{ getEmploymentTypeIcon(et) }}" class="filter-panel-employment-type-image">
       </div>
     </span>
   </div>

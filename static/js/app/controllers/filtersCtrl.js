@@ -95,7 +95,7 @@ define(function (require) {
         if (typeof($(e.toElement).attr('class')) !== 'undefined' && $(e.toElement).attr('class').indexOf('filtersValuePanel') !== -1) {
           return;
         }
-        
+
         if (e.toElement.tagName === 'BUTTON') {
           return;
         }
@@ -125,6 +125,13 @@ define(function (require) {
 
         $rootScope.$broadcast(currentTargetId + 'FilterChanged', eventData);
       }
+    };
+
+    $scope.getEmploymentTypeIcon = function(et) {
+      if (et === 'certification' || et === 'education' || et === 'startup') {
+        return "media/" + et + ".png";
+      }
+      return "media/work.png";
     };
 
   }];

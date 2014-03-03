@@ -14,12 +14,19 @@ define(function (require) {
           color: '=',
           dateLabel: '=',
           type: '=',
-          id: '='
+          id: '=',
+          isStart: '='
         },
         template: jobPointTpl,
 
         link: function(scope, el, attrs) {
+          scope.getY = function() {
+            if (this.color === 'green') {
+              return 30;
+            }
 
+            return 3;
+          }
         }
       };
     }]);
