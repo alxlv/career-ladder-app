@@ -357,7 +357,7 @@ define({
             'Working by SCRUM methology in the distributed team'
           ],
           tags: [
-            { languages: ['Javascript', 'CSS', 'HTML'], stack: ['AngularJS', 'less', 'Scrum', 'Git'] }
+            { languages: ['Javascript', 'CSS', 'HTML'], stack: ['AngularJS', 'WebStorm', 'Chrome DevTools', 'less', 'Scrum', 'Git'] }
           ]
         }
       ],
