@@ -21,6 +21,7 @@ define(function (require) {
     'jobsFlow',
     'jobPoint',
     'tagsCloud',
-    'slidingPanel'
-  ]);
+    'slidingPanel']).config(['$compileProvider', function ($compileProvider) {
+      $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|skype):/);
+    }]);
 });

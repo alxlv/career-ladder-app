@@ -2,7 +2,6 @@ define(function (require) {
   'use strict';
 
   var angular     = require('angular'),
-    _             = require('underscore'),
     $             = require('jquery'),
     TweenMax      = require('tweenMax'),
     slidingPanelTpl  = require('text!components/sliding-panel/sliding-panel.html');
@@ -15,18 +14,36 @@ define(function (require) {
       return {
         restrict: 'EA',
         scope: {
-          headerData: '=',
-          data: '='
+          header: '=',
+          positions: '=',
+          comments: '=',
+          contacts: '='
         },
         template: slidingPanelTpl,
 
         link: function(scope, el, attrs) {
+          var hidden = false;
 
           function _slide() {
-            $(".sliding-panel-flip").click(function(){
+            $(".control-button-image").click(function() {
+              var controlImage = $(".control-button-image");
+              TweenMax.to(controlImage, 0.1, { rotation: hidden ? 0 : 180, ease: "easeOut", onComplete: function(el, title) {
+                $(el).attr('title', title);
+              }, onCompleteParams: [controlImage, hidden ? 'Click to hide' : 'Click to show'] });
               $(".sliding-panel-wrapper").slideToggle("slow");
+              hidden = !hidden;
             });
+
             $(".sliding-panel-wrapper").slideDown("slow");
+            hidden = false;
+          }
+
+          scope.getControlButtonImage = function() {
+            if (hidden) {
+              return "media/open.png";
+            }
+
+            return "media/close.png";
           }
 
           var initTimeout = $timeout(function () {

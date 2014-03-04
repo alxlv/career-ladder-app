@@ -96,7 +96,7 @@ define(function (require) {
           return;
         }
 
-        if (e.toElement.tagName === 'BUTTON') {
+        if (e.toElement.tagName !== null && e.toElement.tagName === 'BUTTON') {
           return;
         }
 

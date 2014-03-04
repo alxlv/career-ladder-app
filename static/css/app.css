@@ -556,7 +556,7 @@ textarea {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
-  
+
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -586,7 +586,7 @@ textarea {
   thead {
     display: table-header-group;
     /* h5bp.com/t */
-  
+
   }
   tr,
   img {
@@ -2501,217 +2501,6 @@ nav.nav-dial .nav-links .nav-link-rotator .nav-link {
 .symbolic-keyboard-small .key-row:before,
 .scale-kb-085 .symbolic-keyboard .key-row:after,
 .symbolic-keyboard-small .key-row:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .key-row:after,
-.symbolic-keyboard-small .key-row:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .key-row:before,
-.symbolic-keyboard-small .key-row:before,
-.scale-kb-085 .symbolic-keyboard .key-row:after,
-.symbolic-keyboard-small .key-row:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .key-row:after,
-.symbolic-keyboard-small .key-row:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .key-row:before,
-.symbolic-keyboard-small .key-row:before,
-.scale-kb-085 .symbolic-keyboard .key-row:after,
-.symbolic-keyboard-small .key-row:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .key-row:after,
-.symbolic-keyboard-small .key-row:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .key-row:before,
-.symbolic-keyboard-small .key-row:before,
-.scale-kb-085 .symbolic-keyboard .key-row:after,
-.symbolic-keyboard-small .key-row:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .key-row:after,
-.symbolic-keyboard-small .key-row:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .key-row.row-1,
-.symbolic-keyboard-small .key-row.row-1 {
-  margin-left: 59.5px;
-}
-.scale-kb-085 .symbolic-keyboard .key-row.row-2,
-.symbolic-keyboard-small .key-row.row-2 {
-  margin-left: 36.55px;
-}
-.scale-kb-085 .symbolic-keyboard .key-row.row-5,
-.symbolic-keyboard-small .key-row.row-5 {
-  margin-left: 29.75px;
-}
-.scale-kb-085 .symbolic-keyboard .keys,
-.symbolic-keyboard-small .keys {
-  display: inline-block;
-}
-.scale-kb-085 .symbolic-keyboard .keys:before,
-.symbolic-keyboard-small .keys:before,
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .keys:before,
-.symbolic-keyboard-small .keys:before,
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .keys:before,
-.symbolic-keyboard-small .keys:before,
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .keys:before,
-.symbolic-keyboard-small .keys:before,
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .keys:before,
-.symbolic-keyboard-small .keys:before,
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .keys:before,
-.symbolic-keyboard-small .keys:before,
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .keys:before,
-.symbolic-keyboard-small .keys:before,
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .keys:before,
-.symbolic-keyboard-small .keys:before,
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .keys:before,
-.symbolic-keyboard-small .keys:before,
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
-  clear: both;
-}
-.scale-kb-085 .symbolic-keyboard .keys:before,
-.symbolic-keyboard-small .keys:before,
-.scale-kb-085 .symbolic-keyboard .keys:after,
-.symbolic-keyboard-small .keys:after {
   content: " ";
   /* 1 */
 
@@ -6670,27 +6459,52 @@ body.TOUCH {
     -ms-touch-action: none;
 }
 
-.sliding-panel-flip, .sliding-panel-wrapper
-{
+.sliding-panel-flip, .sliding-panel-wrapper {
   width:100%;
   margin:auto;
   padding:5px;
   text-align:center;
-  background:#e5eecc;
-  font-family: sans-serif;
-  font-size: 2em;
+  background: #eee463;
+  font-family: monospace, sans-serif;
+  font-size: 1.8em;
   font-weight: bold;
-  border:solid 1px #c3c3c3;
+  border: solid 1px #c3c3c3;
 }
 
-.sliding-panel-wrapper
-{
+.sliding-panel-wrapper {
   display: none;
+}
+
+.sliding-panel-wrapper .sliding-panel-position-item {
+  font-size: 1.1em;
+  text-decoration: underline
+}
+
+.sliding-panel-control-container {
+  width: 100%;
+}
+
+.sliding-panel-control-container .inner-control-button-wrapper {
+  width: 1%;
+  margin: -5px auto;
+}
+
+.control-button-image {
+
+}
+
+.control-button-image:hover {
+  cursor: pointer;
+}
+
+
+.sliding-panel-wrapper .sliding-panel-contact-item {
+  font-size: 1.1em;
 }
 
 div.main-view {
   padding: 0;
-  margin: 0;
+  margin: 10px 0px 0px 0px;
   position: relative;
   width: 100%;
   top: 0;
@@ -6939,21 +6753,21 @@ div.main-view {
 }
 
 .skills-board-container .left-column-wrapper h1 {
-    margin: 1em 0 0.5em 0;
-    width: 90%;
-    font-weight: normal;
-    position: relative;
-    text-shadow: 0 -1px rgba(0,0,0,0.6);
-    font-size: 16px;
-    line-height: 20px;
-    background: #2f96b4;
+  margin: 1em 0 0.5em 0;
+  width: 90%;
+  font-weight: normal;
+  position: relative;
+  text-shadow: 0 -1px rgba(0,0,0,0.6);
+  font-size: 16px;
+  line-height: 20px;
+  background: #2f96b4;
     /*background: rgba(#2f96b4, 0.8);*/
-    border: 1px solid #fff;
-    padding: 5px 5px;
-    color: white;
-    border-radius: 0 10px 0 10px;
-    box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
-    font-family: 'Muli', sans-serif;
+  border: 1px solid #fff;
+  padding: 5px 5px;
+  color: white;
+  border-radius: 0 10px 0 10px;
+  box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
+  font-family: 'Muli', sans-serif;
 }
 
 .skills-board-item-container {
@@ -7019,20 +6833,20 @@ div.main-view {
 
 .skills-board-container .right-column-wrapper h2 {
     /*margin: 1em 0 0.5em 0;*/
-    width: 100%;
-    font-weight: normal;
-    position: relative;
-    text-shadow: 0 -1px rgba(0,0,0,0.6);
-    font-size: 14px;
-    line-height: 10px;
-    background: #2f96b4;
+  width: 100%;
+  font-weight: normal;
+  position: relative;
+  text-shadow: 0 -1px rgba(0,0,0,0.6);
+  font-size: 14px;
+  line-height: 10px;
+  background: #2f96b4;
     /*background: rgba(#2f96b4, 0.8);*/
-    border: 1px solid #fff;
-    padding: 5px 5px;
-    color: white;
-    border-radius: 0 10px 0 10px;
-    box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
-    font-family: 'Muli', sans-serif;
+  border: 1px solid #fff;
+  padding: 5px 5px;
+  color: white;
+  border-radius: 0 10px 0 10px;
+  box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
+  font-family: 'Muli', sans-serif;
 }
 
 .skills-board-container .right-column-wrapper .project {

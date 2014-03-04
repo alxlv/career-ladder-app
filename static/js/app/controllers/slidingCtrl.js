@@ -3,8 +3,11 @@ define(function (require) {
 
   return ['$scope', function ($scope) {
 
-    $scope.headerData = "I'm looking for job";
-    $scope.data = "Positions: Senior .NET/Javascript developer (especially interested in AngularJS, NodeJS or other cool JS stuff), technical leader, architect. Contacts: @, skype";
-
+    $scope.dataModel = {
+      header: "Job wanted!",
+      positions: ['Senior .NET/Javascript developer', 'technical leader', 'architect'],
+      contacts: ['skype:aleksander.levshin', 'mailto:aleks.levshin@gmail.com'],
+      comments: 'Especially interested in AngularJS, NodeJS and other cool JS-* stuff!'
+    };
   }];
 });

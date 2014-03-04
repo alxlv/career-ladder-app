@@ -1,4 +1,14 @@
-<p class="sliding-panel-flip">{{ headerData }}</p>
-<div class="sliding-panel-wrapper">
-  {{ data }}
+<div class="sliding-panel-flip sliding-panel-wrapper">
+  {{ header }} {{ comments }}
+  <div> Positions:
+    <span ng-repeat="position in positions"><span class='sliding-panel-position-item'>{{ position }}</span><span ng-if="$index < positions.length - 1">,</span></span>
+  </div>
+  <div> Contacts:
+    <span ng-repeat="contact in contacts"><a href='{{ contact }}' class='sliding-panel-contact-item'>{{ contact }}</a><span ng-if="$index < contacts.length - 1">&nbsp;</span></span>
+  </div>
+</div>
+<div class="sliding-panel-control-container">
+  <div class="inner-control-button-wrapper">
+    <img class="control-button-image" title="Test" src="" ex-xlink-href="{{ getControlButtonImage() }}">
+  </div>
 </div>

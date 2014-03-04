@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" media="all" href="static/css/app.css" />
 	</head>
 	<body ng-controller="AppCtrl">
-      <sliding-panel ng-controller="SlidingCtrl" data="data" header-data="headerData" ng-cloak>
+      <sliding-panel ng-controller="SlidingCtrl" positions="dataModel.positions" header="dataModel.header" comments="dataModel.comments" contacts="dataModel.contacts" ng-cloak>
       </sliding-panel>
 
       <div class="main-view">
