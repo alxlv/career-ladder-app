@@ -4,7 +4,7 @@
       <div class="skills-board-item-container">
         <span class="skills-board-item-label">Position:</span>
         <span class="skills-board-item-value">
-          <span class="position" ng-repeat="pos in job.position">{{ pos }}</span>
+          <li class="position" ng-repeat="pos in job.position">{{ pos }}</li>
         </span>
       </div>
       <div class="skills-board-item-container">
@@ -16,7 +16,8 @@
       <div class="skills-board-item-container">
         <span class="skills-board-item-label">Company:</span>
         <span class="skills-board-item-value">
-          <a href="{{ job.website }}"> {{ job.company }} </a>
+          <a href="{{ job.website }}" ng-if="job.website.length > 0"> {{ job.company }} </a>
+          <span ng-if="job.website.length == 0"> {{ job.company }} </span>
         </span>
       </div>
       <div class="skills-board-item-container">

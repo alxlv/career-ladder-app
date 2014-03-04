@@ -6806,11 +6806,8 @@ div.main-view {
 }
 
 .skills-board-item-value .position {
+  list-style: none;
   text-decoration: underline;
-}
-
-.skills-board-item-value .positions:nth-of-type(2n) {
-  margin-left: 5px;
 }
 
 .skills-board-container .right-column-wrapper h1 {

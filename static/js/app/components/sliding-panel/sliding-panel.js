@@ -27,11 +27,11 @@ define(function (require) {
           function _slide() {
             $(".control-button-image").click(function() {
               var controlImage = $(".control-button-image");
+              $(".sliding-panel-wrapper").slideToggle("slow");
               TweenMax.to(controlImage, 0.1, { rotation: hidden ? 0 : 180, ease: "easeOut", onComplete: function(el, title) {
                 $(el).attr('title', title);
+                hidden = !hidden;
               }, onCompleteParams: [controlImage, hidden ? 'Click to hide' : 'Click to show'] });
-              $(".sliding-panel-wrapper").slideToggle("slow");
-              hidden = !hidden;
             });
 
             $(".sliding-panel-wrapper").slideDown("slow");
