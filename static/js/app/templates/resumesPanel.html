@@ -3,24 +3,14 @@
   <a href="{{ resume.link }}"><img src="" ex-xlink-href="{{ resume.image_src }}"/></a>
 </div>
 <div class="social-media-header">Social media</div>
-<div class="social-media-item">
-  <a href="http://ru.linkedin.com/pub/alex-levshin/4a/597/29a">
+<div class="social-media-item" ng-repeat="sm in social_media">
+  <a href="{{ sm.link }}" target="_blank">
     <span>
-      <img src="media/facebook_32.png" title="Alex Levshin in Facebook" alt="Alex Levshin in Facebook">
+      <img src="" ex-xlink-href="{{ sm.image_src }}" title="{{ sm.text }}" alt="{{ sm.text }}">
     </span>
   </a>
 </div>
-<div class="social-media-item">
-  <a href="http://www.facebook.com/alexander.levshin.56">
-    <span>
-      <img src="media/linkedin_32.png" title="Alex Levshin in LinkedIn" alt="Alex Levshin in LinkedIn">
-    </span>
-  </a>
-</div>
-<div class="social-media-item">
-    <a href="https://github.com/AlexWell">
-    <span>
-      <img src="media/github_32.png" title="Alex Levshin in GitHub" alt="Alex Levshin in GitHub">
-    </span>
-    </a>
+<div class="js-components-header">Starring</div>
+<div class="js-components-item" ng-repeat="component in jsComponents">
+  <span>{{ component.text }}</span>
 </div>

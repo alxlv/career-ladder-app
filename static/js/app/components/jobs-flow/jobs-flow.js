@@ -31,6 +31,17 @@ define(function (require) {
           var paramsScale15 = { scale: 1.8, ease: "easeOut", transformOrigin: 'top left' };
           var isClicked = false;
 
+          function scaleOffAllJobPoints() {
+            var jobPoints = el.find('job-point').children().find('g');
+            for (var idx = 0; idx < _.size(jobPoints); idx++) {
+              var jobPoint = $(jobPoints[idx]);
+              TweenMax.to(jobPoint, 0.2, paramsScale1);
+              TweenMax.to(jobPoint, zeroDuration, {css:{ cursor: 'arrow' }});
+              var text = jobPoint.children('text')[0];
+              TweenMax.to(text, zeroDuration, {css:{ display: 'none', cursor: 'arrow' }});
+            }
+          }
+
           function scaleJobPoints(job, isScaled) {
             var jobPoints = el.find('job-point').children().find('g');
             for (var idx = 0; idx < _.size(jobPoints); idx++) {
@@ -74,7 +85,13 @@ define(function (require) {
             return job.dateTo;
           }
 
-          scope.onJobPointClick = function(job) {
+          scope.onJobPointClick = function(job, e) {
+            if (typeof e.toElement !== 'undefined') {
+              if ($(e.toElement).attr('class') !== 'job-point-image') {
+                return;
+              }
+            }
+
             if (!isClicked) {
               lastClickedJob = job;
             } else {
@@ -87,13 +104,23 @@ define(function (require) {
             scope.onJobPointClickCtrl({ clicked: isClicked });
           }
 
-          scope.onJobPointEnter = function(job) {
+          scope.onJobPointEnter = function(job, e) {
+            if (typeof e.toElement !== 'undefined') {
+              var className = $(e.toElement).attr('class');
+              if (className !== 'job-point' && className !== 'job-point-image' && typeof className != 'undefined') return;
+            }
             if (isClicked) return;
+            scaleOffAllJobPoints();
             scaleJobPoints(job, true);
             scope.onJobPointEnterCtrl({ job: job });
           }
 
-          scope.onJobPointLeave = function(job) {
+          scope.onJobPointLeave = function(job, e) {
+            if (typeof e.toElement !== 'undefined') {
+              var className = $(e.toElement).attr('class');
+              if (className !== 'job-point' && className !== 'job-point-image' && typeof className != 'undefined') return;
+            }
+
             if (isClicked) return;
             scaleJobPoints(job, false);
             scope.onJobPointLeaveCtrl({ job: job });
