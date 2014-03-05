@@ -22,28 +22,22 @@ define(function (require) {
         template: slidingPanelTpl,
 
         link: function(scope, el, attrs) {
-          var hidden = false;
+          scope.hidden = false;
 
-          function _slide() {
-            $(".control-button-image").click(function() {
-              var controlImage = $(".control-button-image");
-              $(".sliding-panel-wrapper").slideToggle("slow");
-              TweenMax.to(controlImage, 0.1, { rotation: hidden ? 0 : 180, ease: "easeOut", onComplete: function(el, title) {
-                $(el).attr('title', title);
-                hidden = !hidden;
-              }, onCompleteParams: [controlImage, hidden ? 'Click to hide' : 'Click to show'] });
-            });
+          function _click() {
+            $(".sliding-panel-wrapper").slideToggle("slow");
+            scope.hidden = !scope.hidden;
+            scope.$apply();
+            $(".control-button-image").click(_click);
 
-            $(".sliding-panel-wrapper").slideDown("slow");
-            hidden = false;
+            var controlImage = $(".control-button-image");
+            TweenMax.to(controlImage, 0.07, { rotation: scope.hidden ? 180 : 360, ease: "easeOut", onComplete: function() {
+            }, onCompleteParams: [controlImage] });
           }
 
-          scope.getControlButtonImage = function() {
-            if (hidden) {
-              return "media/open.png";
-            }
-
-            return "media/close.png";
+          function _slide() {
+            $(".control-button-image").click(_click);
+            $(".sliding-panel-wrapper").slideDown("slow");
           }
 
           var initTimeout = $timeout(function () {

@@ -8,7 +8,8 @@
   </div>
 </div>
 <div class="sliding-panel-control-container">
-  <div class="inner-control-button-wrapper">
-    <img class="control-button-image" title="Test" src="" ex-xlink-href="{{ getControlButtonImage() }}">
+  <div class="inner-control-button-wrapper" ng-switch="hidden === true">
+    <img ng-switch-when=true class="control-button-image" title="Click to show" src="media/open.png">
+    <img ng-switch-when=false class="control-button-image" title="Click to hide" src="media/close.png">
   </div>
 </div>

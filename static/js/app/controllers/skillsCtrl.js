@@ -11,10 +11,6 @@ define(function (require) {
       $scope.job = undefined;
     });
 
-    $scope.onCompanyWebsiteClick = function() {
-      console.log(1);
-    };
-
     $scope.$on('$destroy', function () {
       onJobPointEnterHandler();
       onJobPointLeaveHandler();
