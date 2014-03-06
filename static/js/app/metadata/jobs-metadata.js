@@ -31,7 +31,7 @@ define({
             'Provided connectivity (LAN, Internet) troubleshooting and support for approximately 200 users'
           ],
           tags: [
-            { languages: [], stack: ['Linux'] }
+            { languages: [], stack: ['Linux', 'FreeBSD'] }
           ]}
       ]
     }, {
@@ -65,7 +65,7 @@ define({
             'Technical writing (compressed HTML files in CHM format)'
           ],
           tags: [
-            { languages: ['C++'], stack: ['MVC', 'Visual C++ 6.0', ' Microsoft Visual Studio 98', 'TFTP', 'TCP/IP'] }
+            { languages: ['C++'], stack: ['MVC', 'Visual C++ 6.0', 'Visual Studio 98', 'TFTP', 'TCP/IP'] }
           ],
           screenshots: []
         }
@@ -115,7 +115,7 @@ define({
             'Deploying application on railway stations around Eastern Russia (Krasnoyarsk, Novosibirsk)',
             'Writing the User\'s Guide and technical documentation (compressed HTML files in CHM format)'],
           tags: [
-            { languages: ['C#', 'C++'], stack: ['.NET 2.0', 'GoF', 'Microsoft Visual Studio .Net 2003', 'WinForms', 'ADO .NET', 'Reflection', 'Generics'] }
+            { languages: ['C#', 'C++'], stack: ['.NET 2.0', 'GoF', 'Visual Studio .Net 2003', 'WinForms', 'ADO .NET', 'Reflection', 'Generics'] }
           ],
           screenshots: []
         },
@@ -128,7 +128,7 @@ define({
             'Display set (Smart phone/PDA/PC with support of Bluetooth).'
           ],
           tags: [
-            { languages: ['C#', 'C'], stack: ['.NET CF 2.0', 'Smartphone 2003 SDK', 'Microsoft Visual Studio .Net 2005', '8-bit microcontroller ATMega 8515', 'Bluetooth', 'BlueGiga WTOR', 'Smartphone', 'PDC', 'PC', 'AT commands'] }
+            { languages: ['C#', 'C'], stack: ['.NET CF 2.0', 'Smartphone 2003 SDK', 'Visual Studio .Net 2005', '8-bit microcontroller ATMega 8515', 'Bluetooth', 'BlueGiga WTOR', 'Smartphone', 'PDC', 'PC', 'AT commands'] }
           ],
           screenshots: []
         }
@@ -152,7 +152,7 @@ define({
             'Debugging'
           ],
           tags: [
-            { languages: ['C#'], stack: ['.NET 2.0', 'Microsoft Visual Studio .Net 2005', 'WinForms'] }
+            { languages: ['C#'], stack: ['.NET 2.0', 'Visual Studio .Net 2005', 'WinForms'] }
           ]
         },
         { title: 'TransConnect', description: 'Software for diagnostic, measurement of gas analysis hostboard through USB/TCP/Serial port interfaces.',
@@ -164,7 +164,7 @@ define({
             'Debugging, maintenance'
           ],
           tags: [
-            { languages: ['C#'], stack: ['.NET 1.1', '.NET 2.0', 'GoF', 'Microsoft Visual Studio .Net 2005', 'SVN', 'Wiki', 'WinForms', 'NUnit', 'ADO.NET', 'Reflection', 'Generics'] }
+            { languages: ['C#'], stack: ['.NET 1.1', '.NET 2.0', 'GoF', 'Visual Studio .Net 2005', 'SVN', 'Wiki', 'WinForms', 'NUnit', 'ADO.NET', 'Reflection', 'Generics'] }
           ],
           screenshots: []
         }
@@ -189,7 +189,7 @@ define({
             'Scrum'
           ],
           tags: [
-            { languages: ['C#', 'SQL'], stack: ['.NET 2.0', 'GoF', 'Scrum', '.NET 3.5', 'MSSQL 2005', 'Microsoft Visual Studio .Net 2008', 'TFS', 'WinForms', 'NUnit', 'Web service', 'Workflow foundation', 'ADO .NET', 'XML', 'Serialization', 'Reflection', 'Generics', 'Remoting'] }
+            { languages: ['C#', 'SQL'], stack: ['.NET 2.0', 'Infragistics WinForms', 'GoF', 'Scrum', '.NET 3.5', 'MSSQL 2005', 'Visual Studio .Net 2008', 'TFS', 'WinForms', 'NUnit', 'Web service', 'Workflow foundation', 'ADO .NET', 'XML', 'Serialization', 'Reflection', 'Generics', 'Remoting'] }
           ],
           screenshots: []
         }
@@ -214,7 +214,7 @@ define({
             'Refactoring, GoF design patterns'
           ],
           tags: [
-            { languages: ['C#'], stack: ['.NET 4.0', 'GoF', 'Scrum', 'Silverlight', 'Visual Studio .Net 2008', 'Visual Studio .Net 2010', 'WCF RIA Services', 'NUnit', 'Entity framework', 'XML', 'Serialization', 'Reflection', 'Generics'] }
+            { languages: ['C#'], stack: ['.NET 4.0', 'GoF', 'Telerik Silverlight', 'Scrum', 'Silverlight', 'Visual Studio .Net 2008', 'Visual Studio .Net 2010', 'WCF RIA Services', 'NUnit', 'Entity framework', 'XML', 'Serialization', 'Reflection', 'Generics'] }
           ],
           screenshots: []
         }
@@ -240,7 +240,7 @@ define({
             'Refactoring, GoF design patterns'
           ],
           tags: [
-            { languages: ['C#', 'SQL', 'Javascript', 'PHP', 'HTML'], stack: ['.NET 3.5', 'MySQL 5', 'Scrum', 'AJAX', 'jQuery', 'WPF', 'WinForms', 'Windows services', 'Visual Studio .Net 2008', 'Visual Studio .Net 2010', 'NUnit', 'Linq', 'XML', 'Serialization', 'Reflection', 'Generics'] }
+            { languages: ['C#', 'SQL', 'Javascript', 'PHP', 'HTML'], stack: ['.NET 3.5', 'Infragistics WinForms', 'MySQL 5', 'Scrum', 'AJAX', 'jQuery', 'WPF', 'WinForms', 'Windows services', 'Visual Studio .Net 2008', 'Visual Studio .Net 2010', 'NUnit', 'Linq', 'XML', 'Serialization', 'Reflection', 'Generics'] }
           ],
           screenshots: []
         }
@@ -262,14 +262,14 @@ define({
             'Working by SCRUM methology in the distributed team of 10 members (USA/Russia)',
             'Developing GUI for vessel application',
             'Code writing in Visual Studio .NET 2010 with C# (.NET 4.0)',
-            'Code writing in Visual Studio 6.0 with Visual Bacic 6.0',
+            'Code writing in Visual Studio 6.0 with Visual Basic 6.0',
             'Investigating performance issues using dotTrace, VBWatch tools, Performance Monitor',
             'Resolving customer complaints on real-time basis, systems monitoring',
             'Refactoring, GoF design patterns',
             'Create unit tests using NUnit integrated into Visual Studio 2010'
           ],
           tags: [
-            { languages: ['Visual Basic 6.0', 'C#'], stack: ['.NET 4.0', 'GoF', 'WinForms', 'Scrum', 'SVN', 'Cruise control', 'Visual Studio .Net 2010', 'NUnit', 'Linq', 'dotTrace'] }
+            { languages: ['Visual Basic 6.0', 'C#'], stack: ['.NET 4.0', 'DevExpress WinForms', 'GoF', 'WinForms', 'Scrum', 'SVN', 'Cruise control', 'Visual Studio .Net 2010', 'NUnit', 'Linq', 'dotTrace'] }
           ],
           screenshots: []
         }
@@ -284,7 +284,7 @@ define({
       dateTo: '04.2012',
       location: 'Saint-Petersburg',
       company: 'Perfect Vision Soft',
-      website: 'http://vk.com/id153862424/',
+      website: 'http://vk.com/id153862424',
       projects: [
         { title: 'Perfect Vision Gallery', description: 'The tool helps non professionals to create video presentations easy and fast.',
           responsibilities: [
@@ -321,7 +321,7 @@ define({
             'Resolving customer complaints on real-time basis'
           ],
           tags: [
-            { languages: ['C#', 'PL/SQL', 'Visual Basic .NET'], stack: ['.NET 4.0', 'Git', 'Oracle 11g', 'Scrum', 'SVN', 'Visual Studio .NET 2010', 'XML', 'Cruise control'] }
+            { languages: ['C#', 'PL/SQL', 'Visual Basic .NET'], stack: ['.NET 4.0', 'Git', 'DevExpress WinForms', 'Oracle 11g', 'Scrum', 'SVN', 'Visual Studio .NET 2010', 'XML', 'Cruise control'] }
           ],
           screenshots: []
         }, {
@@ -333,7 +333,7 @@ define({
             'Analysis, design, programming, testing, implementation and production support of Oracle PL/SQL scripts and stored-procedures'
           ],
           tags: [
-            { languages: ['PHP', 'C#', 'Javascript', 'HTML'], stack: ['.NET 4.0', 'YII 2.0', 'Git', 'less', 'jQuery', 'Scrum', 'SVN', 'WebService', 'PhpStorm', 'Visual Studio .NET 2010', 'XML'] }
+            { languages: ['PHP', 'C#', 'Javascript', 'HTML'], stack: ['.NET 4.0', 'YII 2.0', 'Git', 'less', 'jQuery', 'Scrum', 'SVN', 'WebService', 'PhpStorm', 'Visual Studio .Net 2010', 'XML'] }
           ],
           screenshots: []
         }

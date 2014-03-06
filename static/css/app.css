@@ -648,11 +648,11 @@ div.main-view {
 
 .right-column-wrapper .resume-item img {
   margin-top: 10px;
-  border: 1px solid #d3d3d3;
   width: 32px;
   height: 32px;
   border-radius: 0 10px 0 10px;
-  box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
+  background-color: transparent;
+  box-shadow: 5px 5px 5px #888888;
 }
 
 .right-column-wrapper .social-media-header {
@@ -667,6 +667,9 @@ div.main-view {
   margin-top: 10px;
   width: 32px;
   height: 32px;
+  border-radius: 0 10px 0 10px;
+  background-color: #888888;
+  box-shadow: 5px 5px 5px #888888;
 }
 
 .right-column-wrapper .js-components-header {
@@ -965,6 +968,10 @@ div.main-view {
 .skills-board-container .right-column-wrapper .project {
   margin-top: 5px;
   width: 100%;
+}
+
+.skills-board-container .right-column-wrapper .project .project-tag-item {
+  text-decoration: underline;
 }
 
 .filtersValuePanel {

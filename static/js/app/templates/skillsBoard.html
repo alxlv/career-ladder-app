@@ -39,6 +39,13 @@
       <ul ng-repeat="resp in project.responsibilities">
         <li>{{ resp }}</li>
       </ul>
+      <div>
+         Tags:
+         <span ng-repeat="tag in project.tags">
+           <span ng-repeat="lang in tag.languages"><b class="project-tag-item">{{ lang }}</b> </span>
+           <span ng-repeat="stack in tag.stack"><b class="project-tag-item">{{ stack }}</b> </span>
+         </span>
+      </div>
     </div>
    </div>
 </div>

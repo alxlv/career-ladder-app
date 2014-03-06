@@ -4,8 +4,8 @@ define(function (require) {
   return ['$scope', function ($scope) {
 
     var resumes = [
-      { text: 'PDF', link: 'www', image_src: 'media/pdf.png' },
-      { text: 'DOCX', link: 'www', image_src: 'media/word_docx.png' }
+      { text: 'PDF', link: 'media/alex_levshin_cv_eng.pdf', image_src: 'media/pdf.png' },
+      { text: 'DOC', link: 'media/alex_levshin_cv_eng.doc', image_src: 'media/word_docx.png' }
     ];
 
     $scope.resumes = resumes;
