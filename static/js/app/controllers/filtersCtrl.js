@@ -91,12 +91,13 @@ define(function (require) {
     };
 
     $scope.onValueBoxMouseLeave = function(e) {
-      if (e.toElement !== 'undefined') {
-        if (typeof($(e.toElement).attr('class')) !== 'undefined' && $(e.toElement).attr('class').indexOf('filtersValuePanel') !== -1) {
+      var toElement = e.toElement || e.currentTarget;
+      if (toElement !== 'undefined') {
+        if (toElement !== null && toElement.tagName !== null && toElement.tagName === 'BUTTON') {
           return;
         }
 
-        if (e.toElement !== null && e.toElement.tagName !== null && e.toElement.tagName === 'BUTTON') {
+        if (typeof($(toElement).attr('class')) !== 'undefined' && $(toElement).attr('class').indexOf('filtersValuePanel') !== -1) {
           return;
         }
 

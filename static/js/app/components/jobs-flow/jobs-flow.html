@@ -2,8 +2,8 @@
   <div ng-repeat="year in years" class="job-flow-year-section">
     <img class="mark-year" src="media/mark-year2.png"/>
     <span ng-repeat="month in [1,2,3,4,5,6,7,8,9,10,11,12]" ng-if="year < years[years.length-1]">
-      <img class="mark-month" x="{{ $index * 5 + $parent.$index * 5 }}" y="0" src="media/mark-month2.png" />
-      <job-point ng-repeat="job in findJobs(month, year)" class="job-point" is-start="isStartPoint(job, month, year)" type="getEmploymentType(job)" id="job.id" date-label="getJobText(job, month, year)" color="getJobColor(job, month, year)" ng-mouseenter="onJobPointEnter(job, $event)" ng-mouseleave="onJobPointLeave(job, $event)" ng-click="onJobPointClick(job, $event)"></job-point>
+      <img ng-class="{'mark-month': $index > 0, 'mark-month-1': $index === 0}" x="{{ $index * 5 + $parent.$index * 5 }}" y="0" src="media/mark-month2.png" />
+      <job-point ng-repeat="job in findJobs(month, year)" is-start="isStartPoint(job, month, year)" type="getEmploymentType(job)" id="job.id" date-label="getJobText(job, month, year)" color="getJobColor(job, month, year)" ng-mouseenter="onJobPointEnter(job, $event)" ng-mouseleave="onJobPointLeave(job, $event)" ng-click="onJobPointClick(job, $event)"></job-point>
     </span>
     <!-- HACK!!! -->
     <span ng-if="year === years[years.length-1]" >

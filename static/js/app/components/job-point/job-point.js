@@ -25,7 +25,7 @@ define(function (require) {
               return 30;
             }
 
-            return 3;
+            return 30;
           }
         }
       };
