@@ -80,6 +80,10 @@ define(function (require) {
     };
 
     $scope.onValueBoxMouseEnter = function(e) {
+      if ($('.filtersValuePanel').is(':visible')) {
+        _hideFiltersValuePanel(e.currentTarget);
+      }
+
       if (!$('.filtersValuePanel').is(':visible') && !this.$parent.frozen) {
         var position = $(e.currentTarget).position();
         var boundingRect = e.currentTarget.getBoundingClientRect();
@@ -90,20 +94,22 @@ define(function (require) {
       }
     };
 
-    $scope.onValueBoxMouseLeave = function(e) {
-      var toElement = e.toElement || e.currentTarget;
+    function _hideFiltersValuePanel(toElement) {
       if (toElement !== 'undefined') {
-        if (toElement !== null && toElement.tagName !== null && toElement.tagName === 'BUTTON') {
-          return;
+        if (toElement !== null && toElement.tagName !== null) {
+          if (toElement.tagName === 'SPAN' && toElement.id === $('.filtersValuePanel').data('currentTargetId')) return;
         }
 
-        if (typeof($(toElement).attr('class')) !== 'undefined' && $(toElement).attr('class').indexOf('filtersValuePanel') !== -1) {
-          return;
-        }
+        if (typeof($(toElement).attr('class')) !== 'undefined' && $(toElement).attr('class').indexOf('filtersValuePanel') !== -1) return;
 
         $('.filtersValuePanel').hide();
         $('.filtersValuePanel').removeData('currentTargetId');
       }
+    }
+
+    $scope.onValueBoxMouseLeave = function(e) {
+      var toElement = e.toElement || e.currentTarget;
+      _hideFiltersValuePanel(toElement);
     };
 
     $scope.select = function(e, checked) {

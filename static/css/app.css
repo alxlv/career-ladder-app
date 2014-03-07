@@ -751,14 +751,16 @@ div.main-view {
 
 .filtersValuePanel {
   display: none;
-  background: #FFFFFF;
+  background: transparent;
   border: 1px dotted #d3d3d3;
+  z-index: 99999;
 }
 
 .filter-panel-employment-type-image {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
+
 label.checkbox-label input[type=checkbox]{
   position: relative;
   vertical-align: middle;
