@@ -559,47 +559,31 @@ div.main-view {
   vertical-align: baseline;
 }
 
-.job-point {
-  margin-top: 3px;
-  margin-left: -6px;
-}
-
-.job-point .job-point-image {
-}
-
-.jobs-flow-container img {
-  float: left;
-  height: 45px;
+.jobs-flow-container .job-point {
+  position: relative;
+  margin-top: 2px;
+  margin-left: -15px;
+  z-index: 99999;
 }
 
 .jobs-flow-container img.mark-year {
-  margin-left: 2px;
   width: 6px;
+  height: 45px;
   vertical-align: bottom;
 }
 
 .jobs-flow-container img.mark-month {
-  margin-top: 6px;
-  margin-left: 4px;
+  margin-top: 3px;
+  margin-left: 1px;
   width: 1px;
   height: 30px;
 }
 
 .jobs-flow-container img.mark-month-1 {
-  margin-top: 6px;
-  margin-left: 2px;
+  margin-top: 3px;
+  margin-left: -2px;
   width: 1px;
   height: 30px;
-}
-
-.jobs-flow-container .mark-month-fix {
-  margin-top: 5px;
-  width: 30px;
-  height: 30px;
-}
-
-.jobs-flow-container div.clear-fix {
-  clear: left;
 }
 
 .jobs-flow-container .job-point {

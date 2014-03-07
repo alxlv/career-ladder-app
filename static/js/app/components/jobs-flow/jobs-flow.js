@@ -10,7 +10,7 @@ define(function (require) {
 
   return angular.module('jobsFlow', [])
 
-    .directive('jobsFlow', function($timeout) {
+    .directive('jobsFlow', function() {
 
       return {
         restrict: 'EA',
@@ -135,34 +135,7 @@ define(function (require) {
             return false;
           }
 
-          var initTimeout = $timeout(function () {
-            $timeout(function () {
-             /* var jobPoints = el.find('job-point');
-
-              for (var idx = 0; idx < _.size(jobPoints); idx++) {
-                console.log(jobPoints[idx]);
-                var target = $(jobPoints[idx]);
-                var child = $(jobPoints[idx]).children().find('g');
-                //TweenMax.fromTo($(jobPoints[idx]), 0, { opacity: 0, visibility: 'visible' }, { opacity: 1 });
-                //TweenMax.to($(jobPoints[idx]), 1, { autoAlpha: 1 });
-                //console.log(jobPoints[idx]);
-                // set starting opacity and visibility
-                // set starting opacity
-                TweenMax.to(target, 0, {css:{ display: 'inline' }});
-
-                TweenMax.set(child, { opacity:0, display: 'inline' }); // or { autoAlpha:0 } would work
-
-                // tween opacity to 1 - visibility will be set as soon as the tween starts
-                TweenMax.to(child, 1, { opacity:1 });
-
-                // tween opacity to 1
-                //TweenMax.to(target, 1, { opacity:1 });
-              } */
-            }, 0);
-          }, 0);
-
           scope.$on('$destroy', function () {
-            $timeout.cancel(initTimeout);
           });
         }
       };
