@@ -9,8 +9,8 @@
    <span class="filters-panel-item-label">Positions:</span>
    <span id="positions" class="filters-panel-item-value filters-panel-item-value-checkbox" ng-mouseenter="onValueBoxMouseEnter($event)" ng-mouseleave="onValueBoxMouseLeave($event)">
      <div ng-repeat="pos in positions">
-       <input ng-disabled="frozen" type="checkbox" ng-model="positionsStates[pos]" ng-change="onPositionClick()"/>
-       <label> {{ pos }}</label>
+       <label class="checkbox-label"><input ng-disabled="frozen" type="checkbox" ng-model="positionsStates[pos]" ng-change="onPositionClick()"/>
+       {{ pos }}</label>
      </div>
    </span>
   </div>
@@ -18,9 +18,9 @@
     <span class="filters-panel-item-label">Types of employment:</span>
     <span id="employmentTypes" class="filters-panel-item-value filters-panel-item-value-checkbox" ng-mouseenter="onValueBoxMouseEnter($event)" ng-mouseleave="onValueBoxMouseLeave($event)">
       <div ng-repeat="et in employment_types">
-        <input ng-disabled="frozen" type="checkbox" ng-model="employmentTypesStates[et]" ng-change="onEmploymentTypeClick()"/>
-        <label> {{et}} </label>
-        <img src="" ex-xlink-href="{{ getEmploymentTypeIcon(et) }}" class="filter-panel-employment-type-image">
+        <label class="checkbox-label"><input ng-disabled="frozen" type="checkbox" ng-model="employmentTypesStates[et]" ng-change="onEmploymentTypeClick()"/>
+        {{et}}</label>
+        <img src="" ex-xlink-href="{{ getEmploymentTypeIcon(et) }}" class="filter-panel-employment-type-image" />
       </div>
     </span>
   </div>
@@ -28,8 +28,8 @@
     <span class="filters-panel-item-label">Working types:</span>
     <span id="workingTypes" class="filters-panel-item-value filters-panel-item-value-checkbox" ng-mouseenter="onValueBoxMouseEnter($event)" ng-mouseleave="onValueBoxMouseLeave($event)">
       <div ng-repeat="wt in working_types">
-        <input ng-disabled="frozen" type="checkbox" ng-model="workingTypesStates[wt]" ng-change="onWorkingTypeClick()"/>
-        <label> {{wt}} </label>
+        <label class="checkbox-label"><input ng-disabled="frozen" type="checkbox" ng-model="workingTypesStates[wt]" ng-change="onWorkingTypeClick()"/>
+        {{wt}}</label>
       </div>
     </span>
   </div>

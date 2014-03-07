@@ -759,3 +759,7 @@ div.main-view {
   width: 20px;
   height: 20px;
 }
+label.checkbox-label input[type=checkbox]{
+  position: relative;
+  vertical-align: middle;
+}
