@@ -1,14 +1,14 @@
 require.config({
   baseUrl: './static/js/app',
   paths: {
-    angular:        '../../../bower_components/angular/angular',
-    uiRouter:       '../../../bower_components/angular-ui-router/release/angular-ui-router',
-    jquery:         '../../../bower_components/jquery/jquery',
+    angular:        '../../../bower_components/angular/angular.min',
+    uiRouter:       '../../../bower_components/angular-ui-router/release/angular-ui-router.min',
+    jquery:         '../../../bower_components/jquery/jquery.min',
     rangeSlider:    '../../../bower_components/angular-rangeslider/angular.rangeSlider',
     text:           '../../../bower_components/requirejs-text/text',
-    underscore:     '../../../bower_components/underscore/underscore',
-    timelineMax:    '../../../bower_components/greensock/src/uncompressed/TimelineMax',
-    tweenMax:       '../../../bower_components/greensock/src/uncompressed/TweenMax',
+    underscore:     '../../../bower_components/underscore/underscore-min',
+    timelineMax:    '../../../bower_components/greensock/src/minified/TimelineMax.min',
+    tweenMax:       '../../../bower_components/greensock/src/minified/TweenMax.min',
     cloudCanvas:    '../jquery.tagcanvas'
   },
   shim: {
