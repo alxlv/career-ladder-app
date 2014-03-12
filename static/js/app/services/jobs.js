@@ -2,7 +2,7 @@ define(function (require) {
   'use strict';
 
   var _             = require('underscore'),
-      jobsMetadata  = require('metadata/jobs-metadata')
+      jobsMetadata  = require('metadata/jobs-metadata');
 
   return [function () {
 

@@ -1,6 +1,8 @@
 define(function (require) {
   'use strict';
 
+  var _             = require('underscore');
+
   return ['$rootScope', '$scope', 'jobs', function ($rootScope, $scope, jobs) {
 
     $scope.items = jobs.getAll();

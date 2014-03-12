@@ -370,9 +370,22 @@ define({
       dateFrom: '09.2007',
       dateTo: '03.2008',
       location: 'Saint-Petersburg',
-      company: 'Eureca',
-      website: 'http://www.eureca.ru/',
-      projects: []
+      company: 'MCP Transcript sharing tool',
+      website: 'https://mcp.microsoft.com/Anonymous/Transcript/Validate',
+      projects: [
+        { title: 'Microsoft Certified Solution Developer / Microsoft Certified Application Developer / Microsoft Certified Professional',
+          description: 'Transcript code – 792334, access code - 000F0975',
+          responsibilities: [ 'Exam ID 229 (Mar 28, 2008) - Designing and Implementing Databases with Microsoft SQL Server™ 2000 Enterprise Edition',
+            'Exam ID 300 (Feb 20, 2008) - Analyzing Requirements and Defining Microsoft .NET Solution Architectures',
+            'Exam ID 320 (Jan 28, 2008) - Developing XML Web Services and Server Components with Microsoft Visual C# .NET and the Microsoft .NET Framework',
+            'Exam ID 316 (Jan 14, 2008) - Developing and Implementing Windows-based Applications with Microsoft Visual C#™ .NET and Microsoft Visual Studio .NET',
+            'Exam ID 315 (Nov 26, 2007) - Developing and Implementing Web Applications with Microsoft Visual C#™ .NET and Microsoft Visual Studio .NET'
+          ],
+          tags: [
+            { languages: ['MCAD', 'MCSD'], stack: [] }
+          ]
+        }
+      ]
     }, {
       id: 15,
       position: ['IELTS'],
@@ -383,7 +396,8 @@ define({
       location: 'Moscow',
       company: 'BKC',
       website: 'http://www.bkc.ru/',
-      projects: []
+      projects: [
+      ]
     }, {
       id: 16,
       position: ['MCPD Windows Developer 4'],
@@ -392,9 +406,22 @@ define({
       dateFrom: '11.2012',
       dateTo: '03.2013',
       location: 'Saint-Petersburg',
-      company: 'Eureca',
-      website: 'http://www.eureca.ru/',
-      projects: []
+      company: 'MCP Transcript sharing tool',
+      website: 'https://mcp.microsoft.com/Anonymous/Transcript/Validate',
+      projects: [
+        {
+          title: 'Microsoft® Certified Professional Developer / Microsoft® Certified Technology Specialist',
+          description: 'Transcript code – 792334, access code - 000F0975',
+          responsibilities: [ 'Exam ID 513 (Feb 20, 2013) -	TS: Windows Communication Foundation Development with Microsoft .NET Framework 4',
+            'Exam ID 518 (Feb 06, 2013) - Pro: Designing and Developing Windows Applications Using Microsoft .NET Framework 4',
+            'Exam ID 516 (Jan 16, 2013) - TS: Accessing Data with Microsoft .NET Framework 4',
+            'Exam ID 511 (Dec 26, 2012) - TS: Windows Applications Development with Microsoft .NET Framework 4'
+          ],
+          tags: [
+            { languages: ['MCAD', 'MCSD'], stack: [] }
+          ]
+        }
+      ]
     }
   ]
 });

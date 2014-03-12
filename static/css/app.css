@@ -392,39 +392,86 @@ div.main-view {
   align-items: stretch;
 }
 
-.left-column-wrapper {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+@media screen and (max-width: 1024px) {
+    .left-column-wrapper {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
 
-  flex-flow: row wrap;
-  -webkit-flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  width: 90%;
+        flex-flow: row wrap;
+        -webkit-flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 95%;
+    }
 }
 
-.right-column-wrapper {
-  width: 10%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+@media screen and (min-width: 1152px) {
+    .left-column-wrapper {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
 
-  flex-flow: column nowrap;
-  -webkit-flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
+        flex-flow: row wrap;
+        -webkit-flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 90%;
+    }
 }
 
-.right-column-wrapper .resume-header {
-  width: 100%;
-  font-size: 1.2em;
-  text-align: center;
-  text-decoration: underline;
+@media screen and (max-width: 1024px) {
+    .right-column-wrapper {
+        width: 5%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        flex-flow: column nowrap;
+        -webkit-flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .right-column-wrapper {
+        width: 10%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        flex-flow: column nowrap;
+        -webkit-flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .right-column-wrapper .resume-header {
+        width: 100%;
+        font-size: 0.9em;
+        text-align: center;
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .right-column-wrapper .resume-header {
+        width: 100%;
+        font-size: 1.2em;
+        text-align: center;
+        text-decoration: underline;
+    }
 }
 
 .right-column-wrapper .resume-item img {
@@ -436,12 +483,24 @@ div.main-view {
   box-shadow: 5px 5px 5px #888888;
 }
 
-.right-column-wrapper .social-media-header {
-  margin-top: 20px;
-  width: 100%;
-  font-size: 1.2em;
-  text-align: center;
-  text-decoration: underline;
+@media screen and (max-width: 1024px) {
+    .right-column-wrapper .social-media-header {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 0.9em;
+        text-align: center;
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .right-column-wrapper .social-media-header {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 1.2em;
+        text-align: center;
+        text-decoration: underline;
+    }
 }
 
 .right-column-wrapper .social-media-item img {
@@ -453,24 +512,57 @@ div.main-view {
   box-shadow: 5px 5px 5px #888888;
 }
 
-.right-column-wrapper .js-components-header {
-  margin-top: 20px;
-  width: 100%;
-  font-size: 1.2em;
-  text-align: center;
-  text-decoration: underline;
+@media screen and (max-width: 1024px) {
+    .right-column-wrapper .js-components-header {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 0.9em;
+        text-align: center;
+        text-decoration: underline;
+    }
 }
 
-.right-column-wrapper .js-components-item {
-  margin-top: 10px;
-  text-align: left;
+@media screen and (min-width: 1152px) {
+    .right-column-wrapper .js-components-header {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 1.2em;
+        text-align: center;
+        text-decoration: underline;
+    }
 }
 
-.filters-panel-container {
-  padding: 0;
-  margin: 0;
-  width: 70%;
-  height: 310px;
+@media screen and (max-width: 1024px) {
+    .right-column-wrapper .js-components-item {
+        margin-top: 10px;
+        font-size: 0.8em;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .right-column-wrapper .js-components-item {
+        margin-top: 10px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+   .filters-panel-container {
+     padding: 0;
+     margin: 0;
+     width: 75%;
+     height: 310px;
+   }
+}
+
+@media screen and (min-width: 1152px) {
+   .filters-panel-container {
+     padding: 0;
+     margin: 0;
+     width: 70%;
+     height: 310px;
+  }
 }
 
 .filters-panel-container .flex-wrapper {
@@ -529,12 +621,24 @@ div.main-view {
   cursor: pointer;
 }
 
-.tags-cloud-container {
-  padding: 2px;
-  margin: 2px;
-  width: 29%;
-  height: 310px;
-  border: 1px dotted #d3d3d3;
+@media screen and (max-width: 1024px) {
+    .tags-cloud-container {
+        padding: 2px;
+        margin: 2px;
+        width: 23%;
+        height: 310px;
+        border: 1px dotted #d3d3d3;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .tags-cloud-container {
+        padding: 2px;
+        margin: 2px;
+        width: 29%;
+        height: 310px;
+        border: 1px dotted #d3d3d3;
+    }
 }
 
 .tags-cloud-container .tags-cloud-canvas {
@@ -566,10 +670,20 @@ div.main-view {
   z-index: 99999;
 }
 
-.jobs-flow-container img.mark-year {
-  width: 6px;
-  height: 45px;
-  vertical-align: bottom;
+@media screen and (max-width: 1024px) {
+    .jobs-flow-container img.mark-year {
+        width: 1px;
+        height: 45px;
+        vertical-align: bottom;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .jobs-flow-container img.mark-year {
+        width: 6px;
+        height: 45px;
+        vertical-align: bottom;
+    }
 }
 
 .jobs-flow-container img.mark-month {
@@ -636,18 +750,36 @@ div.main-view {
   width: 29%;
 }
 
-.skills-board-container .main-flex-wrapper .right-column-wrapper {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+@media screen and (max-width: 1024px) {
+    .skills-board-container .main-flex-wrapper .right-column-wrapper {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
 
-  flex-flow: column nowrap;
-  -webkit-flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  width: 70%;
+        flex-flow: column nowrap;
+        -webkit-flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 68%;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .skills-board-container .main-flex-wrapper .right-column-wrapper {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        flex-flow: column nowrap;
+        -webkit-flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 70%;
+    }
 }
 
 .skills-board-container .left-column-wrapper h1 {
@@ -694,12 +826,14 @@ div.main-view {
 
   color: black;
   font-size: 1.2em;
+  font-weight: bold;
   border: 1px dotted #d3d3d3;
 }
 
 .skills-board-item-container .skills-board-item-value {
   padding: 5px;
   margin: 5px;
+  font-size: 1em;
 }
 
 .skills-board-item-value .position {
@@ -743,6 +877,10 @@ div.main-view {
 .skills-board-container .right-column-wrapper .project {
   margin-top: 5px;
   width: 100%;
+}
+
+.skills-board-container .right-column-wrapper .project .description {
+  font-size: 1em;
 }
 
 .skills-board-container .right-column-wrapper .project .project-tag-item {

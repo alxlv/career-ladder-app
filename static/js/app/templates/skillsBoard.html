@@ -35,7 +35,7 @@
     <h1>Projects</h1>
     <div class="project" ng-repeat="project in job.projects">
       <h2>{{ project.title }}</h2>
-      <div>{{ project.description }}</div>
+      <div class="description">{{ project.description }}</div>
       <ul ng-repeat="resp in project.responsibilities">
         <li>{{ resp }}</li>
       </ul>
