@@ -44,13 +44,28 @@ define(function (require) {
 
           function scaleJobPoints(job, isScaled) {
             var jobPoints = el.find('job-point').children().find('g');
+            var textObjs = [];
             for (var idx = 0; idx < _.size(jobPoints); idx++) {
               if (job.id.toString() === $(jobPoints[idx]).attr('id')) {
                 var jobPoint = $(jobPoints[idx]);
+                var text = jobPoint.children('text')[0];
+                textObjs.push(text);
                 TweenMax.to(jobPoint, 0.2, isScaled ? paramsScale15 : paramsScale1);
                 TweenMax.to(jobPoint, zeroDuration, {css:{ cursor: isScaled ? 'pointer' : 'arrow' }});
-                var text = jobPoint.children('text')[0];
                 TweenMax.to(text, zeroDuration, {css:{ display: isScaled ? 'inline' : 'none', cursor: isScaled ? 'pointer' : 'arrow' }});
+              }
+            }
+
+            if (textObjs.length > 1) {
+              var rect0 = textObjs[0].getBoundingClientRect();
+              var width = rect0.width;
+              var leftX0 = $(textObjs[0]).offset().left;
+              var leftX1 = $(textObjs[1]).offset().left;
+              if (leftX0 !== 0 && leftX1 !== 0) {
+                var diff = width + leftX0 - leftX1;
+                if (diff >= -30 && diff <= 30) {
+                  TweenMax.set(textObjs[1], {css:{transform:"translateY(10px)"}});
+                }
               }
             }
           }

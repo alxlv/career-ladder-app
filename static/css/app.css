@@ -25,7 +25,7 @@ html {
 html,
 body {
   height: 100%;
-  font-size: 10px;
+  font-size: 12px;
 }
 body {
   -webkit-transform: translate3d(0, 0, 0);
@@ -341,8 +341,12 @@ body {
 }
 
 .sliding-panel-wrapper .sliding-panel-position-item {
-  font-size: 1.1em;
-  text-decoration: underline
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.sliding-panel-wrapper .sliding-panel-contact-item {
+  font-size: 1.2em;
 }
 
 .sliding-panel-control-container {
@@ -362,10 +366,6 @@ body {
   cursor: pointer;
 }
 
-
-.sliding-panel-wrapper .sliding-panel-contact-item {
-  font-size: 1.1em;
-}
 
 div.main-view {
   padding: 0;
@@ -599,7 +599,7 @@ div.main-view {
   height: 70px;
 
   color: black;
-  font-size: 1em;
+  font-size: 0.9em;
   text-align: left;
   border: 1px dotted #d3d3d3;
 }
@@ -649,10 +649,12 @@ div.main-view {
 .jobs-flow-container {
   margin-top: 10px;
   width: 100%;
-  height: 70px;
+  height: 80px;
 }
 
 .job-flow-wrapper {
+  padding-top: 5px;
+  margin-left: 10px;
   display: table;
   table-layout: fixed;
   height: 100%;
@@ -665,15 +667,19 @@ div.main-view {
 
 .jobs-flow-container .job-point {
   position: relative;
-  margin-top: 2px;
+  margin-top: 10px;
   margin-left: -15px;
   z-index: 99999;
+}
+
+.jobs-flow-container .job-point:hover {
+
 }
 
 @media screen and (max-width: 1024px) {
     .jobs-flow-container img.mark-year {
         width: 1px;
-        height: 45px;
+        height: 40px;
         vertical-align: bottom;
     }
 }
@@ -681,7 +687,7 @@ div.main-view {
 @media screen and (min-width: 1152px) {
     .jobs-flow-container img.mark-year {
         width: 6px;
-        height: 45px;
+        height: 40px;
         vertical-align: bottom;
     }
 }
@@ -690,14 +696,14 @@ div.main-view {
   margin-top: 3px;
   margin-left: 1px;
   width: 1px;
-  height: 30px;
+  height: 25px;
 }
 
 .jobs-flow-container img.mark-month-1 {
   margin-top: 3px;
   margin-left: -2px;
   width: 1px;
-  height: 30px;
+  height: 25px;
 }
 
 .jobs-flow-container .job-point {
@@ -710,7 +716,6 @@ div.main-view {
 .jobs-flow-container .job-point-text-leave {
   display: none;
   font-family: monospace, serif;
-  font-weight: bold;
   font-size: 0.7em;
 }
 
