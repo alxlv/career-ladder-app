@@ -31,6 +31,16 @@ define(function (require) {
           var paramsScale15 = { scale: 1.8, ease: "easeOut", transformOrigin: 'top left' };
           var isClicked = false;
 
+          function setTitleText() {
+            var newTitleText = isClicked ? 'lock' : "unlock"
+            var jobPoints = el.find('job-point').children().find('g');
+            for (var idx = 0; idx < _.size(jobPoints); idx++) {
+              var jobPoint = $(jobPoints[idx]);
+              var titleObj = jobPoint.children('title')[0];
+              $(titleObj).text("Click to " + newTitleText);
+            }
+          }
+
           function scaleOffAllJobPoints() {
             var jobPoints = el.find('job-point').children().find('g');
             for (var idx = 0; idx < _.size(jobPoints); idx++) {
@@ -114,6 +124,8 @@ define(function (require) {
                 scaleJobPoints(lastClickedJob, false);
               }
             }
+
+            setTitleText();
 
             isClicked = !isClicked;
             scope.onJobPointClickCtrl({ clicked: isClicked });
