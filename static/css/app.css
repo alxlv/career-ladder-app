@@ -880,7 +880,8 @@ div.main-view {
 }
 
 .skills-board-container .right-column-wrapper .project {
-  margin-top: 5px;
+  padding: 0px;
+  margin: -5px 0px 0px 0px;
   width: 100%;
 }
 
