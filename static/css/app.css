@@ -669,11 +669,7 @@ div.main-view {
   position: relative;
   margin-top: 10px;
   margin-left: -15px;
-  z-index: 99999;
-}
-
-.jobs-flow-container .job-point:hover {
-
+  z-index: 999;
 }
 
 @media screen and (max-width: 1024px) {
@@ -804,11 +800,6 @@ div.main-view {
   font-family: 'Muli', sans-serif;
 }
 
-.skills-board-container .left-column-wrapper h1 a:link {color:#FFFFFF;}      /* unvisited link */
-.skills-board-container .left-column-wrapper h1 a:visited {color:#FFFFFF;}  /* visited link */
-.skills-board-container .left-column-wrapper h1 a:hover {color:#FFFFFF;}  /* mouse over link */
-.skills-board-container .left-column-wrapper h1 a:active {color:#FFFFFF;}  /* selected link */
-
 .skills-board-item-container {
   margin-top: 5px;
   display: -webkit-box;
@@ -827,7 +818,7 @@ div.main-view {
 .skills-board-item-container .skills-board-item-label {
   padding: 5px;
   margin: 5px;
-  width: 20%;
+  width: 40%;
 
   color: black;
   font-size: 1.2em;
@@ -839,7 +830,20 @@ div.main-view {
   padding: 5px;
   margin: 5px;
   font-size: 1em;
+  width: 59%;
+  z-index: 1000;
 }
+
+.skills-board-item-container .skills-board-item-value .organization {
+  cursor: default;
+  color: #2f96b4;
+  text-decoration: underline;
+}
+
+.skills-board-item-container .skills-board-item-value  a:link {color: #2f96b4;}
+.skills-board-item-container .skills-board-item-value  a:visited {color: #2f96b4;}
+.skills-board-item-container .skills-board-item-value  a:hover {color: #2f96b4;}
+.skills-board-item-container .skills-board-item-value  a:active {color: #2f96b4;}
 
 .skills-board-item-value .position {
   list-style: none;

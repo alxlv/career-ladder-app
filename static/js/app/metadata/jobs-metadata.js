@@ -8,9 +8,14 @@ define({
       dateFrom: '09.1999',
       dateTo: '02.2005',
       location: 'Pskov',
-      company: 'Pskov Polistate University.  Bachelor\'s degree - system engineer.',
+      company: 'Pskov Polistate University',
       website: 'http://pskgu.ru/',
-      projects: []
+      projects: [
+        { title: 'Bachelor\'s degree - system engineer', description: '',
+          responsibilities: [],
+          tags: []
+        }
+      ]
     }, {
       id: 2,
       position: ['Cofounder', 'System administrator'],

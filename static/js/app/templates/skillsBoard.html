@@ -1,11 +1,13 @@
-<div ng-show="job !== undefined" class="main-flex-wrapper">
-  <div class="left-column-wrapper">
-    <h1>
-      <span>
-        <a href="{{ job.website }}" ng-if="job.website.length > 0" target="_blank"> {{ job.company }} </a>
-        <span ng-if="job.website.length == 0"> {{ job.company }} </span>
-      </span>
-    </h1>
+<div class="main-flex-wrapper" ng-show="job !== undefined">
+    <div class="left-column-wrapper">
+      <h1>General</h1>
+      <div class="skills-board-item-container">
+        <span class="skills-board-item-label">Organization:</span>
+        <span class="skills-board-item-value">
+          <a href="{{ job.website }}" ng-if="job.website.length > 0" target="_blank">{{ job.company }}</a>
+          <span ng-if="job.website.length === 0"> {{ job.company }} </span>
+        </span>
+      </div>
       <div class="skills-board-item-container">
         <span class="skills-board-item-label">Position:</span>
         <span class="skills-board-item-value">
@@ -39,7 +41,7 @@
       <ul ng-repeat="resp in project.responsibilities">
         <li>{{ resp }}</li>
       </ul>
-      <div>
+      <div ng-show="job.tags.length > 0">
          Tags:
          <span ng-repeat="tag in project.tags">
            <span ng-repeat="lang in tag.languages"><b class="project-tag-item">{{ lang }}</b> </span>

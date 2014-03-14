@@ -20,13 +20,6 @@ define(function (require) {
         template: jobPointTpl,
 
         link: function(scope, el, attrs) {
-          scope.getY = function() {
-            if (this.color === 'green') {
-              return 30;
-            }
-
-            return 30;
-          }
         }
       };
     }]);

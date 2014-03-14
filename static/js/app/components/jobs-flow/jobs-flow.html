@@ -3,7 +3,7 @@
     <img class="mark-year" src="media/mark-year2.png"/>
     <span ng-repeat="month in [1,2,3,4,5,6,7,8,9,10,11,12]" ng-if="year < years[years.length-1]">
       <img ng-class="{'mark-month': $index > 0, 'mark-month-1': $index === 0}" x="0" y="0" src="media/mark-month2.png" />
-      <job-point ng-repeat="job in findJobs(month, year)" is-start="isStartPoint(job, month, year)" type="getEmploymentType(job)" id="job.id" date-label="getJobText(job, month, year)" color="getJobColor(job, month, year)" ng-mouseenter="onJobPointEnter(job, $event)" ng-mouseleave="onJobPointLeave(job, $event)" ng-click="onJobPointClick(job, $event)"></job-point>
+      <job-point ng-repeat="job in findJobs(month, year)" is-start="isStartPoint(job, month, year)" type="getEmploymentType(job)" id="job.id" date-label="getJobText(job, month, year)" color="getJobColor(job, month, year)" ng-click="onJobPointClick(job, $event)" ng-mouseenter="onJobPointEnter(job, $event)" ng-mouseleave="onJobPointLeave(job, $event)"></job-point>
     </span>
     <div>{{ year }}</div>
   </div>
