@@ -1,4 +1,12 @@
 /* app styles */
+* {
+  box-sizing: content-box;
+}
+
+img {
+  vertical-align: baseline;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6,6 +14,11 @@ html {
 }
 body {
   margin: 0;
+}
+
+label {
+  display: inline;
+  font-weight: normal;
 }
 
 button,
@@ -437,6 +450,7 @@ div.main-view {
         -webkit-flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: center;
+        z-index: 1000;
     }
 }
 
@@ -453,6 +467,7 @@ div.main-view {
         -webkit-flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: center;
+        z-index: 1000;
     }
 }
 
@@ -828,7 +843,6 @@ div.main-view {
 
 .skills-board-item-container .skills-board-item-value {
   padding: 5px;
-  margin: 5px;
   font-size: 1em;
   width: 59%;
   z-index: 1000;
@@ -847,7 +861,6 @@ div.main-view {
 
 .skills-board-item-value .position {
   list-style: none;
-  text-decoration: underline;
 }
 
 .skills-board-container .right-column-wrapper h1 {
@@ -890,7 +903,56 @@ div.main-view {
 }
 
 .skills-board-container .right-column-wrapper .project .description {
+  margin-top: 5px;
   font-size: 1em;
+}
+
+.skills-board-container .right-column-wrapper .project .screenshot {
+
+}
+
+.skills-board-container .right-column-wrapper .project .screenshot ul {
+  list-style: none;
+}
+
+.skills-board-container .right-column-wrapper .project .screenshot ul li {
+  background: #fff;
+  display: inline;
+  float: left;
+  padding: 0;
+  text-align: center;
+  color: #000;
+}
+
+.skills-board-container .right-column-wrapper .project .screenshot .screenshot-title {
+
+}
+
+.skills-board-container .right-column-wrapper .project .screenshot img {
+  display: block;
+  margin: 5px;
+  width: 100px;
+  height: 60px;
+}
+
+.skills-board-container .right-column-wrapper .project .screenshot img.inactive {
+  border: 1px dotted #d3d3d3;
+  position: relative;
+  z-index: 9999;
+}
+
+.skills-board-container .right-column-wrapper .project .screenshot img.active {
+  border: none;
+  position: relative;
+  z-index: 10000;
+}
+
+.skills-board-container .right-column-wrapper .project .screenshot img:hover {
+  cursor: pointer;
+}
+
+.skills-board-container .right-column-wrapper .project .responsibility {
+  margin-top: 5px;
 }
 
 .skills-board-container .right-column-wrapper .project .project-tag-item {

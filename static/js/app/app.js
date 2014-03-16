@@ -3,6 +3,8 @@ define(function (require) {
 
   var angular = require('angular');
   require('rangeSlider');
+  require('uiBootstrap');
+  require('uiBootstrapTpls');
   require('uiRouter');
   require('directives');
   require('controllers');
@@ -14,6 +16,8 @@ define(function (require) {
 
   return angular.module('ladderApp', [
     'ui-rangeSlider',
+    'ui.bootstrap',
+    'ui.bootstrap.tpls',
     'ui.router',
     'ladderApp.directives',
     'ladderApp.controllers',

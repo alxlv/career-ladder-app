@@ -11,9 +11,14 @@ define({
       company: 'Pskov Polistate University',
       website: 'http://pskgu.ru/',
       projects: [
-        { title: 'Bachelor\'s degree - system engineer', description: '',
+        {
+          title: 'Bachelor\'s degree - system engineer', description: '',
           responsibilities: [],
-          tags: []
+          tags: [
+            { languages: [], stack: [] }
+          ],
+          screenshots: [],
+          references: []
         }
       ]
     }, {
@@ -27,7 +32,8 @@ define({
       company: 'District 5 network',
       website: '',
       projects: [
-        { title: 'District 5 network', description: 'I was one of cofounder of local network that operates than more 200+ users.',
+        {
+          title: 'District 5 network', description: 'I was one of cofounder of local network that operates than more 200+ users.',
           responsibilities: [
             'Performed day-to-day administration functions, backup and restoration, file server maintenance',
             'Implemented virus protection',
@@ -37,7 +43,10 @@ define({
           ],
           tags: [
             { languages: [], stack: ['Linux', 'FreeBSD'] }
-          ]}
+          ],
+          screenshots: [],
+          references: []
+        }
       ]
     }, {
       id: 3,
@@ -50,7 +59,8 @@ define({
       company: 'Ats-Convers',
       website: 'http://www.atsconvers.ru/',
       projects: [
-        { title: 'WebTel', description: 'Software for remote monitoring and control of uninterruptible power supply and WEB-based invertors.',
+        {
+          title: 'WebTel', description: 'Software for remote monitoring and control of uninterruptible power supply and WEB-based invertors.',
           responsibilities: [
             'Problem definition and development of the application structure and algorithms',
             'Code writing in Borland C++ 3.1, Watcom C/C++ 11, size optimization of program parts in assembler, development of the interface part on basis of WEB technologies (HTML/ JavaScript)',
@@ -60,22 +70,24 @@ define({
           tags: [
             { languages: ['C++', 'C', 'Assembler'], stack: ['Borland C++ 3.1', 'Watcom 11', 'HTML', 'Javascript'] }
           ],
-          screenshots: []
-        },
-        { title: 'WebTel TFTP updater', description: 'Software for loading updates of a WebTel program via a TFTP application-level protocol.',
-          responsibilities: [
-            'Development of the application structure and algorithms',
-            'Code writing in Visual Studio 6.0 with Visual C++ 6.0',
-            'Debugging, maintenance',
-            'Technical writing (compressed HTML files in CHM format)'
-          ],
-          tags: [
-            { languages: ['C++'], stack: ['MVC', 'Visual C++ 6.0', 'Visual Studio 98', 'TFTP', 'TCP/IP'] }
-          ],
-          screenshots: []
-        }
-      ],
-      references: ''
+          screenshots: [],
+          references: []
+      },
+      {
+        title: 'WebTel TFTP updater', description: 'Software for loading updates of a WebTel program via a TFTP application-level protocol.',
+        responsibilities: [
+         'Development of the application structure and algorithms',
+         'Code writing in Visual Studio 6.0 with Visual C++ 6.0',
+         'Debugging, maintenance',
+         'Technical writing (compressed HTML files in CHM format)'
+        ],
+        tags: [
+          { languages: ['C++'], stack: ['MVC', 'Visual C++ 6.0', 'Visual Studio 98', 'TFTP', 'TCP/IP'] }
+        ],
+        screenshots: [],
+        references: []
+      }
+    ]
     }, {
       id: 4,
       position: ['Java developer'],
@@ -96,10 +108,10 @@ define({
           tags: [
             { languages: ['Java'], stack: ['SIM card', 'Intellij Idea', 'JVM'] }
           ],
-          screenshots: []
+          screenshots: [],
+          references: ''
         }
-      ],
-      references: ''
+      ]
     }, {
       id: 5,
       position: ['C#.NET developer', 'C++ developer', 'Embedding developer'],
@@ -111,7 +123,8 @@ define({
       company: 'ATIS',
       website: 'http://as-atis.ru/',
       projects: [
-        { title: 'Kzp', description: 'Software for control and monitoring of railway equipment with the help of the serial port interface.',
+        {
+          title: 'Kzp', description: 'Software for control and monitoring of railway equipment with the help of the serial port interface.',
           responsibilities: [
             'Development of the application structure and algorithms',
             'Code writing in Visual Studio .Net 2003/2005 with C++/C#',
@@ -122,9 +135,11 @@ define({
           tags: [
             { languages: ['C#', 'C++'], stack: ['.NET 2.0', 'GoF', 'Visual Studio .Net 2003', 'WinForms', 'ADO .NET', 'Reflection', 'Generics'] }
           ],
-          screenshots: []
+          screenshots: [],
+          references: ''
         },
-        { title: 'SmartMon', description: 'Software for diagnosis, measurement, display and registration of signals using Bluetooth-connection.',
+        {
+          title: 'SmartMon', description: 'Software for diagnosis, measurement, display and registration of signals using Bluetooth-connection.',
           responsibilities: [
             'Development of the application structure and algorithms',
             'Code writing in Visual Studio .Net 2005 with C# (Smartphone 2003 SDK)',
@@ -135,10 +150,10 @@ define({
           tags: [
             { languages: ['C#', 'C'], stack: ['.NET CF 2.0', 'Smartphone 2003 SDK', 'Visual Studio .Net 2005', '8-bit microcontroller ATMega 8515', 'Bluetooth', 'BlueGiga WTOR', 'Smartphone', 'PDC', 'PC', 'AT commands'] }
           ],
-          screenshots: []
+          screenshots: [],
+          references: ''
         }
-      ],
-      references: ''
+      ]
     }, {
       id: 6,
       position: ['C#.NET developer', 'Embedding developer'],
@@ -150,7 +165,8 @@ define({
       company: 'Kelman Ltd',
       website: 'http://www.kelman.co.uk/',
       projects: [
-        { title: 'SMM', description: 'Application software for diagnostic and management the relay protection system.',
+        {
+          title: 'SMM', description: 'Application software for diagnostic and management the relay protection system.',
           responsibilities: [
             'Development GUI module for digital filter',
             'Code writing in Visual Studio .Net 2005 with C# (.NET 2.0)',
@@ -158,9 +174,12 @@ define({
           ],
           tags: [
             { languages: ['C#'], stack: ['.NET 2.0', 'Visual Studio .Net 2005', 'WinForms'] }
-          ]
+          ],
+          screenshots: [],
+          references: ''
         },
-        { title: 'TransConnect', description: 'Software for diagnostic, measurement of gas analysis hostboard through USB/TCP/Serial port interfaces.',
+        {
+          title: 'TransConnect', description: 'Software for diagnostic, measurement of gas analysis hostboard through USB/TCP/Serial port interfaces.',
           responsibilities: [
             'Development GUI and communication modules',
             'Code writing in Visual Studio .Net 2005 with C# (.NET 1.1/2.0)',
@@ -171,10 +190,10 @@ define({
           tags: [
             { languages: ['C#'], stack: ['.NET 1.1', '.NET 2.0', 'GoF', 'Visual Studio .Net 2005', 'SVN', 'Wiki', 'WinForms', 'NUnit', 'ADO.NET', 'Reflection', 'Generics'] }
           ],
-          screenshots: []
+          screenshots: [],
+          references: ''
         }
-      ],
-      references: ''
+      ]
     }, {
       id: 7,
       position: ['Senior C#.NET developer'],
@@ -186,7 +205,8 @@ define({
       company: 'Paladyne Systems',
       website: 'http://www.paladynesys.com/',
       projects: [
-        { title: 'Analytics Master', description: 'Software for optimizing hedge fund activities (back-office).',
+        {
+          title: 'Analytics Master', description: 'Software for optimizing hedge fund activities (back-office).',
           responsibilities: [
             'Development GUI and business logic (MSSQL 2005)',
             'Code writing in Visual Studio .Net 2008 TFS with C# (.NET 2.0/3.5)',
@@ -196,10 +216,10 @@ define({
           tags: [
             { languages: ['C#', 'SQL'], stack: ['.NET 2.0', 'Infragistics WinForms', 'GoF', 'Scrum', '.NET 3.5', 'MSSQL 2005', 'Visual Studio .Net 2008', 'TFS', 'WinForms', 'NUnit', 'Web service', 'Workflow foundation', 'ADO .NET', 'XML', 'Serialization', 'Reflection', 'Generics', 'Remoting'] }
           ],
-          screenshots: []
+          screenshots: [],
+          references: ''
         }
-      ],
-      references: ''
+      ]
     }, {
       id: 8,
       position: ['Senior C#.NET developer'],
@@ -211,7 +231,8 @@ define({
       company: 'Blueprint (Sofea SPB)',
       website: 'http://www.blueprintsys.com/',
       projects: [
-        { title: 'Raptor', description: 'It is a complete requirements solution for definition and collaboration. Enables authors to define requirements using rich text, UI mockups, use cases, business process, data, and roles. Uses rich simulation to visually communicate requirements to stakeholders in distributed or local organizations.',
+        {
+          title: 'Raptor/Requirements center', description: 'It is a complete requirements solution for definition and collaboration. Enables authors to define requirements using rich text, UI mockups, use cases, business process, data, and roles. Uses rich simulation to visually communicate requirements to stakeholders in distributed or local organizations.',
           responsibilities: [
             'Working by SCRUM methology in the distributed team of 20 members (Canada/Russia)',
             'Development of Presentation Layer (Graphic Core team)',
@@ -221,10 +242,14 @@ define({
           tags: [
             { languages: ['C#'], stack: ['.NET 4.0', 'GoF', 'Telerik Silverlight', 'Scrum', 'Silverlight', 'Visual Studio .Net 2008', 'Visual Studio .Net 2010', 'WCF RIA Services', 'NUnit', 'Entity framework', 'XML', 'Serialization', 'Reflection', 'Generics'] }
           ],
-          screenshots: []
+          screenshots: [
+            { title: 'Generic diagram', thumbnail: 'media/screenshots/blueprint/genericdiagram.png' },
+            { title: 'Property grid' , thumbnail:'media/screenshots/blueprint/reviewtrackprogress.png'},
+            { title: 'Storyboard', thumbnail:'media/screenshots/blueprint/storyboard.png' }
+          ],
+          references: ''
         }
-      ],
-      references: ''
+      ]
     }, {
       id: 9,
       position: ['Cofounder', 'Technical leader'],
@@ -236,7 +261,8 @@ define({
       company: 'DSB',
       website: 'http://www.simactivator.ru/',
       projects: [
-        { title: 'SIMActivator', description: 'Software for automation of business processes for regional telecommunication companies.',
+        {
+          title: 'SIMActivator', description: 'Software for automation of business processes for regional telecommunication companies.',
           responsibilities: [
             'Managing team as a technical leader within 2 developers working by SCRUM methology',
             'Development GUI and business logic (stored procedures, MySQL 5.x)',
@@ -247,10 +273,10 @@ define({
           tags: [
             { languages: ['C#', 'SQL', 'Javascript', 'PHP', 'HTML'], stack: ['.NET 3.5', 'Infragistics WinForms', 'MySQL 5', 'Scrum', 'AJAX', 'jQuery', 'WPF', 'WinForms', 'Windows services', 'Visual Studio .Net 2008', 'Visual Studio .Net 2010', 'NUnit', 'Linq', 'XML', 'Serialization', 'Reflection', 'Generics'] }
           ],
-          screenshots: []
+          screenshots: [],
+          references: ''
         }
-      ],
-      references: ''
+      ]
     }, {
       id: 10,
       position: ['Senior C#.NET developer', 'Support engineer'],
@@ -262,7 +288,8 @@ define({
       company: 'VinTelligent',
       website: 'http://www.vintelligent.com/',
       projects: [
-        { title: 'M21', description: 'The terminal operation system (part of Ports America software products) that operate with container terminals.',
+        {
+          title: 'M21', description: 'The terminal operation system (part of Ports America software products) that operate with container terminals.',
           responsibilities: [
             'Working by SCRUM methology in the distributed team of 10 members (USA/Russia)',
             'Developing GUI for vessel application',
@@ -276,10 +303,10 @@ define({
           tags: [
             { languages: ['Visual Basic 6.0', 'C#'], stack: ['.NET 4.0', 'DevExpress WinForms', 'GoF', 'WinForms', 'Scrum', 'SVN', 'Cruise control', 'Visual Studio .Net 2010', 'NUnit', 'Linq', 'dotTrace'] }
           ],
-          screenshots: []
+          screenshots: [],
+          references: ''
         }
-      ],
-      references: ''
+      ]
     }, {
       id: 11,
       position: ['Senior C#.NET developer', 'Installation developer'],
@@ -291,7 +318,8 @@ define({
       company: 'Perfect Vision Soft',
       website: 'http://vk.com/id153862424',
       projects: [
-        { title: 'Perfect Vision Gallery', description: 'The tool helps non professionals to create video presentations easy and fast.',
+        {
+          title: 'Perfect Vision Gallery', description: 'The tool helps non professionals to create video presentations easy and fast.',
           responsibilities: [
             'Working by SCRUM methology in the distributed team of 7 members all around Russia',
             'Create build box machine using VisualBuild Pro',
@@ -302,10 +330,10 @@ define({
           tags: [
             { languages: ['C#'], stack: ['.NET 4.0', 'WPF', 'Scrum', 'TFS', 'WiX Toolset 3.5', 'Visual Studio .Net 2010', 'Visual Build Pro', 'NUnit', 'Linq', 'XML', 'Serialization', 'Reflection', 'Generics'] }
           ],
-          screenshots: []
+          screenshots: [],
+          references: ''
         }
-      ],
-      references: ''
+      ]
     }, {
       id: 12,
       position: ['Senior C#.NET developer', 'Visual Basic.NET developer', 'Support engineer'],
@@ -317,7 +345,8 @@ define({
       company: 'Ultima Businessware',
       website: 'http://www.ultimaerp.com/',
       projects: [
-        { title: 'Ultima ERP', description: 'ERP-system of international standard for the medium and big businesses based on Oracle 11g database.',
+        {
+          title: 'Ultima ERP', description: 'ERP-system of international standard for the medium and big businesses based on Oracle 11g database.',
           responsibilities: [
             'Working by SCRUM methology in the distributed team of 20 members all around Russia',
             'Implementing new features and fix bugs in desktop client application (C#, .NET 4.0)',
@@ -328,7 +357,8 @@ define({
           tags: [
             { languages: ['C#', 'PL/SQL', 'Visual Basic .NET'], stack: ['.NET 4.0', 'Git', 'DevExpress WinForms', 'Oracle 11g', 'Scrum', 'SVN', 'Visual Studio .NET 2010', 'XML', 'Cruise control'] }
           ],
-          screenshots: []
+          screenshots: [],
+          references: ''
         }, {
           title: 'Supplier exchange', description: 'The web application helps company to manage the process of supplying goods.',
           responsibilities: [
@@ -340,10 +370,10 @@ define({
           tags: [
             { languages: ['PHP', 'C#', 'Javascript', 'HTML'], stack: ['.NET 4.0', 'YII 2.0', 'Git', 'less', 'jQuery', 'Scrum', 'SVN', 'WebService', 'PhpStorm', 'Visual Studio .Net 2010', 'XML'] }
           ],
-          screenshots: []
+          screenshots: [],
+          references: ''
         }
-      ],
-      references: ''
+      ]
     }, {
       id: 13,
       position: ['Javascript frontend developer'],
@@ -355,7 +385,8 @@ define({
       company: 'Akzia.com',
       website: 'http://akzia.com/',
       projects: [
-        { title: 'Akzia payments', description: 'The single page application provides payments support for initial 108 merchants through Elecsnet API (http://www.elecsnet.ru/).',
+        {
+          title: 'Akzia payments', description: 'The single page application provides payments support for initial 108 merchants through Elecsnet API (http://www.elecsnet.ru/).',
           responsibilities: [
             'Implementing frontend part with Javascript (AngularJS)',
             'Profiling application to find and fix leaks and performance bottlenecks',
@@ -363,10 +394,11 @@ define({
           ],
           tags: [
             { languages: ['Javascript', 'CSS', 'HTML'], stack: ['AngularJS', 'WebStorm', 'Chrome DevTools', 'less', 'Scrum', 'Git'] }
-          ]
+          ],
+          screenshots: [],
+          references: ''
         }
-      ],
-      references: ''
+      ]
     }, {
       id: 14,
       position: ['MCAD/MCSD'],
@@ -378,7 +410,8 @@ define({
       company: 'MCP Transcript sharing tool',
       website: 'https://mcp.microsoft.com/Anonymous/Transcript/Validate',
       projects: [
-        { title: 'Microsoft Certified Solution Developer / Microsoft Certified Application Developer / Microsoft Certified Professional',
+        {
+          title: 'Microsoft Certified Solution Developer / Microsoft Certified Application Developer / Microsoft Certified Professional',
           description: 'Transcript code – 792334, access code - 000F0975',
           responsibilities: [ 'Exam ID 229 (Mar 28, 2008) - Designing and Implementing Databases with Microsoft SQL Server™ 2000 Enterprise Edition',
             'Exam ID 300 (Feb 20, 2008) - Analyzing Requirements and Defining Microsoft .NET Solution Architectures',
@@ -388,7 +421,9 @@ define({
           ],
           tags: [
             { languages: ['MCAD', 'MCSD'], stack: [] }
-          ]
+          ],
+          screenshots: [],
+          references: ''
         }
       ]
     }, {
@@ -402,6 +437,13 @@ define({
       company: 'BKC',
       website: 'http://www.bkc.ru/',
       projects: [
+        {
+          tags: [
+            { languages: [], stack: [] }
+          ],
+          screenshots: [],
+          references: ''
+        }
       ]
     }, {
       id: 16,
@@ -424,7 +466,9 @@ define({
           ],
           tags: [
             { languages: ['MCAD', 'MCSD'], stack: [] }
-          ]
+          ],
+          screenshots: [],
+          references: ''
         }
       ]
     }

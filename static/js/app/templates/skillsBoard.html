@@ -1,46 +1,79 @@
 <div class="main-flex-wrapper" ng-show="job !== undefined">
-    <div class="left-column-wrapper">
-      <h1>General</h1>
-      <div class="skills-board-item-container">
-        <span class="skills-board-item-label">Organization:</span>
-        <span class="skills-board-item-value">
-          <a href="{{ job.website }}" ng-if="job.website.length > 0" target="_blank">{{ job.company }}</a>
-          <span ng-if="job.website.length === 0"> {{ job.company }} </span>
-        </span>
-      </div>
-      <div class="skills-board-item-container">
-        <span class="skills-board-item-label">Position:</span>
-        <span class="skills-board-item-value">
-          <li class="position" ng-repeat="pos in job.position">{{ pos }}</li>
-        </span>
-      </div>
-      <div class="skills-board-item-container">
-        <span class="skills-board-item-label">Location:</span>
-        <span class="skills-board-item-value">
-          {{ job.location }}
-        </span>
-      </div>
-      <div class="skills-board-item-container">
-        <span class="skills-board-item-label">Type:</span>
-        <span class="skills-board-item-value">
-          {{ job.employment_type }}
-        </span>
-      </div>
-      <div class="skills-board-item-container">
-        <span class="skills-board-item-label">Dates:</span>
-        <span class="skills-board-item-value">
-          From {{ job.dateFrom }} to {{ job.dateTo }}
-        </span>
-      </div>
+  <div class="left-column-wrapper">
+    <h1>General</h1>
+    <div class="skills-board-item-container">
+      <span class="skills-board-item-label">Organization:</span>
+      <span class="skills-board-item-value">
+        <a href="{{ job.website }}" ng-if="job.website.length > 0" target="_blank">{{ job.company }}</a>
+        <span ng-if="job.website.length === 0"> {{ job.company }} </span>
+      </span>
+    </div>
+    <div class="skills-board-item-container">
+      <span class="skills-board-item-label">Position(s):</span>
+      <span class="skills-board-item-value">
+        <li class="position" ng-repeat="pos in job.position">{{ pos }}</li>
+      </span>
+    </div>
+    <div class="skills-board-item-container">
+      <span class="skills-board-item-label">Location:</span>
+      <span class="skills-board-item-value">
+        {{ job.location }}
+      </span>
+    </div>
+    <div class="skills-board-item-container">
+      <span class="skills-board-item-label">Type:</span>
+      <span class="skills-board-item-value">
+        {{ job.employment_type }}
+      </span>
+    </div>
+    <div class="skills-board-item-container">
+      <span class="skills-board-item-label">Dates:</span>
+      <span class="skills-board-item-value">
+        From {{ job.dateFrom }} to {{ job.dateTo }}
+      </span>
+    </div>
   </div>
   <div class="right-column-wrapper" ng-show="job.projects.length > 0">
     <h1>Projects</h1>
     <div class="project" ng-repeat="project in job.projects">
       <h2>{{ project.title }}</h2>
-      <div class="description">{{ project.description }}</div>
-      <ul ng-repeat="resp in project.responsibilities">
-        <li>{{ resp }}</li>
-      </ul>
+       <tabset>
+         <tab>
+           <tab-heading>
+             Description
+           </tab-heading>
+           <div class="description">
+            {{ project.description }}
+            <ul class="responsibility" ng-repeat="resp in project.responsibilities">
+              <li>{{ resp }}</li>
+            </ul>
+           </div>
+         </tab>
+         <tab ng-show="project.screenshots.length > 0">
+           <tab-heading>
+            Screenshots
+           </tab-heading>
+           <div>
+             <span class="screenshot" ng-repeat="screenshot in project.screenshots">
+               <ul>
+                 <li>
+                   <span>
+                     <img class="inactive" ng-click="showScreenshot($event)" title="Click to enlarge" src="" ex-xlink-href="{{ screenshot.thumbnail }}"/>
+                   </span>
+                   <span class="screenshot-title">{{ screenshot.title }}</span>
+                 </li>
+               </ul>
+             </span>
+           </div>
+         </tab>
+         <tab ng-show="project.references.length > 0">
+           <tab-heading>
+            References
+           </tab-heading>
+           <div>
+           </div>
+         </tab>
+      </tabset>
       <div ng-show="job.tags.length > 0">
          Tags:
          <span ng-repeat="tag in project.tags">

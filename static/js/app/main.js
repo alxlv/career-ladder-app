@@ -1,8 +1,10 @@
 require.config({
   baseUrl: './static/js/app',
   paths: {
-    angular:        '../../../bower_components/angular/angular.min',
+    angular:        '../../../bower_components/angular/angular',
     uiRouter:       '../../../bower_components/angular-ui-router/release/angular-ui-router.min',
+    uiBootstrap:    '../../../bower_components/angular-bootstrap/ui-bootstrap',
+    uiBootstrapTpls:'../../../bower_components/angular-bootstrap/ui-bootstrap-tpls',
     jquery:         '../../../bower_components/jquery/jquery.min',
     rangeSlider:    '../../../bower_components/angular-rangeslider/angular.rangeSlider',
     text:           '../../../bower_components/requirejs-text/text',
@@ -15,6 +17,8 @@ require.config({
     'angular'          : { deps: ['jquery'], exports : 'angular' },
     'rangeSlider'      : { deps: ['jquery', 'angular'] },
     'uiRouter'         : ['angular'],
+    'uiBootstrap'      : ['angular'],
+    'uiBootstrapTpls'  : ['angular', 'uiBootstrap'],
     'jquery'           : { exports: '$' },
     'underscore'       : { exports: '_' },
     'tweenMax'         : { exports: 'TweenMax' },
