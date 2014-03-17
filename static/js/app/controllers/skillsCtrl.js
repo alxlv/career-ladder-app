@@ -15,21 +15,22 @@ define(function (require) {
     });
 
     $scope.showScreenshot = function(e) {
-      if (typeof e.toElement !== 'undefined') {
+      var element = e.toElement || e.currentTarget;
+      if (typeof element !== 'undefined') {
         var enlarge = true;
-        if (typeof e.toElement._gsTransform !== 'undefined') {
-          if (e.toElement._gsTransform.scaleX > 1) {
-            TweenMax.to(e.toElement, 0,  {css:{ className: 'inactive' }});
-            $(e.toElement).attr('title', 'Click to enlarge');
-            TweenMax.to(e.toElement, 0.2, { scale: 1, ease: "easeOut", transformOrigin: 'center center' });
+        if (typeof element._gsTransform !== 'undefined') {
+          if (element._gsTransform.scaleX > 1) {
+            TweenMax.to(element, 0,  {css:{ className: 'inactive' }});
+            $(element).attr('title', 'Click to enlarge');
+            TweenMax.to(element, 0.2, { scale: 1, ease: "easeOut", transformOrigin: 'center center' });
             enlarge = false;
           }
         }
 
         if (enlarge) {
-          TweenMax.to(e.toElement, 0,  {css:{ className: 'active' }});
-          $(e.toElement).attr('title', 'Click to minimise');
-          TweenMax.to(e.toElement, 0.2, { scale: 8, ease: "easeOut", transformOrigin: 'center center' });
+          TweenMax.to(element, 0,  {css:{ className: 'active' }});
+          $(element).attr('title', 'Click to minimise');
+          TweenMax.to(element, 0.2, { scale: 8, ease: "easeOut", transformOrigin: 'center center' });
         }
       }
     };

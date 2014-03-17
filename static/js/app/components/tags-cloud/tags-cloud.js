@@ -23,9 +23,6 @@ define(function (require) {
           function _init() {
             if (!$('#tags-cloud-canvas').tagcanvas({
               textColour: '#2f96b4',
-              //dragControl: true,
-              //freezeActive: true,
-              //shape: 'hcylinder',
               hideTags: false,
               interval: 20,
               outlineColour: '#5bc0de',
@@ -35,7 +32,6 @@ define(function (require) {
               minBrightness: 0.1,
               maxSpeed: 0.05,
               weight: true,
-              //weightMode: "both",
               textHeight: 25,
               shadow: '#ccf',
               shadowBlur: 3,
