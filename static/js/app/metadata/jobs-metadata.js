@@ -109,7 +109,7 @@ define({
             { languages: ['Java'], stack: ['SIM card', 'Intellij Idea', 'JVM'] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }
       ]
     }, {
@@ -136,7 +136,7 @@ define({
             { languages: ['C#', 'C++'], stack: ['.NET 2.0', 'GoF', 'Visual Studio .Net 2003', 'WinForms', 'ADO .NET', 'Reflection', 'Generics'] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         },
         {
           title: 'SmartMon', description: 'Software for diagnosis, measurement, display and registration of signals using Bluetooth-connection.',
@@ -151,7 +151,7 @@ define({
             { languages: ['C#', 'C'], stack: ['.NET CF 2.0', 'Smartphone 2003 SDK', 'Visual Studio .Net 2005', '8-bit microcontroller ATMega 8515', 'Bluetooth', 'BlueGiga WTOR', 'Smartphone', 'PDC', 'PC', 'AT commands'] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }
       ]
     }, {
@@ -176,7 +176,7 @@ define({
             { languages: ['C#'], stack: ['.NET 2.0', 'Visual Studio .Net 2005', 'WinForms'] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         },
         {
           title: 'TransConnect', description: 'Software for diagnostic, measurement of gas analysis hostboard through USB/TCP/Serial port interfaces.',
@@ -191,7 +191,7 @@ define({
             { languages: ['C#'], stack: ['.NET 1.1', '.NET 2.0', 'GoF', 'Visual Studio .Net 2005', 'SVN', 'Wiki', 'WinForms', 'NUnit', 'ADO.NET', 'Reflection', 'Generics'] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }
       ]
     }, {
@@ -217,7 +217,7 @@ define({
             { languages: ['C#', 'SQL'], stack: ['.NET 2.0', 'Infragistics WinForms', 'GoF', 'Scrum', '.NET 3.5', 'MSSQL 2005', 'Visual Studio .Net 2008', 'TFS', 'WinForms', 'NUnit', 'Web service', 'Workflow foundation', 'ADO .NET', 'XML', 'Serialization', 'Reflection', 'Generics', 'Remoting'] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }
       ]
     }, {
@@ -244,10 +244,10 @@ define({
           ],
           screenshots: [
             { title: 'Generic diagram', thumbnail: 'media/screenshots/blueprint/genericdiagram.png' },
-            { title: 'Property grid' , thumbnail:'media/screenshots/blueprint/reviewtrackprogress.png'},
+            { title: 'Properties grid' , thumbnail:'media/screenshots/blueprint/reviewtrackprogress.png'},
             { title: 'Storyboard', thumbnail:'media/screenshots/blueprint/storyboard.png' }
           ],
-          references: ''
+          references: []
         }
       ]
     }, {
@@ -274,7 +274,7 @@ define({
             { languages: ['C#', 'SQL', 'Javascript', 'PHP', 'HTML'], stack: ['.NET 3.5', 'Infragistics WinForms', 'MySQL 5', 'Scrum', 'AJAX', 'jQuery', 'WPF', 'WinForms', 'Windows services', 'Visual Studio .Net 2008', 'Visual Studio .Net 2010', 'NUnit', 'Linq', 'XML', 'Serialization', 'Reflection', 'Generics'] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }
       ]
     }, {
@@ -304,7 +304,7 @@ define({
             { languages: ['Visual Basic 6.0', 'C#'], stack: ['.NET 4.0', 'DevExpress WinForms', 'GoF', 'WinForms', 'Scrum', 'SVN', 'Cruise control', 'Visual Studio .Net 2010', 'NUnit', 'Linq', 'dotTrace'] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }
       ]
     }, {
@@ -331,7 +331,7 @@ define({
             { languages: ['C#'], stack: ['.NET 4.0', 'WPF', 'Scrum', 'TFS', 'WiX Toolset 3.5', 'Visual Studio .Net 2010', 'Visual Build Pro', 'NUnit', 'Linq', 'XML', 'Serialization', 'Reflection', 'Generics'] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }
       ]
     }, {
@@ -358,7 +358,7 @@ define({
             { languages: ['C#', 'PL/SQL', 'Visual Basic .NET'], stack: ['.NET 4.0', 'Git', 'DevExpress WinForms', 'Oracle 11g', 'Scrum', 'SVN', 'Visual Studio .NET 2010', 'XML', 'Cruise control'] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }, {
           title: 'Supplier exchange', description: 'The web application helps company to manage the process of supplying goods.',
           responsibilities: [
@@ -371,7 +371,7 @@ define({
             { languages: ['PHP', 'C#', 'Javascript', 'HTML'], stack: ['.NET 4.0', 'YII 2.0', 'Git', 'less', 'jQuery', 'Scrum', 'SVN', 'WebService', 'PhpStorm', 'Visual Studio .Net 2010', 'XML'] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }
       ]
     }, {
@@ -396,7 +396,7 @@ define({
             { languages: ['Javascript', 'CSS', 'HTML'], stack: ['AngularJS', 'WebStorm', 'Chrome DevTools', 'less', 'Scrum', 'Git'] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }
       ]
     }, {
@@ -423,7 +423,7 @@ define({
             { languages: ['MCAD', 'MCSD'], stack: [] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }
       ]
     }, {
@@ -442,7 +442,7 @@ define({
             { languages: [], stack: [] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }
       ]
     }, {
@@ -468,7 +468,7 @@ define({
             { languages: ['MCAD', 'MCSD'], stack: [] }
           ],
           screenshots: [],
-          references: ''
+          references: []
         }
       ]
     }

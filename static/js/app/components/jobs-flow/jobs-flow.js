@@ -30,6 +30,11 @@ define(function (require) {
           var paramsScale1 = { scale: 1, ease: "easeOut", transformOrigin: 'top left' };
           var paramsScale15 = { scale: 1.8, ease: "easeOut", transformOrigin: 'top left' };
           var isClicked = false;
+          var connector = $('.job-point-connector-inactive');
+
+          function hideConnector() {
+            TweenMax.set(connector, {css:{className: 'job-point-connector-inactive'}});
+          }
 
           function setTitleText() {
             var newTitleText = isClicked ? 'lock' : "unlock"
@@ -50,14 +55,18 @@ define(function (require) {
               var text = jobPoint.children('text')[0];
               TweenMax.to(text, zeroDuration, {css:{ display: 'none', cursor: 'arrow' }});
             }
+
+            //hideConnector();
           }
 
           function scaleJobPoints(job, isScaled) {
             var jobPoints = el.find('job-point').children().find('g');
             var textObjs = [];
-            for (var idx = 0; idx < _.size(jobPoints); idx++) {
+            var jobPointsObjs = [];
+            for (var idx = 0; idx < _.size(jobPoints) && textObjs.length < 2; idx++) {
               if (job.id.toString() === $(jobPoints[idx]).attr('id')) {
                 var jobPoint = $(jobPoints[idx]);
+                jobPointsObjs.push(jobPoints[idx]);
                 var text = jobPoint.children('text')[0];
                 textObjs.push(text);
                 TweenMax.to(jobPoint, 0.2, isScaled ? paramsScale15 : paramsScale1);
@@ -73,8 +82,23 @@ define(function (require) {
               var leftX1 = $(textObjs[1]).offset().left;
               if (leftX0 !== 0 && leftX1 !== 0) {
                 var diff = width + leftX0 - leftX1;
+                var wrap = false;
                 if (diff >= -30 && diff <= 30) {
                   TweenMax.set(textObjs[1], {css:{transform:"translateY(10px)"}});
+                  wrap = true;
+                }
+
+                if (wrap === false && jobPointsObjs.length > 1) {
+                  rect0 = jobPointsObjs[0].getBoundingClientRect();
+                  width = rect0.width;
+                  var leftY0 = $(jobPointsObjs[0]).offset().top;
+                  // TODO: HACK! (detect browser features)
+                  if (leftY0 < 500) {
+                    leftY0 = leftY0 + rect0.height / 2;
+                  }
+                  leftX0 = $(jobPointsObjs[0]).offset().left;
+                  leftX1 = $(jobPointsObjs[1]).offset().left;
+                  //TweenMax.set(connector, {css:{top: leftY0, left: leftX0 + width / 2, width: leftX1 - leftX0, className: 'job-point-connector-active'}});
                 }
               }
             }
@@ -150,6 +174,7 @@ define(function (require) {
 
             if (isClicked) return;
             scaleJobPoints(job, false);
+            hideConnector();
             scope.onJobPointLeaveCtrl({ job: job });
           }
 

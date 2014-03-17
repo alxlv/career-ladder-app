@@ -29,7 +29,7 @@ define(function (require) {
         if (enlarge) {
           TweenMax.to(e.toElement, 0,  {css:{ className: 'active' }});
           $(e.toElement).attr('title', 'Click to minimise');
-          TweenMax.to(e.toElement, 0.2, { scale: 7, ease: "easeOut", transformOrigin: 'center center' });
+          TweenMax.to(e.toElement, 0.2, { scale: 8, ease: "easeOut", transformOrigin: 'center center' });
         }
       }
     };

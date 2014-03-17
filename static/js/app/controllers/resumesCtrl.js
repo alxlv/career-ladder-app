@@ -24,7 +24,8 @@ define(function (require) {
       { text: 'RequireJS v2.1.11', link: 'http://github.com/jrburke/requirejs' },
       { text: 'jQuery v2.1.0', link: 'http://jquery.com' },
       { text: 'GreenSock-JS v1.11.4', link: 'http://www.greensock.com' },
-      { text: 'jQuery.tagcanvas v2.2', link: 'http://www.goat1000.com/tagcanvas.php' }
+      { text: 'jQuery.tagcanvas v2.2', link: 'http://www.goat1000.com/tagcanvas.php' },
+      { text: 'UI Bootstrap v0.10', link: 'http://angular-ui.github.io/bootstrap/' }
     ];
 
     $scope.jsComponents = jsComponents;

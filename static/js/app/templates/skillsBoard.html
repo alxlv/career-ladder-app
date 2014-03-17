@@ -48,6 +48,13 @@
               <li>{{ resp }}</li>
             </ul>
            </div>
+           <div ng-show="(project.tags[0].languages.length > 0 || project.tags[0].stack.length > 0)">
+             Tags:
+             <span ng-repeat="tag in project.tags">
+               <span ng-repeat="lang in tag.languages"><b class="project-tag-item">{{ lang }}</b> </span>
+               <span ng-repeat="stack in tag.stack"><b class="project-tag-item">{{ stack }}</b> </span>
+             </span>
+           </div>
          </tab>
          <tab ng-show="project.screenshots.length > 0">
            <tab-heading>
@@ -71,16 +78,12 @@
             References
            </tab-heading>
            <div>
+             <span ng-repeat="reference in project.references">
+               {{ reference }}
+             </span>
            </div>
          </tab>
       </tabset>
-      <div ng-show="job.tags.length > 0">
-         Tags:
-         <span ng-repeat="tag in project.tags">
-           <span ng-repeat="lang in tag.languages"><b class="project-tag-item">{{ lang }}</b> </span>
-           <span ng-repeat="stack in tag.stack"><b class="project-tag-item">{{ stack }}</b> </span>
-         </span>
-      </div>
     </div>
    </div>
 </div>

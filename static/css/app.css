@@ -567,7 +567,7 @@ div.main-view {
      padding: 0;
      margin: 0;
      width: 75%;
-     height: 310px;
+     height: 320px;
    }
 }
 
@@ -576,7 +576,7 @@ div.main-view {
      padding: 0;
      margin: 0;
      width: 70%;
-     height: 310px;
+     height: 320px;
   }
 }
 
@@ -599,7 +599,7 @@ div.main-view {
   padding: 2px;
   margin: 2px;
   width: 20%;
-  height: 70px;
+  height: 75px;
 
   text-align: center;
   color: black;
@@ -611,7 +611,7 @@ div.main-view {
   margin: 2px;
   padding: 2px;
   width: 80%;
-  height: 70px;
+  height: 75px;
 
   color: black;
   font-size: 0.9em;
@@ -641,8 +641,8 @@ div.main-view {
         padding: 2px;
         margin: 2px;
         width: 23%;
-        height: 310px;
-        border: 1px dotted #d3d3d3;
+        height: 320px;
+        /*border: 1px dotted #d3d3d3;*/
     }
 }
 
@@ -651,18 +651,18 @@ div.main-view {
         padding: 2px;
         margin: 2px;
         width: 29%;
-        height: 310px;
-        border: 1px dotted #d3d3d3;
+        height: 320px;
+        /*border: 1px dotted #d3d3d3;*/
     }
 }
 
 .tags-cloud-container .tags-cloud-canvas {
   width: 100%;
-  height: 310px;
+  height: 100%;
 }
 
 .jobs-flow-container {
-  margin-top: 10px;
+  margin-top: 15px;
   width: 100%;
   height: 80px;
 }
@@ -728,6 +728,18 @@ div.main-view {
   display: none;
   font-family: monospace, serif;
   font-size: 0.7em;
+}
+
+.job-point-connector-inactive {
+  display: none;
+}
+
+.job-point-connector-active {
+  display: inline;
+  position: fixed;
+  width: 35px;
+  border: 1px solid black;
+  z-index: 0;
 }
 
 .skills-board-container {
