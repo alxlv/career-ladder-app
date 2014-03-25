@@ -942,9 +942,8 @@ div.main-view {
 
 .skills-board-container .right-column-wrapper .project .screenshot img {
   display: block;
-  margin: 5px;
-  width: 100px;
-  height: 60px;
+  margin: 10px;
+  padding: 10px;
 }
 
 .skills-board-container .right-column-wrapper .project .screenshot img.inactive {
@@ -961,6 +960,19 @@ div.main-view {
 
 .skills-board-container .right-column-wrapper .project .screenshot img:hover {
   cursor: pointer;
+}
+
+.skills-board-container .right-column-wrapper .project .ref {
+  padding: 0px;
+  margin: -5px -10px 0px 0px;
+  width: 100%;
+}
+
+.skills-board-container .right-column-wrapper .project .ref ul {
+  list-style: none;
+}
+
+.skills-board-container .right-column-wrapper .project .ref ul li {
 }
 
 .skills-board-container .right-column-wrapper .project .responsibility {

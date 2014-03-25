@@ -65,9 +65,10 @@
                <ul>
                  <li>
                    <span>
-                     <img class="inactive" ng-click="showScreenshot($event)" title="Click to enlarge" src="" ex-xlink-href="{{ screenshot.thumbnail }}"/>
+                     <img ng-if="screenshot.type === 'pic'" class="inactive" width="{{ screenshot.width }}" height="{{ screenshot.height }}" ng-click="showScreenshot($event)" title="Click to enlarge" src="" ex-xlink-href="{{ screenshot.thumbnail }}"/>
+                     <iframe ng-if="screenshot.type === 'video'" class="inactive" width="{{ screenshot.width }}" height="{{ screenshot.height }}" src="" ex-xlink-href="{{ screenshot.thumbnail }}" frameborder="0" allowfullscreen></iframe>
                    </span>
-                   <span class="screenshot-title">{{ screenshot.title }}</span>
+                   <span ng-if="screenshot.type === 'pic'" class="screenshot-title">{{ screenshot.title }}</span>
                  </li>
                </ul>
              </span>
@@ -78,8 +79,12 @@
             References
            </tab-heading>
            <div>
-             <span ng-repeat="reference in project.references">
-               {{ reference }}
+             <span class="ref" ng-repeat="reference in project.references">
+               <ul>
+                 <li>Name: {{ reference.title }}</li>
+                 <li>Position: {{ reference.position }}</li>
+                 <li>Contact: <a href='{{ reference.contact }}' class='sliding-panel-contact-item'>{{ reference.contact }}</a></li>
+               </ul>
              </span>
            </div>
          </tab>

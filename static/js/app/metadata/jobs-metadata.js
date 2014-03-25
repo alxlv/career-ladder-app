@@ -12,7 +12,7 @@ define({
       website: 'http://pskgu.ru/',
       projects: [
         {
-          title: 'Bachelor\'s degree - system engineer', description: '',
+          title: 'Student', description: 'Bachelor\'s degree: system engineer. Diploma: \'The development of hardware-software web based complex that controls and manages the uninterruptible power supply\'.',
           responsibilities: [],
           tags: [
             { languages: [], stack: [] }
@@ -135,7 +135,12 @@ define({
           tags: [
             { languages: ['C#', 'C++'], stack: ['.NET 2.0', 'GoF', 'Visual Studio .Net 2003', 'WinForms', 'ADO .NET', 'Reflection', 'Generics'] }
           ],
-          screenshots: [],
+          screenshots: [
+            { title: 'Main view', width: '110', height: '70', type: 'pic', thumbnail: 'media/screenshots/atis/mainview.jpg'},
+            { title: 'Event log player', width: '70', height: '90', type: 'pic', thumbnail: 'media/screenshots/atis/event_log_dlg.jpg'},
+            { title: 'Preferences', width: '90', height: '70', type: 'pic', thumbnail: 'media/screenshots/atis/path_bizp.jpg'},
+            { title: 'Paths capacity', width: '60', height: '40', type: 'pic', thumbnail: 'media/screenshots/atis/wnd_freedom_rtl.JPG'}
+          ],
           references: []
         },
         {
@@ -216,8 +221,13 @@ define({
           tags: [
             { languages: ['C#', 'SQL'], stack: ['.NET 2.0', 'Infragistics WinForms', 'GoF', 'Scrum', '.NET 3.5', 'MSSQL 2005', 'Visual Studio .Net 2008', 'TFS', 'WinForms', 'NUnit', 'Web service', 'Workflow foundation', 'ADO .NET', 'XML', 'Serialization', 'Reflection', 'Generics', 'Remoting'] }
           ],
-          screenshots: [],
-          references: []
+          screenshots: [
+            { title: 'Report Grid', width: '120', height: '80', type: 'pic', thumbnail: 'media/screenshots/paladyne/grid.jpg' },
+            { title: 'Formula workshop', width: '100', height: '80', type: 'pic', thumbnail:'media/screenshots/paladyne/formula_workshop.jpg'}
+          ],
+          references: [
+            { title: 'Artyom Pavlinov', position: 'Team leader', contact: 'skype:apavlinov' }
+          ]
         }
       ]
     }, {
@@ -243,11 +253,13 @@ define({
             { languages: ['C#'], stack: ['.NET 4.0', 'GoF', 'Telerik Silverlight', 'Scrum', 'Silverlight', 'Visual Studio .Net 2008', 'Visual Studio .Net 2010', 'WCF RIA Services', 'NUnit', 'Entity framework', 'XML', 'Serialization', 'Reflection', 'Generics'] }
           ],
           screenshots: [
-            { title: 'Generic diagram', thumbnail: 'media/screenshots/blueprint/genericdiagram.png' },
-            { title: 'Properties grid' , thumbnail:'media/screenshots/blueprint/reviewtrackprogress.png'},
-            { title: 'Storyboard', thumbnail:'media/screenshots/blueprint/storyboard.png' }
+            { title: 'Generic diagram editor', width: '110', height: '65', type: 'pic', thumbnail: 'media/screenshots/blueprint/genericdiagram.png' },
+            { title: 'Properties grid', width: '110', height: '65', type: 'pic', thumbnail:'media/screenshots/blueprint/reviewtrackprogress.png'},
+            { title: 'Storyboard editor', width: '110', height: '65',type: 'pic', thumbnail:'media/screenshots/blueprint/storyboard.png' }
           ],
-          references: []
+          references: [
+            { title: 'Salah Sharieh', position: 'Team leader', contact: 'skype:salah_sharieh' }
+          ]
         }
       ]
     }, {
@@ -273,7 +285,17 @@ define({
           tags: [
             { languages: ['C#', 'SQL', 'Javascript', 'PHP', 'HTML'], stack: ['.NET 3.5', 'Infragistics WinForms', 'MySQL 5', 'Scrum', 'AJAX', 'jQuery', 'WPF', 'WinForms', 'Windows services', 'Visual Studio .Net 2008', 'Visual Studio .Net 2010', 'NUnit', 'Linq', 'XML', 'Serialization', 'Reflection', 'Generics'] }
           ],
-          screenshots: [],
+          screenshots: [
+            { title: 'Authentication', width: '40', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/client_auth_window.PNG'},
+            { title: 'Beeline preferences', width: '70', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/client_beeline_preferences.PNG'},
+            { title: 'Beeline resident', width: '70', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/client_beeline_resident.PNG' },
+            { title: 'Megafon preferences', width: '70', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/client_megafon_preferences.PNG' },
+            { title: 'Megafon resident',width: '70', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/client_megafon_resident.PNG' },
+            { title: 'MTC preferences', width: '70', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/client_mts_preferences.PNG' },
+            { title: 'MTC resident', width: '70', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/client_mts_resident.PNG' },
+            { title: 'Tele2 preferences', width: '70', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/client_tele2_preferences.PNG' },
+            { title: 'Tele2 resident', width: '70', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/client_tele2_resident.PNG' }
+          ],
           references: []
         }
       ]
@@ -303,8 +325,16 @@ define({
           tags: [
             { languages: ['Visual Basic 6.0', 'C#'], stack: ['.NET 4.0', 'DevExpress WinForms', 'GoF', 'WinForms', 'Scrum', 'SVN', 'Cruise control', 'Visual Studio .Net 2010', 'NUnit', 'Linq', 'dotTrace'] }
           ],
-          screenshots: [],
-          references: []
+          screenshots: [
+            { title: 'Operation management', width: '120', height: '80', type: 'pic', thumbnail: 'media/screenshots/vintelligent/operation_management.png'},
+            { title: 'Pedestal', width: '80', height: '100', type: 'pic', thumbnail: 'media/screenshots/vintelligent/pedestal.png'},
+            { title: 'General arrangement', width: '120', height: '80', type: 'pic', thumbnail: 'media/screenshots/vintelligent/general_arr.png'},
+            { title: 'Chassis damage', width: '120', height: '80', type: 'pic', thumbnail: 'media/screenshots/vintelligent/chassis_damage.png'},
+            { title: 'Job control', width: '120', height: '80', type: 'pic', thumbnail: 'media/screenshots/vintelligent/job_control.png'}
+          ],
+          references: [
+            { title: 'Jason McBurney', position: 'Team leader', contact: 'mailto:Jason.mcburney@gmail.com' }
+          ]
         }
       ]
     }, {
@@ -314,9 +344,9 @@ define({
       working_type: 'remote',
       dateFrom: '01.2011',
       dateTo: '04.2012',
-      location: 'Saint-Petersburg',
+      location: 'Moscow',
       company: 'Perfect Vision Soft',
-      website: 'http://vk.com/id153862424',
+      website: 'http://perfectvisionsoft.com',
       projects: [
         {
           title: 'Perfect Vision Gallery', description: 'The tool helps non professionals to create video presentations easy and fast.',
@@ -330,8 +360,15 @@ define({
           tags: [
             { languages: ['C#'], stack: ['.NET 4.0', 'WPF', 'Scrum', 'TFS', 'WiX Toolset 3.5', 'Visual Studio .Net 2010', 'Visual Build Pro', 'NUnit', 'Linq', 'XML', 'Serialization', 'Reflection', 'Generics'] }
           ],
-          screenshots: [],
-          references: []
+          screenshots: [
+            { title: 'UI modules', width: '220', height: '140', type: 'video', thumbnail: 'http://www.youtube.com/embed/7nrZwEtJ7mQ'},
+            { title: 'Main window', width: '120', height: '80', type: 'pic', thumbnail: 'media/screenshots/pv/main_wnd.png'},
+            { title: 'Module Carousel', width: '110', height: '80', type: 'pic', thumbnail: 'media/screenshots/pv/carousel_mod.png'},
+            { title: 'Module Manipulator', width: '110', height: '80', type: 'pic', thumbnail: 'media/screenshots/pv/manipulator_mod.png'}
+          ],
+          references: [
+            { title: 'Igor Vagin', position: 'CEO, Cofounder', contact: 'skype:antaresantares' }
+          ]
         }
       ]
     }, {
@@ -357,7 +394,12 @@ define({
           tags: [
             { languages: ['C#', 'PL/SQL', 'Visual Basic .NET'], stack: ['.NET 4.0', 'Git', 'DevExpress WinForms', 'Oracle 11g', 'Scrum', 'SVN', 'Visual Studio .NET 2010', 'XML', 'Cruise control'] }
           ],
-          screenshots: [],
+          screenshots: [
+            { title: 'Documents list', width: '140', height: '70', type: 'pic', thumbnail: 'media/screenshots/ultima/list.png'},
+            { title: 'Payments claim document', width: '120', height: '70', type: 'pic', thumbnail: 'media/screenshots/ultima/payment_claim.png'},
+            { title: 'Report', width: '100', height: '80', type: 'pic', thumbnail: 'media/screenshots/ultima/report.png'},
+            { title: 'Mobile payments', width: '110', height: '70', type: 'pic', thumbnail: 'media/screenshots/ultima/mobile.png'}
+          ],
           references: []
         }, {
           title: 'Supplier exchange', description: 'The web application helps company to manage the process of supplying goods.',
@@ -370,8 +412,11 @@ define({
           tags: [
             { languages: ['PHP', 'C#', 'Javascript', 'HTML'], stack: ['.NET 4.0', 'YII 2.0', 'Git', 'less', 'jQuery', 'Scrum', 'SVN', 'WebService', 'PhpStorm', 'Visual Studio .Net 2010', 'XML'] }
           ],
-          screenshots: [],
-          references: []
+          screenshots: [
+          ],
+          references: [
+            { title: 'Alexander Zolotov', position: 'Project manager', contact: 'skype:ultima.businessware' }
+          ]
         }
       ]
     }, {
@@ -396,7 +441,9 @@ define({
             { languages: ['Javascript', 'CSS', 'HTML'], stack: ['AngularJS', 'WebStorm', 'Chrome DevTools', 'less', 'Scrum', 'Git'] }
           ],
           screenshots: [],
-          references: []
+          references: [
+            { title: 'Vasiliy Ruzanov', position: 'Project manager', contact: 'skype:vasiliy.ruzanov' }
+          ]
         }
       ]
     }, {
