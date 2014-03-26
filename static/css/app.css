@@ -964,7 +964,7 @@ div.main-view {
 
 .skills-board-container .right-column-wrapper .project .ref {
   padding: 0px;
-  margin: -5px -10px 0px 0px;
+  border: 1px solid transparent;
   width: 100%;
 }
 
