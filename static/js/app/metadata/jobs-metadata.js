@@ -226,7 +226,7 @@ define({
             { title: 'Formula workshop', width: '100', height: '80', type: 'pic', thumbnail:'media/screenshots/paladyne/formula_workshop.jpg'}
           ],
           references: [
-            { title: 'Artyom Pavlinov', position: 'Team leader', contact: 'skype:apavlinov' }
+            { title: 'Artyom Pavlinov', position: 'Project manager', contact: 'skype:apavlinov' }
           ]
         }
       ]
@@ -286,6 +286,9 @@ define({
             { languages: ['C#', 'SQL', 'Javascript', 'PHP', 'HTML'], stack: ['.NET 3.5', 'Infragistics WinForms', 'MySQL 5', 'Scrum', 'AJAX', 'jQuery', 'WPF', 'WinForms', 'Windows services', 'Visual Studio .Net 2008', 'Visual Studio .Net 2010', 'NUnit', 'Linq', 'XML', 'Serialization', 'Reflection', 'Generics'] }
           ],
           screenshots: [
+            { title: 'Server - Salepoints', width: '100', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/admin_salepoints_create.PNG'},
+            { title: 'Server - Users', width: '100', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/admin_users.PNG'},
+            { title: 'Server - Diagnostics', width: '100', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/admin_diagnostics.PNG'},
             { title: 'Authentication', width: '40', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/client_auth_window.PNG'},
             { title: 'Beeline preferences', width: '70', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/client_beeline_preferences.PNG'},
             { title: 'Beeline resident', width: '70', height: '65', type: 'pic', thumbnail:'media/screenshots/dsb/client_beeline_resident.PNG' },
@@ -400,7 +403,9 @@ define({
             { title: 'Report', width: '100', height: '80', type: 'pic', thumbnail: 'media/screenshots/ultima/report.png'},
             { title: 'Mobile payments', width: '110', height: '70', type: 'pic', thumbnail: 'media/screenshots/ultima/mobile.png'}
           ],
-          references: []
+          references: [
+            { title: 'Alexander Zolotov', position: 'Project manager', contact: 'skype:ultima.businessware' }
+          ]
         }, {
           title: 'Supplier exchange', description: 'The web application helps company to manage the process of supplying goods.',
           responsibilities: [
@@ -440,7 +445,13 @@ define({
           tags: [
             { languages: ['Javascript', 'CSS', 'HTML'], stack: ['AngularJS', 'WebStorm', 'Chrome DevTools', 'less', 'Scrum', 'Git'] }
           ],
-          screenshots: [],
+          screenshots: [
+            { title: 'Main window', width: '120', height: '85', type: 'pic', thumbnail: 'media/screenshots/akzia/mainview.png'},
+            { title: 'Navigation', width: '120', height: '85', type: 'pic', thumbnail: 'media/screenshots/akzia/navigation.png'},
+            { title: 'Payments', width: '120', height: '85', type: 'pic', thumbnail: 'media/screenshots/akzia/payment.png'},
+            { title: 'My office', width: '120', height: '85', type: 'pic', thumbnail: 'media/screenshots/akzia/office.png'},
+            { title: 'Children', width: '120', height: '85', type: 'pic', thumbnail: 'media/screenshots/akzia/children.png'}
+          ],
           references: [
             { title: 'Vasiliy Ruzanov', position: 'Project manager', contact: 'skype:vasiliy.ruzanov' }
           ]
@@ -473,7 +484,7 @@ define({
           references: []
         }
       ]
-    }, {
+    },/* {
       id: 15,
       position: ['IELTS'],
       employment_type: 'certification',
@@ -485,6 +496,8 @@ define({
       website: 'http://www.bkc.ru/',
       projects: [
         {
+          title: 'IELTS',
+          description: 'International standardised test of English language proficiency for non-native English language speakers.',
           tags: [
             { languages: [], stack: [] }
           ],
@@ -492,7 +505,7 @@ define({
           references: []
         }
       ]
-    }, {
+    },*/ {
       id: 16,
       position: ['MCPD Windows Developer 4'],
       employment_type: 'certification',
