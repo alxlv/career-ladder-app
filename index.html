@@ -1,37 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="ladderApp" class="ng-app no-js">
+<html lang="en" ng-app="ladderApp" class="ng-app">
   <head>
-    <title>Alex Levshin's jobs flow</title>
+    <title>Jobs flow</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--<base href="/" />-->
-    <base href="/career-ladder-app/" />
+    <base href="/" />
+    <!--<base href="/career-ladder-app/" />-->
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap-responsive.css">
     <link rel="stylesheet" type="text/css" media="all" href="static/css/app.css" />
   </head>
   <body ng-controller="AppCtrl">
-    <sliding-panel ng-controller="SlidingCtrl" positions="dataModel.positions" header="dataModel.header" comments="dataModel.comments" contacts="dataModel.contacts" ng-cloak>
-    </sliding-panel>
-
-    <div class="main-view">
-      <div class="main-view-wrapper">
-        <div class="left-column-wrapper">
-          <div ng-controller="FiltersCtrl" class="filters-panel-container" ng-cloak ng-include="'static/js/app/templates/filtersPanel.html'">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+          <!--<sliding-panel ng-controller="SlidingCtrl" positions="dataModel.positions" header="dataModel.header" comments="dataModel.comments" contacts="dataModel.contacts" ng-cloak>
+           </sliding-panel>-->
+          <div ng-controller="ResumesCtrl" ng-include="'static/js/app/templates/resumesPanel.html'" ng-cloak>
           </div>
-          <tags-cloud ng-controller="TagsCtrl" class="tags-cloud-container" ng-cloak items="items">
+        </div>
+      </div>
+      <div class="row-fluid" style="margin-top: 10px;">
+        <div class="span9">
+          <div ng-controller="FiltersCtrl" ng-cloak ng-include="'static/js/app/templates/filtersPanel.html'">
+          </div>
+        </div>
+        <div class="span3">
+          <tags-cloud ng-controller="TagsCtrl" ng-cloak items="items">
           </tags-cloud>
-          <jobs-flow ng-controller="JobsCtrl" class="jobs-flow-container" ng-cloak items="items" years="years" find-jobs-ctrl="findJobs(month, year)" on-job-point-enter-ctrl="onJobPointEnter(job)" on-job-point-leave-ctrl="onJobPointLeave(job)" on-job-point-click-ctrl="onJobPointClick(clicked)">
+        </div>
+      </div>
+      <div class="row-fluid" style="margin-top: 10px;">
+        <div class="span12">
+          <jobs-flow ng-controller="JobsCtrl" ng-cloak items="items" years="years" find-jobs-ctrl="findJobs(month, year)" on-job-point-enter-ctrl="onJobPointEnter(job)" on-job-point-leave-ctrl="onJobPointLeave(job)" on-job-point-click-ctrl="onJobPointClick(clicked)">
           </jobs-flow>
+        </div>
+      </div>
+      <div class="row-fluid" style="margin-top: 10px;">
+        <div class="span12">
           <div ng-controller="SkillsCtrl" class="skills-board-container" ng-cloak ng-include="'static/js/app/templates/skillsBoard.html'">
           </div>
         </div>
-        <div class="right-column-wrapper" ng-controller="ResumesCtrl" ng-include="'static/js/app/templates/resumesPanel.html'" ng-cloak>
-        </div>
       </div>
-	</div>
-
-	<footer>
-	</footer>
+    </div>
    	<script data-main="static/js/app/main" src="bower_components/requirejs/require.js"></script>
+
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+        var sc_project=9692714;
+        var sc_invisible=1;
+        var sc_security="90d31a7d";
+        var scJsHost = (("https:" == document.location.protocol) ?
+                "https://secure." : "http://www.");
+        document.write("<sc"+"ript type='text/javascript' src='" +
+                scJsHost+
+                "statcounter.com/counter/counter.js'></"+"script>");
+    </script>
+    <noscript><div class="statcounter"><a title="hit counter"
+                                          href="http://statcounter.com/" target="_blank"><img
+            class="statcounter"
+            src="http://c.statcounter.com/9692714/0/90d31a7d/1/"
+            alt="hit counter"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide -->
   </body>
 </html>

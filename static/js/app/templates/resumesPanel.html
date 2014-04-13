@@ -1,16 +1,69 @@
-<div class="resume-header">Curriculum vitae</div>
-<div class="resume-item" ng-repeat="resume in resumes">
-  <a href="{{ resume.link }}"><img src="" ex-xlink-href="{{ resume.image_src }}"/></a>
-</div>
-<div class="social-media-header">Social media</div>
-<div class="social-media-item" ng-repeat="sm in social_media">
-  <a href="{{ sm.link }}" target="_blank">
-    <span>
-      <img src="" ex-xlink-href="{{ sm.image_src }}" title="{{ sm.text }}" alt="{{ sm.text }}">
-    </span>
-  </a>
-</div>
-<div class="js-components-header">Starring</div>
-<div class="js-components-item" ng-repeat="component in jsComponents">
-  <a href="{{ component.link }}" target="_blank"><span>{{ component.text }}</span></a>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+      <div class="row-fluid">
+        <div class="span12">
+          <span class="resume-item-label">Curriculum vitae</span>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <span ng-repeat="resume in resumes">
+            <a href="{{ resume.link }}"><img class="resume-item-img" src="" ex-xlink-href="{{ resume.image_src }}"/></a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="span4">
+      <div class="row-fluid">
+        <div class="span12">
+          <span class="social-media-item-label">Social media accounts</span>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <span ng-repeat="sm in social_media">
+            <a href="{{ sm.link }}" target="_blank">
+              <span>
+                <img src="" class="social-media-item-img"  ex-xlink-href="{{ sm.image_src }}" title="{{ sm.text }}"/>
+              </span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="span3">
+      <div class="row-fluid">
+        <div class="span12">
+          <span class="looking-position-item-label">Job wanted!</span>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <ul class="looking-position-item-value-ul">
+            <li class="looking-position-item-value-ul-li" ng-repeat="position in looking_positions">{{ position.text }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="span2">
+      <div class="row-fluid">
+        <div class="span12">
+          <span class="contact-item-label">Contacts</span>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <ul class="contact-item-value-ul">
+            <li class="contact-item-value-ul-li" ng-repeat="contact in contacts"><a href='{{ contact.link }}'>{{ contact.text }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+   <!-- <div class="span4">
+      <span class="js-components-item" ng-repeat="component in jsComponents">
+        <a href="{{ component.link }}" target="_blank"><span>{{ component.text }}</span></a>
+      </span>
+    </div> -->
+  </div>
 </div>

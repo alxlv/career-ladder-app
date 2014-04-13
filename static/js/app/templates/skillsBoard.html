@@ -1,94 +1,130 @@
-<div class="main-flex-wrapper" ng-show="job !== undefined">
-  <div class="left-column-wrapper">
-    <h1>General</h1>
-    <div class="skills-board-item-container">
-      <span class="skills-board-item-label">Organization:</span>
-      <span class="skills-board-item-value">
-        <a href="{{ job.website }}" ng-if="job.website.length > 0" target="_blank">{{ job.company }}</a>
-        <span ng-if="job.website.length === 0"> {{ job.company }} </span>
-      </span>
+<div class="container-fluid" ng-show="job !== undefined">
+  <div class="row-fluid">
+    <div class="span4">
+      <h1 class="skills-board-h1">General</h1>
+      <div class="row-fluid">
+        <div class="span6">
+          <span class="skills-board-item-label">Organization</span>
+        </div>
+        <div class="span6">
+          <span class="skills-board-item-value">
+            <a class="skills-board-item-value-a" style="position: relative;" href="{{ job.website }}" ng-if="job.website.length > 0" target="_blank">{{ job.company }}</a>
+            <span ng-if="job.website.length === 0"> {{ job.company }} </span>
+          </span>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <span class="skills-board-item-label">Position(s)</span>
+        </div>
+        <div class="span6">
+          <span class="skills-board-item-value">
+            <div class="row-fluid">
+              <div class="span12">
+                <ul class="skills-board-item-value-position-ul">
+                  <li class="skills-board-item-value-position-li" ng-repeat="pos in job.position">
+                    {{ pos }}
+                  </li>
+                </ul>
+             </div>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <span class="skills-board-item-label">Location</span>
+        </div>
+        <div class="span6">
+          <span class="skills-board-item-value">{{ job.location }}</span>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <span class="skills-board-item-label">Type</span>
+        </div>
+        <div class="span6">
+          <span class="skills-board-item-value">{{ job.employment_type }}</span>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span6">
+          <span class="skills-board-item-label">Dates</span>
+        </div>
+        <div class="span6">
+          <span class="skills-board-item-value">From {{ job.dateFrom }} to {{ job.dateTo }}</span>
+        </div>
+      </div>
     </div>
-    <div class="skills-board-item-container">
-      <span class="skills-board-item-label">Position(s):</span>
-      <span class="skills-board-item-value">
-        <li class="position" ng-repeat="pos in job.position">{{ pos }}</li>
-      </span>
-    </div>
-    <div class="skills-board-item-container">
-      <span class="skills-board-item-label">Location:</span>
-      <span class="skills-board-item-value">
-        {{ job.location }}
-      </span>
-    </div>
-    <div class="skills-board-item-container">
-      <span class="skills-board-item-label">Type:</span>
-      <span class="skills-board-item-value">
-        {{ job.employment_type }}
-      </span>
-    </div>
-    <div class="skills-board-item-container">
-      <span class="skills-board-item-label">Dates:</span>
-      <span class="skills-board-item-value">
-        From {{ job.dateFrom }} to {{ job.dateTo }}
-      </span>
+    <div class="span8" ng-show="job.projects.length > 0">
+      <div class="row-fluid">
+        <div class="span12">
+          <h1 class="skills-board-h1">Projects</h1>
+        </div>
+      </div>
+      <div class="row-fluid">
+       <div class="span12">
+        <div class="skills-board-project" ng-repeat="project in job.projects">
+          <h2 class="skills-board-h2">{{ project.title }}</h2>
+          <tabset>
+            <tab>
+              <tab-heading>
+                <span class="skills-board-heading">Description</span>
+              </tab-heading>
+              <div class="skills-board-project-description">
+                {{ project.description }}
+                <ul class="skills-board-project-description-responsibility" ng-repeat="resp in project.responsibilities">
+                  <li>{{ resp }}</li>
+                </ul>
+              </div>
+              <div ng-show="(project.tags[0].languages.length > 0 || project.tags[0].stack.length > 0)">
+                Tags:
+                <span ng-repeat="tag in project.tags">
+                  <span ng-repeat="lang in tag.languages"><b class="skills-board-project-tag-item">{{ lang }}</b> </span>
+                  <span ng-repeat="stack in tag.stack"><b class="skills-board-project-tag-item">{{ stack }}</b> </span>
+                </span>
+              </div>
+            </tab>
+            <tab ng-show="project.screenshots.length > 0">
+              <tab-heading>
+                <span class="skills-board-heading">Screenshots</span>
+              </tab-heading>
+              <div>
+                <div class="row-fluid skills-board-project-screenshot">
+                   <span ng-repeat="screenshot in project.screenshots">
+                     <div class="span3">
+                         <ul class="skills-board-project-screenshot-ul">
+                           <li class="skills-board-project-screenshot-ul-li">
+                             <span>
+                              <img ng-if="screenshot.type === 'pic'" class="skills-board-project-screenshot-img skills-board-project-screenshot-img-inactive" width="{{ screenshot.width }}" height="{{ screenshot.height }}" ng-click="showScreenshot($event)" title="Click to enlarge" src="" ex-xlink-href="{{ screenshot.thumbnail }}"/>
+                              <iframe ng-if="screenshot.type === 'video'" style="margin: 10px;" class="skills-board-project-screenshot-img-inactive" width="{{ screenshot.width }}" height="{{ screenshot.height }}" src="" ex-xlink-href="{{ screenshot.thumbnail }}" frameborder="0" allowfullscreen></iframe>
+                             </span>
+                             <span ng-if="screenshot.type === 'pic'" class="skills-board-project-screenshot-title">{{ screenshot.title }}</span>
+                           </li>
+                         </ul>
+                     </div>
+                   </span>
+                </div>
+              </div>
+             </tab>
+             <tab ng-show="project.references.length > 0">
+               <tab-heading>
+                <span class="skills-board-heading">References</span>
+               </tab-heading>
+                <div>
+                  <span class="skills-board-project-ref" ng-repeat="reference in project.references">
+                    <ul class="skills-board-project-ul">
+                      <li class="skills-board-project-ul-li">Name: {{ reference.title }}</li>
+                      <li class="skills-board-project-ul-li">Position: {{ reference.position }}</li>
+                      <li class="skills-board-project-ul-li">Contact: <a class="skills-board-project-ul-li-a" href='{{ reference.contact }}' class='sliding-panel-contact-item'>{{ reference.contact }}</a></li>
+                    </ul>
+                  </span>
+                </div>
+             </tab>
+            </tabset>
+        </div>
+       </div>
+     </div>
     </div>
   </div>
-  <div class="right-column-wrapper" ng-show="job.projects.length > 0">
-    <h1>Projects</h1>
-    <div class="project" ng-repeat="project in job.projects">
-      <h2>{{ project.title }}</h2>
-       <tabset>
-         <tab>
-           <tab-heading>
-             Description
-           </tab-heading>
-           <div class="description">
-            {{ project.description }}
-            <ul class="responsibility" ng-repeat="resp in project.responsibilities">
-              <li>{{ resp }}</li>
-            </ul>
-           </div>
-           <div ng-show="(project.tags[0].languages.length > 0 || project.tags[0].stack.length > 0)">
-             Tags:
-             <span ng-repeat="tag in project.tags">
-               <span ng-repeat="lang in tag.languages"><b class="project-tag-item">{{ lang }}</b> </span>
-               <span ng-repeat="stack in tag.stack"><b class="project-tag-item">{{ stack }}</b> </span>
-             </span>
-           </div>
-         </tab>
-         <tab ng-show="project.screenshots.length > 0">
-           <tab-heading>
-            Screenshots
-           </tab-heading>
-           <div>
-             <span class="screenshot" ng-repeat="screenshot in project.screenshots">
-               <ul>
-                 <li>
-                   <span>
-                     <img ng-if="screenshot.type === 'pic'" class="inactive" width="{{ screenshot.width }}" height="{{ screenshot.height }}" ng-click="showScreenshot($event)" title="Click to enlarge" src="" ex-xlink-href="{{ screenshot.thumbnail }}"/>
-                     <iframe ng-if="screenshot.type === 'video'" class="inactive" width="{{ screenshot.width }}" height="{{ screenshot.height }}" src="" ex-xlink-href="{{ screenshot.thumbnail }}" frameborder="0" allowfullscreen></iframe>
-                   </span>
-                   <span ng-if="screenshot.type === 'pic'" class="screenshot-title">{{ screenshot.title }}</span>
-                 </li>
-               </ul>
-             </span>
-           </div>
-         </tab>
-         <tab ng-show="project.references.length > 0">
-           <tab-heading>
-            References
-           </tab-heading>
-           <div>
-             <span class="ref" ng-repeat="reference in project.references">
-               <ul>
-                 <li>Name: {{ reference.title }}</li>
-                 <li>Position: {{ reference.position }}</li>
-                 <li>Contact: <a href='{{ reference.contact }}' class='sliding-panel-contact-item'>{{ reference.contact }}</a></li>
-               </ul>
-             </span>
-           </div>
-         </tab>
-      </tabset>
-    </div>
-   </div>
 </div>

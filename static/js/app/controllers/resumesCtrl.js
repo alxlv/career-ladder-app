@@ -30,5 +30,20 @@ define(function (require) {
 
     $scope.jsComponents = jsComponents;
 
+    var contacts = [
+      { text: 'Skype', link: 'skype:aleksander.levshin' },
+      { text: 'Mail', link: 'mailto:aleks.levshin@gmail.com' }
+    ];
+
+    $scope.contacts = contacts;
+
+    var looking_positions = [
+      { text: 'Senior .NET + Javascript developer', link: 'Senior .NET AND Javascript developer' },
+      { text: 'Technical leader', link: 'Technical leader' },
+      { text: 'Architect', link: 'Architect' }
+    ];
+
+    $scope.looking_positions = looking_positions;
+
   }];
 });

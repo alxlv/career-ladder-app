@@ -1,15 +1,29 @@
-<div class="sliding-panel-flip sliding-panel-wrapper">
-  {{ header }} {{ comments }}
-  <div> Positions:
-    <span ng-repeat="position in positions"><span class='sliding-panel-position-item'>{{ position }}</span><span ng-if="$index < positions.length - 1">,</span></span>
+<div class="container-fluid">
+  <div class="sliding-panel-wrapper">
+    <div class="row-fluid sliding-panel-flip">
+      <div class="span12 item">{{ header }} {{ comments }}</div>
+    </div>
+    <div class="row-fluid sliding-panel-flip">
+      <div class="span2 item-label">Positions:</div>
+      <div class="span10">
+        <div class="row-fluid" ng-repeat="position in positions">
+          <div class="span10 item">{{ position }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid sliding-panel-flip">
+      <div class="span2 item-label">Contacts:</div>
+      <div class="span10">
+        <div class="row-fluid" ng-repeat="contact in contacts">
+          <div class="span12 item"><a href='{{ contact }}'>{{ contact }}</a></div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div> Contacts:
-    <span ng-repeat="contact in contacts"><a href='{{ contact }}' class='sliding-panel-contact-item'>{{ contact }}</a><span ng-if="$index < contacts.length - 1">&nbsp;</span></span>
-  </div>
-</div>
-<div class="sliding-panel-control-container">
-  <div class="inner-control-button-wrapper" ng-switch="hidden === true">
-    <img ng-switch-when=true class="control-button-image" title="Click to show" src="media/open.png">
-    <img ng-switch-when=false class="control-button-image" title="Click to hide" src="media/close.png">
+  <div class="sliding-panel-control-container">
+    <div class="inner-control-button-wrapper" ng-switch="hidden === true">
+      <img ng-switch-when=true class="control-button-image" title="Click to show" src="media/open.png">
+      <img ng-switch-when=false class="control-button-image" title="Click to hide" src="media/close.png">
+    </div>
   </div>
 </div>

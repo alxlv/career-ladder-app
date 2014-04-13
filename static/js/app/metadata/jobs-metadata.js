@@ -139,7 +139,7 @@ define({
             { title: 'Main view', width: '110', height: '70', type: 'pic', thumbnail: 'media/screenshots/atis/mainview.jpg'},
             { title: 'Event log player', width: '70', height: '90', type: 'pic', thumbnail: 'media/screenshots/atis/event_log_dlg.jpg'},
             { title: 'Preferences', width: '90', height: '70', type: 'pic', thumbnail: 'media/screenshots/atis/path_bizp.jpg'},
-            { title: 'Paths capacity', width: '60', height: '40', type: 'pic', thumbnail: 'media/screenshots/atis/wnd_freedom_rtl.JPG'}
+            { title: 'Paths capacity', width: '60', height: '40', type: 'pic', thumbnail: 'media/screenshots/atis/wnd_freedom_rtl.jpg'}
           ],
           references: []
         },

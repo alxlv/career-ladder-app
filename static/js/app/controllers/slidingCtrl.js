@@ -5,9 +5,9 @@ define(function (require) {
 
     $scope.dataModel = {
       header: "Job wanted!",
-      positions: ['Senior .NET/Javascript developer', 'technical leader', 'architect'],
+      comments: 'Especially interested in AngularJS, NodeJS and other cool JS-* stuff!',
+      positions: ['Senior .NET/Javascript developer', 'Technical leader', 'Architect'],
       contacts: ['skype:aleksander.levshin', 'mailto:aleks.levshin@gmail.com'],
-      comments: 'Especially interested in AngularJS, NodeJS and other cool JS-* stuff!'
     };
   }];
 });

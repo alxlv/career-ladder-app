@@ -1,39 +1,37 @@
-<div>
-  <div class="flex-wrapper">
-   <span class="filters-panel-item-label">Years:</span>
-   <span class="filters-panel-item-value">
-     <div disabled="frozen" range-slider min="years.rangeMin" max="years.rangeMax" model-min="years.min" model-max="years.max" step="1" />
-   </span>
-  </div>
-  <div class="flex-wrapper">
-   <span class="filters-panel-item-label">Positions:</span>
-   <span id="positions" class="filters-panel-item-value filters-panel-item-value-checkbox" ng-mouseenter="onValueBoxMouseEnter($event)" ng-mouseleave="onValueBoxMouseLeave($event)">
-     <div ng-repeat="pos in positions">
-       <label class="checkbox-label"><input ng-disabled="frozen" type="checkbox" ng-model="positionsStates[pos]" ng-change="onPositionClick()"/>
-       {{ pos }}</label>
-     </div>
-   </span>
-  </div>
-  <div class="flex-wrapper">
-    <span class="filters-panel-item-label">Types of employment:</span>
-    <span id="employmentTypes" class="filters-panel-item-value filters-panel-item-value-checkbox" ng-mouseenter="onValueBoxMouseEnter($event)" ng-mouseleave="onValueBoxMouseLeave($event)">
-      <div ng-repeat="et in employment_types">
-        <label class="checkbox-label"><input ng-disabled="frozen" type="checkbox" ng-model="employmentTypesStates[et]" ng-change="onEmploymentTypeClick()"/>
-        {{et}}</label>
-        <img src="" ex-xlink-href="{{ getEmploymentTypeIcon(et) }}" class="filter-panel-employment-type-image" />
-      </div>
-    </span>
-  </div>
-  <div class="flex-wrapper">
-    <span class="filters-panel-item-label">Working types:</span>
-    <span id="workingTypes" class="filters-panel-item-value filters-panel-item-value-checkbox" ng-mouseenter="onValueBoxMouseEnter($event)" ng-mouseleave="onValueBoxMouseLeave($event)">
-      <div ng-repeat="wt in working_types">
-        <label class="checkbox-label"><input ng-disabled="frozen" type="checkbox" ng-model="workingTypesStates[wt]" ng-change="onWorkingTypeClick()"/>
-        {{wt}}</label>
-      </div>
-    </span>
-  </div>
- </div>
+<div class="container-fluid">
+   <div class="row-fluid" style="margin-top: 2px;">
+     <span class="span3 filter-item-label">Years</span>
+     <span class="span9">
+       <div disabled="frozen" range-slider min="years.rangeMin" max="years.rangeMax" model-min="years.min" model-max="years.max" step="1" />
+     </span>
+   </div>
+   <div class="row-fluid" style="margin-top: 2px;">
+     <span class="span3 filter-item-label">Positions</span>
+     <span id="positions" class="span9" ng-mouseenter="onValueBoxMouseEnter($event)" ng-mouseleave="onValueBoxMouseLeave($event)">
+       <div class="row-fluid btn-toolbar btn-group-sm" data-toggle="buttons-checkbox">
+         <button-check ng-disabled="frozen" type="button" class="btn btn-default filter-item-value-label" ng-model="positionsStates[pos]" ng-change="onPositionClick()" ng-repeat="pos in positions">{{ pos }} </button-check>
+       </div>
+     </span>
+   </div>
+   <div class="row-fluid" style="margin-top: 2px;">
+     <span class="span3 filter-item-label">Types of employment</span>
+     <span id="employmentTypes" class="span9" ng-mouseenter="onValueBoxMouseEnter($event)" ng-mouseleave="onValueBoxMouseLeave($event)">
+       <div class="row-fluid btn-toolbar btn-group-sm" data-toggle="buttons-checkbox">
+         <button-check ng-disabled="frozen" type="button" class="btn btn-default filter-item-value-label" ng-repeat="et in employment_types" ng-model="employmentTypesStates[et]" ng-change="onEmploymentTypeClick()"> {{et}}
+           <img src="" ex-xlink-href="{{ getEmploymentTypeIcon(et) }}" class="filter-panel-employment-type-image" />
+         </button-check>
+       </div>
+     </span>
+   </div>
+   <div class="row-fluid" style="margin-top: 2px;">
+     <span class="span3 filter-item-label">Working types</span>
+     <span id="workingTypes" class="span9" ng-mouseenter="onValueBoxMouseEnter($event)" ng-mouseleave="onValueBoxMouseLeave($event)">
+       <div class="row-fluid btn-toolbar btn-group-sm" data-toggle="buttons-checkbox">
+         <button-check type="button" class="btn btn-default filter-item-value-label" ng-repeat="wt in working_types" ng-disabled="frozen" ng-model="workingTypesStates[wt]" ng-click="onWorkingTypeClick()">{{wt}}</button-check>
+       </div>
+     </span>
+    </div>
+</div>
 
 <div class="filtersValuePanel" ng-cloak>
   <button title="Select all" ng-click="select($event, true)">+*</button>

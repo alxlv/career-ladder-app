@@ -30,11 +30,6 @@ define(function (require) {
           var paramsScale1 = { scale: 1, ease: "easeOut", transformOrigin: 'top left' };
           var paramsScale15 = { scale: 1.8, ease: "easeOut", transformOrigin: 'top left' };
           var isClicked = false;
-          var connector = $('.job-point-connector-inactive');
-
-          function hideConnector() {
-            TweenMax.set(connector, {css:{className: 'job-point-connector-inactive'}});
-          }
 
           function setTitleText() {
             var newTitleText = isClicked ? 'lock' : "unlock"
@@ -60,6 +55,7 @@ define(function (require) {
           }
 
           function scaleJobPoints(job, isScaled) {
+
             var jobPoints = el.find('job-point').children().find('g');
             var textObjs = [];
             var jobPointsObjs = [];
@@ -83,22 +79,8 @@ define(function (require) {
               if (leftX0 !== 0 && leftX1 !== 0) {
                 var diff = width + leftX0 - leftX1;
                 var wrap = false;
-                if (diff >= -30 && diff <= 30) {
-                  TweenMax.set(textObjs[1], {css:{transform:"translateY(10px)"}});
-                  wrap = true;
-                }
-
-                if (wrap === false && jobPointsObjs.length > 1) {
-                  rect0 = jobPointsObjs[0].getBoundingClientRect();
-                  width = rect0.width;
-                  var leftY0 = $(jobPointsObjs[0]).offset().top;
-                  // TODO: HACK! (detect browser features)
-                  if (leftY0 < 500) {
-                    leftY0 = leftY0 + rect0.height / 2;
-                  }
-                  leftX0 = $(jobPointsObjs[0]).offset().left;
-                  leftX1 = $(jobPointsObjs[1]).offset().left;
-                  //TweenMax.set(connector, {css:{top: leftY0, left: leftX0 + width / 2, width: leftX1 - leftX0, className: 'job-point-connector-active'}});
+                if (diff >= -35 && diff <= 35) {
+                  TweenMax.to(textObjs[1], zeroDuration, {css:{transform:"translateY(10px)"}});
                 }
               }
             }
@@ -160,6 +142,7 @@ define(function (require) {
               var className = $(e.toElement).attr('class');
               if (className !== 'job-point' && className !== 'job-point-image' && typeof className != 'undefined') return;
             }
+
             if (isClicked) return;
             scaleOffAllJobPoints();
             scaleJobPoints(job, true);
@@ -174,7 +157,7 @@ define(function (require) {
 
             if (isClicked) return;
             scaleJobPoints(job, false);
-            hideConnector();
+            //hideConnector();
             scope.onJobPointLeaveCtrl({ job: job });
           }
 

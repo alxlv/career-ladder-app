@@ -20,7 +20,7 @@ define(function (require) {
         var enlarge = true;
         if (typeof element._gsTransform !== 'undefined') {
           if (element._gsTransform.scaleX > 1) {
-            TweenMax.to(element, 0,  {css:{ className: 'inactive' }});
+            TweenMax.to(element, 0,  {css:{ className: 'skills-board-project-screenshot-img skills-board-project-screenshot-img-inactive' }});
             $(element).attr('title', 'Click to enlarge');
             TweenMax.to(element, 0.2, { scale: 1, ease: "easeOut", transformOrigin: 'center center' });
             enlarge = false;
@@ -28,7 +28,7 @@ define(function (require) {
         }
 
         if (enlarge) {
-          TweenMax.to(element, 0,  {css:{ className: 'active' }});
+          TweenMax.to(element, 0,  {css:{ className: 'skills-board-project-screenshot-img skills-board-project-screenshot-img-active' }});
           $(element).attr('title', 'Click to minimise');
           TweenMax.to(element, 0.2, { scale: 8, ease: "easeOut", transformOrigin: 'center center' });
         }

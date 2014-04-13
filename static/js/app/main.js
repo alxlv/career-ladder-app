@@ -12,6 +12,7 @@ require.config({
     timelineMax:    '../../../bower_components/greensock/src/minified/TimelineMax.min',
     tweenMax:       '../../../bower_components/greensock/src/minified/TweenMax.min',
     cloudCanvas:    '../jquery.tagcanvas'
+    //modernizr:      '../modernizr.custom.18530'
   },
   shim: {
     'angular'          : { deps: ['jquery'], exports : 'angular' },
@@ -39,6 +40,7 @@ define(function (require) {
       app        = require('app');
 
   require('cloudCanvas');
+  //require('modernizr');
 
   var $html = angular.element(document.getElementsByTagName('html')[0]);
 

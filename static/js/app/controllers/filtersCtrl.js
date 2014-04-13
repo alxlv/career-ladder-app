@@ -76,6 +76,7 @@ define(function (require) {
       var eventData = {
         value: this.workingTypesStates
       };
+
       $rootScope.$broadcast('workingTypesFilterChanged', eventData);
     };
 
