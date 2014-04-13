@@ -340,6 +340,8 @@ body {
 
 .resume-item-label {
   font: 18px Cambria,Georgia,Arial;
+  text-decoration: none;
+  border-bottom: 2px dotted #ccc;
 }
 
 .resume-item-img {
@@ -353,6 +355,8 @@ body {
 
 .social-media-item-label {
   font: 18px Cambria,Georgia,Arial;
+  text-decoration: none;
+  border-bottom: 2px dotted #ccc;
 }
 
 .social-media-item-img {
@@ -366,6 +370,8 @@ body {
 
 .looking-position-item-label {
   font: 18px Cambria,Georgia,Arial;
+  text-decoration: none;
+  border-bottom: 2px dotted #ccc;
 }
 
 .looking-position-item-value-ul {
@@ -380,6 +386,8 @@ body {
 
 .contact-item-label {
   font: 18px Cambria,Georgia,Arial;
+  text-decoration: none;
+  border-bottom: 2px dotted #ccc;
 }
 
 .contact-item-value-ul {
@@ -393,6 +401,8 @@ body {
 
 .filter-item-label {
   font: 18px Cambria,Georgia,Arial;
+  text-decoration: none;
+  border-bottom: 2px dotted #ccc;
 }
 
 .filter-item-value-label {
@@ -465,12 +475,12 @@ body {
 }
 
 .job-point {
-    margin-top: 10px;
-    margin-left: -15px;
-    position: fixed;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+  margin-top: 10px;
+  margin-left: -15px;
+  position: fixed;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .job-point-text-leave {
@@ -495,6 +505,8 @@ body {
 
 .skills-board-item-label {
   font: 18px Cambria,Georgia,Arial;
+  text-decoration: none;
+  border-bottom: 2px dotted #ccc;
 }
 
 .skills-board-item-value {

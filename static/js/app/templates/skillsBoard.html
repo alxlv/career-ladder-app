@@ -96,7 +96,7 @@
                          <ul class="skills-board-project-screenshot-ul">
                            <li class="skills-board-project-screenshot-ul-li">
                              <span>
-                              <img ng-if="screenshot.type === 'pic'" class="skills-board-project-screenshot-img skills-board-project-screenshot-img-inactive" width="{{ screenshot.width }}" height="{{ screenshot.height }}" ng-click="showScreenshot($event)" title="Click to enlarge" src="" ex-xlink-href="{{ screenshot.thumbnail }}"/>
+                              <img ng-if="screenshot.type === 'pic'" class="skills-board-project-screenshot-img skills-board-project-screenshot-img-inactive thumbnail" width="{{ screenshot.width }}" height="{{ screenshot.height }}" ng-click="showScreenshot($event)" title="Click to enlarge" src="" ex-xlink-href="{{ screenshot.thumbnail }}"/>
                               <iframe ng-if="screenshot.type === 'video'" style="margin: 10px;" class="skills-board-project-screenshot-img-inactive" width="{{ screenshot.width }}" height="{{ screenshot.height }}" src="" ex-xlink-href="{{ screenshot.thumbnail }}" frameborder="0" allowfullscreen></iframe>
                              </span>
                              <span ng-if="screenshot.type === 'pic'" class="skills-board-project-screenshot-title">{{ screenshot.title }}</span>
