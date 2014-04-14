@@ -78,8 +78,8 @@ define(function (require) {
               var leftX1 = $(textObjs[1]).offset().left;
               if (leftX0 !== 0 && leftX1 !== 0) {
                 var diff = width + leftX0 - leftX1;
-                var wrap = false;
-                if (diff >= -35 && diff <= 35) {
+                console.debug(diff);
+                if (diff >= -40 && diff <= 40) {
                   TweenMax.to(textObjs[1], zeroDuration, {css:{transform:"translateY(10px)"}});
                 }
               }
